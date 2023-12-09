@@ -1,2 +1,2 @@
-# pregymnasium
-Module computerprogrammeren voor het pregymnasium.
+# intermezzo
+Programmeren in Python voor Intermezzo.
