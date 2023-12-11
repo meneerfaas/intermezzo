@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Computerprogrammeren voor het Pregymnasium'
+project = 'Programmeren in Python voor Intermezzo'
 copyright = '2023, S. Faas'
 author = 'S. Faas'
 release = '0.0'
@@ -40,7 +40,7 @@ html_theme_options = {
 "logo": {
     "image_light": "images/logo_beekvliet.png",
     "image_dark": "images/logo_beekvliet.png",
-    "text": "Computerprogrammeren voor het Pregymnasium"
+    "text": "Programmeren in Python voor Intermezzo"
     }
 }
 

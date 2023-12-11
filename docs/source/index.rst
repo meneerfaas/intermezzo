@@ -1,5 +1,5 @@
 *****************************************************
-Welkom bij computerprogrammeren voor het pregymnasium
+Programmeren in Python voor Intermezzo
 *****************************************************
 
 .. toctree::
