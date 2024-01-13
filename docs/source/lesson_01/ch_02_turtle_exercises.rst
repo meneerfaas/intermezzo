@@ -386,7 +386,7 @@ Oplossingen
 
         tony.end_fill()
 
-    .. dropdown:: Extra
+    .. dropdown:: Extra - Tekst tonen
         :color: secondary
         :icon: plus-circle
 
@@ -405,3 +405,74 @@ Oplossingen
             tony.rt(90)
             tony.pencolor('dark goldenrod')
             tony.write('SHERIFF', False, align = 'center', font = ('Arial Narrow', 32, 'bold'))            
+
+    .. dropdown:: Extra - Cirkels in plaats van stippen
+        :color: secondary
+        :icon: plus-circle
+
+        Wanneer je in plaats van :python:`turtle.dot()` de functie :python:`turtle.circle()` gebruikt, kun je de volgende ster tekenen:
+
+        .. image:: images/turtle_sheriff_star_2.png
+          :align: center
+
+        In dit voorbeeld is er met de aanroep :python:`tony.circle(16, 320)` voor gezorgd, dat de turtle 320° van een hele cirkel (360°) met straal 16 tekent. Echter direct vóór en ná deze aanroep moet de turtle 100° rechtsom draaien.
+
+        .. dropdown:: Oplossing
+            :color: secondary
+            :icon: check-circle
+
+            .. code-block:: python
+                :linenos:
+                :caption: turtle_sheriff_ster_v2.py
+
+                import turtle
+
+                tony = turtle.Turtle()
+                tony.pensize(5)
+
+                tony.color('orange', 'gold')
+                tony.begin_fill()
+
+                tony.fd(80)
+                tony.rt(100)
+                tony.circle(16,320)
+                tony.rt(100)
+                tony.fd(80)
+                tony.rt(60)
+
+                tony.fd(80)
+                tony.rt(100)
+                tony.circle(16,320)
+                tony.rt(100)
+                tony.fd(80)
+                tony.rt(60)
+
+                tony.fd(80)
+                tony.rt(100)
+                tony.circle(16,320)
+                tony.rt(100)
+                tony.fd(80)
+                tony.rt(60)
+
+                tony.fd(80)
+                tony.rt(100)
+                tony.circle(16,320)
+                tony.rt(100)
+                tony.fd(80)
+                tony.rt(60)
+
+                tony.fd(80)
+                tony.rt(100)
+                tony.circle(16,320)
+                tony.rt(100)
+                tony.fd(80)
+                tony.rt(60)
+
+                tony.fd(80)
+                tony.rt(100)
+                tony.circle(16,320)
+                tony.rt(100)
+                tony.fd(80)
+                tony.rt(60)
+
+                tony.end_fill()
