@@ -3,3 +3,4 @@ sphinx
 pydata-sphinx-theme
 sphinx-design
 sphinx-copybutton
+sphinxcontrib-plantuml
