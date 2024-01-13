@@ -32,3 +32,4 @@ In deze les ga je aan de slag met algoritmen om in Python een schildpad (Engels:
    :caption: Onderdelen
 
    lesson_01/ch_01_turtle
+   lesson_01/ch_02_turtle_exercises

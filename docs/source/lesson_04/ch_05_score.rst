@@ -304,7 +304,7 @@ Om de score elke seconde met een punt te verhogen, moeten we een nieuwe functie 
    :class: no-copybutton
    :linenos:
    :lineno-start: 15
-   :emphasize-lines: 5-9
+   :emphasize-lines: 5-8
    :caption: alien.py
 
    # Variables

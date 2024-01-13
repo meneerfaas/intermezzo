@@ -15,7 +15,6 @@ Tijd voor actie! Die statische alien mag wel eens in beweging komen. Om dat voor
    :linenos:
    :emphasize-lines: 7, 13-15
    :caption: alien.py
-   :name: alien_v11
 
    # Vensterafmetingen
    WIDTH = 600
@@ -174,7 +173,7 @@ Door in regel 18 de rechterzijde van de alien op 0 te zetten, plaatsen we hem ne
       .. code-block:: python
          :class: no-copybutton
          :linenos:
-         :emphasize-lines: 19
+         :emphasize-lines: 17-18
          :caption: alien.py
          :name: alien_v15
 

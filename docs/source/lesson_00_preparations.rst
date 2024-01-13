@@ -6,6 +6,17 @@ Voorbereiding
 
 Om te kunnen programmeren heb je een *programmeeromgeving* nodig: een programma waarin je code kunt typen en kunt laten uitvoeren. In deze cursus gebruiken we daarvoor `Mu editor <https://codewith.mu/>`_. Nadat je Mu editor hebt gestart, ga je de benodigde vensters handig rangschikken op je scherm en je eerste programma maken.
 
+.. dropdown:: Wat leer je in dit hoofdstuk
+    :open:
+    :color: primary
+    :icon: book
+
+    * Hoe start je Mu editor.
+    * Hoe plaats je vensters in Windows mooi naast elkaar.
+    * Hoe typ je programmacode in Mu editor.
+    * Hoe run je programmacode in Mu editor.
+    * Hoe sla je je programma op in Mu editor.
+
 Mu editor starten
 -----------------
 Start Mu editor via de Windows Startknop linksonder in je scherm.
@@ -24,10 +35,14 @@ Start Mu editor via de Windows Startknop linksonder in je scherm.
         .. image:: images/mu_windows_start.png
             :height: 36px
 
+.. card:: :octicon:`x-circle-fill` Probleem?
+
+    Kun je Mu editor niet vinden in het Startmenu in Windows? Wellicht is het programma dan nog niet geïnstalleerd. Download Mu editor via `deze link <https://codewith.mu/en/download>`_ en installeer het op je PC.
+
 Controleer nadat je Mu editor hebt opgestart, dat rechtsonder in de statusbalk Python 3 staat. Als er iets anders staat, klik dan op de Mode knop en selecteer Python 3.
 
 .. image:: images/mu_editor.png
-
+    
 
 Vensters rangschikken
 ---------------------
@@ -58,7 +73,7 @@ Je hebt nu minstens twee vensters open op je scherm: het venster van de webbrows
 Je eerste programma
 -------------------
 
-Het is tijd om je eerste programma te maken in Mu editor. Het woord programma is enigszins overdreven, want het bestaat slechts uit twee regels code. Typ de onderstaande code voor het programma hello_word.py in Mu editor. Uiteraard hoef je de regelnummers 1 en 2 niet te typen.
+Nu ben je gereed om je eerste programma te maken in Mu editor. Het woord programma is enigszins overdreven, want het bestaat slechts uit twee regels code. Typ de onderstaande code voor het programma :file:`hello_word.py` in Mu editor. Uiteraard hoef je de regelnummers 1 en 2 niet te typen.
 
 .. code-block:: python
     :class: no-copybutton
@@ -69,7 +84,7 @@ Het is tijd om je eerste programma te maken in Mu editor. Het woord programma is
     # Dit is mijn eerste programma
     print('Hello, World!')
 
-.. dropdown:: Hoe typ je aanhalingstekens?
+.. dropdown:: Hoe typ je aanhalingstekens? (Klik op deze balk om de uitleg te openen.)
     :color: info
     :icon: info
 

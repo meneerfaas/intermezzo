@@ -313,7 +313,7 @@ Nu staat de alien precies op de plek die we wilden:
          :linenos:
          :lineno-start: 7
          :caption: alien.py
-         :name: alien_v09
+         :name: alien_v11
 
          alien.left = 0
          alien.bottom = HEIGHT
@@ -325,6 +325,5 @@ Nu staat de alien precies op de plek die we wilden:
          :linenos:
          :lineno-start: 7
          :caption: alien.py
-         :name: alien_v10
 
          alien.bottomleft = (0, HEIGHT)

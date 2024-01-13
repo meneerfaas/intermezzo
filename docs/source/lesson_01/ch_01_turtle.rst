@@ -4,6 +4,22 @@
 Python Turtle
 =============
 
+.. dropdown:: Wat leer je in dit hoofdstuk
+    :open:
+    :color: primary
+    :icon: book
+
+    * Hoe importeer je de :python:`turtle` module in je programma.
+    * Hoe maak je een turtle aan.
+    * Hoe laat je de turtle bewegen.
+    * Hoe verander je het uiterlijk van de turtle.
+    * Hoe haal je de pen van het tekenpapier en hoe zet je hem weer neer.
+    * Hoe wijzig je de dikte en de kleur van de pen.
+    * Hoe vul je een getekende figuur op met een kleur.
+    * Hoe laat je de turtle een cirkel tekenen.
+
+    :bdg-warning:`Let op!` Dit hoofdstuk bevat vragen en opdrachten. Deze moet je 'uitklappen' om ze te kunnen lezen. Klik daartoe op de gekleurde titelbalk, net zoals je op de titelbalk van dit blok kunt klikken om het in te klappen.
+
 Start in Mu editor met een nieuw bestand door op de knop :guilabel:`New` te klikken. Typ onderstaande code in het bestand en let daarbij goed op het verschil tussen hoofdletters en kleine letters! Sla het bestand op als :file:`hello_turtle.py` in de Documenten map.
 
 .. code-block:: python
