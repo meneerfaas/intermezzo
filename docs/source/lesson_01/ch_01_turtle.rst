@@ -80,7 +80,8 @@ Op regel 4 zorgt :python:`tony.shape('turtle')` ervoor dat onze schildpad er ook
  
 De waarde die je tussen de haakjes aan de functie :python:`tony.forward()` meegeeft, is het aantal pixels dat de schildpad vooruit moet bewegen. Maar wat doet het getal :python:`90` tussen de haakjes van :python:`tony.left()`?
 
-.. dropdown:: Vraag 01
+.. dropdown:: Vraag
+    :open:
     :color: secondary
     :icon: question
 

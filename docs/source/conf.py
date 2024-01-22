@@ -16,7 +16,8 @@ release = '0.0'
 
 extensions = ['sphinx_copybutton',
               'sphinx_design',
-              'sphinxcontrib.plantuml']
+              'sphinxcontrib.plantuml',
+              'sphinx_prompt']
 
 templates_path = ['_templates']
 exclude_patterns = ['.venv']
