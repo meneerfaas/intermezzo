@@ -114,3 +114,5 @@ Zoals je ziet, geeft Python een TypeError wanneer je twee strings probeert te ve
 
 De functie :python:`type()`
 ---------------------------
+
+Bla bla bla
