@@ -112,6 +112,90 @@ Zoals je ziet, geeft Python een TypeError wanneer je twee strings probeert te ve
     >>> 5 * 'bla'
     'blablablablabla'
 
+Voordat Python een berekening uitvoert, checkt het eerst de datatypes van de waarden in die berekening om vast te stellen of de berekening überhaupt mogelijk is. 
+
 De functie :python:`type()`
 ---------------------------
+
+Als je het voorgaande hebt begrepen, kun je nu herkennen wat het datatype is van bijvoorbeeld de waarde :python:`5.8` of van de waarde :python:`'datatype'`. Mocht je er nog onzeker over zijn, dan kun je de functie :python:`type()` gebruiken, waaraan je tussen de haakjes een waarde meegeeft:
+
+.. prompt:: python >>> auto
+
+    >>> type(5.8)
+    <class 'float'>
+    >>> type('datatype')
+    <class 'str'>
+
+Je ziet dat Python :python:`5.8` als een float identificeert en :python:`'datatype'` als een string.    
+
+.. dropdown:: Opdracht 01
+    :color: secondary
+    :icon: pencil
+
+    Run in Mu editor het lege bestand :file:`blank.py` dat je in het hoofdstuk :ref:`Variabelen <blank-py>` maakte om in de CLI te kunnen werken. Gebruik in de CLI de functie :python:`type()` om achtereenvolgens de datatypes van de onderstaande waarden te verkrijgen. Druk telkens pas op :kbd:`Enter` nadat je zelf een voorspelling hebt gedaan over het resultaat.
+
+    * :python:`100`
+    * :python:`-2`
+    * :python:`True`
+    * :python:`'True'`
+    * :python:`'3.14'`
+    * :python:`3.14`
+
+.. dropdown:: Opdracht 02
+    :color: secondary
+    :icon: pencil
+
+    Je kunt aan :python:`type()` in plaats van een waarde ook een *expressie* meegeven. Een expressie evalueert tenslotte naar een waarde. Voorspel de uitkomsten van de onderstaande :python:`type()`-aanroepen en test in de CLI of je voorspelling klopt.
+
+    .. prompt:: python >>> auto 
+
+        >>> type(10 + 6)
+        ...
+        >>> type(12 / 3)
+        ...
+        >>> type(5 * 2.0)
+        ...
+        >>> type(7 * 'ha')
+        ...
+        >>> type('Tot' + ' ' + 'ziens!')
+        ...
+        >>> type(6 > 2)
+        ...
+
+    De expressie :python:`6 > 2` in de laatste regel betekent '6 is groter dan 2'. We komen later terug op dit soort expressies. 
+
+.. dropdown:: Opdracht 03
+    :color: secondary
+    :icon: pencil
+
+    | Je kunt aan :python:`type()` ook een variabele meegeven. Een variabele bevat immers een waarde.
+    | Maak in Mu editor een nieuw bestand :file:`datatypes.py` en kopieer onderstaande code erin.
+
+    .. code-block:: python
+        :linenos:
+        :caption: datatypes.py
+
+        import turtle
+
+        getal = 18
+        tekst = 'Tony is een schildpad.'
+        getal_is_klein = getal < 100
+        tony = turtle.Turtle()
+
+        print('De waarde van de variabele getal is', getal)
+        print('Het datatype van de variabele getal is', type(getal))
+
+    Run de code. Als het goed is, zie je de volgende output:
+
+    .. prompt:: raw
+
+        De waarde van de variabele getal is 18
+        Het datatype van de variabele getal is <class 'int'>
+
+    Vul de code aan zodat op dezelfde manier de waarden en datatypes van de variabelen :python:`tekst`, :python:`getal_is_klein` en :python:`tony` worden getoond.
+
+Type casting
+------------
+
+
 

@@ -203,7 +203,9 @@ Variabelen maken
     :icon: info
 
     Bij het woord *waarde* denk je wellicht aan een getal. Je kunt in een variabele inderdaad een getal opslaan, maar ook andere informatie zoals een stukje tekst of een afbeelding is mogelijk. 
-          
+
+.. _blank-py:
+
 Maak in Mu editor een nieuw bestand door op de knop :guilabel:`New` te klikken.  Laat het bestand leeg en sla het op onder de naam :file:`blank.py` (in het Engels heet een leeg bestand ook wel een *blank file*). Klik vervolgens op :guilabel:`Run`. Ook al staat er geen code in het bestand, Mu editor runt het programma zonder problemen:
 
 .. figure:: images/mu_editor_blank_py.png
