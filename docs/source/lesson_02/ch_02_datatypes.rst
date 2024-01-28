@@ -197,5 +197,58 @@ Je ziet dat Python :python:`5.8` als een float identificeert en :python:`'dataty
 Type casting
 ------------
 
+Als je programmeert, komt het regelmatig voor dat je een waarde van een bepaald datatype krijgt, terwijl je liever een ander datatype zou hebben. Dan is het handig als je het datatype kunt veranderen. Het veranderen van een datatype noemen we *type casting*. In Python kun je daar de volgende functies voor gebruiken:
 
+.. list-table::
+    :header-rows: 1
 
+    * - Functie
+      - Werking 
+    * - :python:`int(value)`
+      - Converteert value naar een integer, indien mogelijk.
+    * - :python:`float(value)`
+      - Converteert value naar een float, indien mogelijk.
+    * - :python:`str(value)`
+      - Converteert value naar een string, indien mogelijk.
+    * - :python:`bool(value)`
+      - Converteert value naar een boolean, indien mogelijk.
+
+In het voorbeeld hieronder zie je dat de variabele :python:`spam` de waarde '5' krijgt. Het datatype van :python:`spam` is dus :python:`string`.
+
+.. prompt:: python >>> auto 
+
+    >>> spam = '5'
+    >>> type(spam)
+    <class 'str'>
+
+Met de functie :python:`int()` kun je de *string*\waarde :python:`'5'` converteren naar de *integer*\waarde :python:`5`:
+
+    >>> spam = '5'
+    >>> spam
+    '5'
+    >>> int(spam)
+    5
+
+Echter de waarde van :python:`spam` is hierdoor niet gewijzigd:
+
+    >>> spam = '5'
+    >>> int(spam)
+    5
+    >>> spam
+    '5'
+
+Om :python:`spam` te veranderen in een integervariabele, gebruik je een assignment statement:
+
+    >>> spam = '5'
+    >>> spam = int(spam)   # assignment statement
+    >>> spam
+    5
+    >>> type(spam)
+    <class 'int'>
+
+Een standaard onderdeel bij het programmeren van een game is het tonen van de score aan de speler. Meestal is de score een integer waarde. Voor het tonen van informatie aan de gebruiker heb je echter liever een string omdat je die aan andere stringwaarden kunt plakken met de :python:`+` operator. Dan kun je handig gebruik maken van de :python:`str()` functie:
+
+    >>> score = 100
+    >>> score_message = 'Uw score is ' + str(score) + ' punten!'
+    >>> print(score_message)
+    Uw score is 100 punten!
