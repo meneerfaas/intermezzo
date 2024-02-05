@@ -13,7 +13,10 @@ Datatypes
     :color: primary
     :icon: book
 
-    * [NOG AANVULLEN]
+    * Wat we bedoelen met het datatype van een waarde of variabele.
+    * Wat de datatypes :python:`int`, :python:`float`, :python:`string` en :python:`boolean` inhouden.
+    * Hoe je met de functie :python:`type()` het datatype van een waarde kunt opvragen.
+    * Hoe je met de type casting functies :python:`int()`, :python:`float()`, :python:`str()` en :python:`bool()` een waarde kunt converteren naar een ander datatype.
 
 Getallen, tekst en waarheid
 ---------------------------
