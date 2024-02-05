@@ -253,20 +253,6 @@ In de volgende opdrachten ga je je eigen while loops schrijven. Je zult merken d
 
     .. image:: images/red_dots.png
 
-.. dropdown:: Opdracht 06
-    :color: secondary
-    :icon: pencil
-
-    Schrijf een programma dat de onderstaande figuur tekent. Je mag zelf de kleur en de pendikte bepalen, maar voor het daadwerkelijke tekenen mag je **maximaal 5 regels code** gebruiken.
-
-    .. image:: images/five_pointed_star.png
-        :align: center
-
-    .. dropdown:: Hint
-        :color: secondary
-        :icon: light-bulb
-
-        Vind je het lastig om de draaiingshoek te bepalen? Bedenk dan dat de turtle in totaal 2 keer volledig ronddraait (dus de totale draaiingshoek is 2 * 360° = 720°) en dat die volledige draai over 5 stappen wordt verdeeld.
 
 Het wordt nóg interessanter wanneer je de while loop variabele niet alleen als *teller* gebruikt, maar bijvoorbeeld ook aan :python:`turtle.fd()` meegeeft zoals in onderstaand voorbeeld :file:`turtle_spiral.py`.
 
@@ -287,37 +273,74 @@ Het wordt nóg interessanter wanneer je de while loop variabele niet alleen als 
 
 Deze code tekent eerst een lijnstukje van 2 pixels, vervolgens een lijnstukje van 4 pixels, dan 6 pixels, dan 8 pixels, enzovoort. En tussendoor draait de turtle telkens 30 graden. Kijk maar eens wat dat oplevert, door de code in Mu editor uit te proberen.
 
+.. dropdown:: Opdracht 06
+    :color: secondary
+    :icon: pencil
+
+    Experimenteer met de code in :file:`turtle_spiral.py` door telkens één getal een beetje te veranderen en te bekijken hoe de figuur verandert. En wat gebeurt er als je op regel 8 :python:`tony.lt(30)` vervangt door :python:`tony.lt(lengte)` of :python:`tony.lt(3 * lengte)`? Probeer maar uit!
+
+For loops
+---------
+
+Een while loop kost je tenminste 3 regels code:
+
+1. Een regel om de tellervariabele aan te maken.
+2. Een regel met het :python:`while` statement.
+3. Een regel die de tellervariabele aanpast.
+
+Voor het tekenen van een vierkant waarmee deze les begon, zag dat er zo uit:
+
+.. code-block:: python
+    :name: while_code
+
+    zijde = 0               # Hier wordt de tellervariabele aangemaakt.
+    while zijde < 4:        # Dit is het while statement.
+        ...
+        ...
+        zijde = zijde + 1   # Hier wordt de tellervariabele aangepast.
+
+Een for loop voegt deze drie acties samen in slechts één coderegel. Test de volgende code maar eens in Mu editor:
+
+.. code-block:: python
+    :linenos:
+    :caption: turtle_for.py
+    :name: turtle_for
+
+    import turtle
+
+    tony = turtle.Turtle()
+
+    for zijde in range(4):
+        tony.fd(100)
+        tony.lt(90)
+
+Waar we in het :ref:`eerste voorbeeld <turtle_while_v01>` van deze les nog 5 regels code nodig hadden om een vierkant te tekenen, hebben we nu genoeg aan 3 regels! Als je een breakpoint in regel 5 plaatst en de :guilabel:`Debug` mode gebruikt (zie :ref:`Opdracht 01 <opdracht-01>` voor uitleg over debuggen), kun je checken dat de waarde van de variabele :python:`zijde` weer van 0 tot en met 3 loopt.
+
 .. dropdown:: Opdracht 07
     :color: secondary
     :icon: pencil
 
-    Experimenteer met de code in :file:`turtle_spiral.py` door telkens één getal een te veranderen en te bekijken hoe de figuur verandert. Je zou :python:`tony` bijvoorbeeld telkens 91° kunnen laten draaien in plaats van 30°. En wat gebeurt er als je op regel 8 :python:`tony.lt(30)` vervangt door :python:`tony.lt(lengte)` of :python:`tony.lt(3 * lengte)`? Probeer maar uit!
+    Vervang de code in :file:`turtle_for.py` door een programma dat de onderstaande figuur tekent. Je mag zelf de kleur en de pendikte bepalen, maar voor het daadwerkelijke tekenen mag je **maximaal 3 regels code** gebruiken.
+
+    .. image:: images/five_pointed_star.png
+        :align: center
+
+    .. dropdown:: Hint
+        :color: secondary
+        :icon: light-bulb
+
+        Vind je het lastig om de draaiingshoek te bepalen? Bedenk dan dat de turtle in totaal 2 keer volledig ronddraait (dus de totale draaiingshoek is 2 * 360° = 720°) en dat die volledige draai over 5 stappen wordt verdeeld.
 
 .. dropdown:: Opdracht 08
     :color: secondary
     :icon: pencil
 
-    Kopieer onderstaande code in een nieuw bestand, dat je opslaat als :file:`turtle_veelhoeken.py`.
+    Vervang de code in :file:`turtle_for.py` door een programma dat de onderstaande figuur tekent. Deze 'bloem' bestaat uit 10 vierkanten met zijden van lengte 100. Om hem te tekenen heb je twee for loops nodig: één om iets 10 keer uit te voeren en daarbinnen één om een vierkant te tekenen.
 
-    .. code-block:: python
-        :linenos:
-        :caption: turtle_veelhoeken.py
+    .. image:: images/flower_of_squares.png
+        :align: center
 
-        import turtle
+    Je kunt de bloem nog mooier maken door :python:`fillcolor()`,  :python:`begin_fill()` en :python:`end_fill()` te gebruiken en een stip (:python:`dot()`) in het midden te plaatsen.
 
-        tony = turtle.Turtle()
-
-        aantal_hoeken = 5
-        draaiingshoek = ...
-
-        hoek = ...
-        while ...:
-            tony.fd(100)
-            tony.lt(draaiingshoek)
-            hoek = hoek + 1  
-
-    Op regels 6, 8 en 9 ontbreekt code. Vul zelf in wat op de puntjes moet staan, opdat het programma een regelmatige vijfhoek tekent.
-
-    Wanneer je vervolgens in regel 5 de waarde van :python:`aantal_hoeken` wijzigt naar bijvoorbeeld 7, zou een regelmatige zevenhoek moeten worden getekend.
-
-    Gelukt? Breid dan je programma uit met een :python:`input()` aanroep waarmee aan de gebruiker wordt gevraagd hoeveel hoeken de veelhoek moet hebben en sla het antwoord van de gebruiker op in :python:`aantal_hoeken`.  
+    .. image:: images/flower_of_squares_2.png
+        :align: center
