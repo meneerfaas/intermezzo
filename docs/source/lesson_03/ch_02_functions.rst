@@ -24,15 +24,17 @@ Kopieer onderstaande code naar een nieuw bestand in Mu editor en sla het op als 
 
     # Functie square() tekent een vierkant
     def square():
-        for i in range(4):
+        z = 0
+        while z < 4:
             tony.fd(50)
             tony.lt(90)
+            z = z + 1
 
-Wanneer je :file:`function_square.py` runt, zul je zien dat er niets gebeurt! Daar is een goede reden voor. In regel 6 wordt de functie :python:`square()` gedefinieerd. Let op de dubbele punt :python:`:` aan het einde van de regel. Net als bij de while loop en de for loop moeten de coderegels die binnen de functie horen ingesprongen zijn. Python weet dat het deze regels pas moet uitvoeren wanneer de functie wordt aangeroepen. En dat is waarom er niets gebeurt: de functie is nog niet aangeroepen. Dat is snel op te lossen door een coderegel toe te voegen:
+Wanneer je :file:`function_square.py` runt, zul je zien dat er niets gebeurt! Daar is een goede reden voor. In regel 6 wordt de functie :python:`square()` gedefinieerd. Let op de dubbele punt :python:`:` aan het einde van de regel. Net als bij de while loop moeten de coderegels die binnen de functie horen ingesprongen zijn. Python weet dat het deze regels pas moet uitvoeren wanneer de functie wordt aangeroepen. En dat is waarom er niets gebeurt: de functie is nog niet aangeroepen. Dat is snel op te lossen door een coderegel toe te voegen:
 
 .. code-block:: python
     :linenos:
-    :emphasize-lines: 11, 12
+    :emphasize-lines: 13, 14
     :caption: function_square.py
     :name: function_square_v02
 
@@ -42,14 +44,16 @@ Wanneer je :file:`function_square.py` runt, zul je zien dat er niets gebeurt! Da
 
     # Functie square() tekent een vierkant
     def square():
-        for i in range(4):
+        z = 0
+        while z < 4:
             tony.fd(50)
             tony.lt(90)
+            z = z + 1
 
     # Hoofdprogramma
     square()
 
-Het commentaar op regels 5 en 11 is voor Python niet interessant (Python negeert commentaar bij het uitvoeren van het programma), maar maakt de code wel beter leesbaar. Met :python:`# Hoofdprogramma` in regel 11 geven we aan dat vanaf daar het eigenlijke programma begint. In regel 12 roepen we de functie :python:`square()` aan, waardoor het vierkant daadwerkelijk wordt getekend. Probeer maar.
+Het commentaar op regels 5 en 13 is voor Python niet interessant (Python negeert commentaar bij het uitvoeren van het programma), maar maakt de code wel beter leesbaar. Met :python:`# Hoofdprogramma` in regel 13 geven we aan dat vanaf daar het eigenlijke programma begint. In regel 14 roepen we de functie :python:`square()` aan, waardoor het vierkant daadwerkelijk wordt getekend. Probeer maar.
 
 Elke keer dat we nu een vierkantje met zijden van 50 pixels willen tekenen, hoeven we slechts de functie :python:`square()` aan te roepen. Dat scheelt een hoop typwerk. Wijzig de code in :file:`function_square.py` als volgt:
 
@@ -65,19 +69,23 @@ Elke keer dat we nu een vierkantje met zijden van 50 pixels willen tekenen, hoev
 
     # Functie square() tekent een vierkant
     def square():
-        for i in range(4):
+        z = 0
+        while z < 4:
             tony.fd(50)
             tony.lt(90)
+            z = z + 1
 
     # Hoofdprogramma
     tony.pu()
     tony.goto(-375, 0)
     tony.pd()
-    for i in range(10):
+    vierkant = 0
+    while vierkant < 10:
         square()
         tony.pu()
         tony.fd(75)
         tony.pd()
+        vierkant = vierkant + 1
 
 .. dropdown:: Opdracht 01
     :color: secondary

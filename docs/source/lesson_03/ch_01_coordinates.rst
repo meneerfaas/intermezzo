@@ -217,13 +217,15 @@ Door coördinaten in loops te gebruiken, kun je leuke effecten bereiken. Probeer
 
     tony = turtle.Turtle()
 
-    for z in range(10):
-        tony.goto(20*z, 0)
-        tony.goto(20*z, 20*z)
-        tony.goto(0, 20*z)
+    zijdelengte = 20
+    while zijdelengte <= 200:
+        tony.goto(zijdelengte, 0)
+        tony.goto(zijdelengte, zijdelengte)
+        tony.goto(0, zijdelengte)
         tony.goto(0, 0)
+        zijdelengte = zijdelengte + 20
 
-De for loop zorgt ervoor dat 10 vierkantjes worden getekend. De eerste met zijden van 20 pixels, de volgende met zijden van 40 pixels, dan 60 pixels, enzovoort.
+De while loop zorgt ervoor dat 10 vierkantjes worden getekend. De eerste met zijden van 20 pixels, de volgende met zijden van 40 pixels, dan 60 pixels, enzovoort.
 
 .. figure:: images/turtle_coordinates_3.png
 
