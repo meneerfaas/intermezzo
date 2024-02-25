@@ -226,6 +226,8 @@ In het voorbeeld hieronder zie je dat de variabele :python:`spam` de waarde '5' 
 
 Met de functie :python:`int()` kun je de *string*\waarde :python:`'5'` converteren naar de *integer*\waarde :python:`5`:
 
+.. prompt:: python >>> auto 
+
     >>> spam = '5'
     >>> spam
     '5'
@@ -233,6 +235,8 @@ Met de functie :python:`int()` kun je de *string*\waarde :python:`'5'` converter
     5
 
 Echter de waarde van :python:`spam` is hierdoor niet gewijzigd:
+
+.. prompt:: python >>> auto 
 
     >>> spam = '5'
     >>> int(spam)
@@ -242,6 +246,8 @@ Echter de waarde van :python:`spam` is hierdoor niet gewijzigd:
 
 Om :python:`spam` te veranderen in een integervariabele, gebruik je een assignment statement:
 
+.. prompt:: python >>> auto 
+
     >>> spam = '5'
     >>> spam = int(spam)   # assignment statement
     >>> spam
@@ -250,6 +256,8 @@ Om :python:`spam` te veranderen in een integervariabele, gebruik je een assignme
     <class 'int'>
 
 Een standaard onderdeel bij het programmeren van een game is het tonen van de score aan de speler. Meestal is de score een integer waarde. Voor het tonen van informatie aan de gebruiker heb je echter liever een string omdat je die aan andere stringwaarden kunt plakken met de :python:`+` operator. Dan kun je handig gebruik maken van de :python:`str()` functie:
+
+.. prompt:: python >>> auto 
 
     >>> score = 100
     >>> score_message = 'Uw score is ' + str(score) + ' punten!'
