@@ -59,7 +59,7 @@ Elke keer dat we nu een vierkantje met zijden van 50 pixels willen tekenen, hoev
 
 .. code-block:: python
     :linenos:
-    :emphasize-lines: 12-19
+    :emphasize-lines: 14-23
     :caption: function_square.py
     :name: function_square_v03
 
@@ -118,7 +118,7 @@ Elke keer dat we nu een vierkantje met zijden van 50 pixels willen tekenen, hoev
     :color: secondary
     :icon: pencil
 
-    Wijzig de code in :file:`function_triangle.py` uit opdracht 01 zodat niet één driehoek wordt getekend, maar vijf driehoeken op een rij, zoals in onderstaande figuur. Hiervoor heb je slechts 3 regels code nodig in je hoofdprogramma.
+    Wijzig de code in :file:`function_triangle.py` uit opdracht 01 zodat niet één driehoek wordt getekend, maar vijf driehoeken op een rij, zoals in onderstaande figuur. Hiervoor heb je slechts 5 regels code nodig in je hoofdprogramma.
 
     .. image:: images/function_triangle.png
 
