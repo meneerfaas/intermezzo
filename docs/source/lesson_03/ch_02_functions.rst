@@ -270,4 +270,34 @@ De for loop zorgt er nu voor dat 10 vierkanten worden getekend. De eerste met zi
               teleport(-10 * i, -10 * i)
               square(40 + 20 * i)
     
-In opdracht 04 zag je dat je aan een functie meer dan één argument kunt meegeven. De functie :python:`teleport(x, y)` moet een x- én een y-coördinaat meekrijgen om haar werk te kunnen doen. In het volgende onderdeel gaan we onze functies :python:`square()` en :python:`triangle()` uitbreiden met meerdere argumenten zodat je behalve de zijdelengte bijvoorbeeld ook de gewenste kleur kunt meegeven (:python:`square(100, "green")`). Daarvoor is het handig als je iets weet van *if-statements*, dus dat behandelen we eerst. Klik door naar het volgende hoofdstuk.
+.. dropdown:: Opdracht 05
+    :color: secondary
+    :icon: pencil
+
+    :bdg-secondary:`Uitdaging!`
+
+    Voeg aan :file:`turtle_functions.py` de functie :python:`veelhoek(aantal_hoeken)` toe, die een regelmatige veelhoek tekent.
+
+    Test je functie met de volgende aanroepen:
+
+    * :python:`veelhoek(3)`
+    * :python:`veelhoek(4)`
+    * :python:`veelhoek(5)`
+
+    Met deze aanroepen zouden achtereenvolgens een driehoek, een vierkant en een vijfhoek moeten worden getekend.
+
+.. dropdown:: Opdracht 06
+    :color: secondary
+    :icon: pencil
+
+    :bdg-secondary:`Uitdaging!`
+    
+    Breid de functie :python:`veelhoek(aantal_hoeken)` uit naar :python:`veelhoek(aantal_hoeken, kleur)` zodat je bij een aanroep tussen de haakjes ook een kleur mee kunt geven waarin de veelhoek moet worden getekend.
+
+    Test je functie met bijvoorbeeld de volgende aanroepen:
+
+    * :python:`veelhoek(3, "red")`
+    * :python:`veelhoek(4, "green")`
+    * :python:`veelhoek(5, "blue")`
+
+    Met deze aanroepen zouden achtereenvolgens een rode driehoek, een groen vierkant en een blauwe vijfhoek moeten worden getekend.
