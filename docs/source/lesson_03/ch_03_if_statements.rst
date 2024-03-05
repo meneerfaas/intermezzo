@@ -4,7 +4,7 @@
 Als... dan...
 =============
 
-Je hebt inmiddels kennisgemaakt met :python:`while` en :python:`for` loops, die je in staat stellen een blok code te herhalen. In dit hoofdstuk behandelen we het :python:`if` statement, waarmee Python kan kiezen om een blok code wel of niet uit te voeren.
+Je hebt inmiddels kennisgemaakt met :python:`while` loops, die je in staat stellen een blok code te herhalen. In dit hoofdstuk behandelen we het :python:`if` statement, waarmee Python kan kiezen om een blok code wel of niet uit te voeren.
 
 Kopieer onderstaande code naar een nieuw bestand in Mu editor en sla het op als hello_if.py. 
 
@@ -118,6 +118,85 @@ Wanneer je deze code runt, is de output:
     Hallo Tina
     Aangenaam kennis te maken.
 
+.. dropdown:: Opdracht 01
+    :color: secondary
+    :icon: pencil
+
+    Je gaat een eenvoudig raadspelletje maken, waarbij de gebruiker een getal moet raden dat de computer 'in gedachten heeft'. Maak daartoe in Mu editor een nieuw bestand :file:`raad_het_getal.py` aan en kopieer onderstaande code erin.
+
+    .. code-block:: python
+        :caption: raad_het_getal.py
+        :name: if_statements_opdracht_01
+        :linenos:
+
+        import random
+
+        # Variabele getal_in_gedachten bevat een willekeurige integer tussen 0 en 5.
+        getal_in_gedachten = random.randint(1, 4)
+
+        print('Ik heb een getal onder de vijf in gedachten. Kun je het raden?')
+        getal = int(input('Typ een getal onder de vijf: '))
+
+    Op regel 1 wordt met :python:`import random` de Python random module geïmporteerd, die je in staat stelt om op regel 4 met de functie :python:`randint()` een willekeurig getal te genereren.
+    
+    Voeg onder deze code een :python:`if` statement toe waardoor
+
+    * als de gebruiker het goed heeft geraden, de tekst ``Dat klopt, goed geraden!`` wordt geprint;
+    * als de gebruiker het fout heeft, de tekst ``Helaas. Het goede getal was ..`` met op de puntjes het goede getal wordt geprint.
+
+    .. dropdown:: Hint
+        :color: secondary
+        :icon: light-bulb
+
+        Het :python:`if` statement heeft de volgende vorm:
+
+        .. code-block:: python
+
+            if ...:
+                print('Dat klopt, goed geraden!')
+            else:
+                print('Helaas. Het goede getal was ' + str(getal_in_gedachten))
+
+        Welke voorwaarde moet op de puntjes staan?   
+
+.. dropdown:: Opdracht 02
+    :color: secondary
+    :icon: pencil
+
+    Het raadspelletje van opdracht 01 wordt leuker als een speler meerdere keren kan raden. Om dat voor elkaar te krijgen, hebben we een while loop nodig. Pas je code als volgt aan:
+
+    .. code-block:: python
+        :caption: raad_het_getal.py
+        :name: if_statements_opdracht_02
+        :linenos:
+        :emphasize-lines: 5,6,10-12
+
+        import random
+
+        # Variabele getal_in_gedachten bevat een willekeurige integer tussen 0 en 5.
+        getal_in_gedachten = random.randint(1, 4)
+        # Variabele geraden is een boolean die aangeeft of het getal is geraden
+        geraden = False
+        
+        print('Ik heb een getal onder de vijf in gedachten. Kun je het raden?')
+
+        while not geraden:
+            getal = int(input('Typ een getal onder de vijf: '))
+            if ...
+
+    Op regel 10 zie je de start van de while loop :python:`while not geraden:`. Zolang de waarde van de variabele :python:`geraden` :python:`False` is, blijft deze while loop zich herhalen.
+
+    Vul vanaf regel 12 het :python:`if` statement aan waardoor 
+
+    * als de gebruiker het goed heeft geraden, de tekst ``Dat klopt, goed geraden!`` wordt geprint **en de while loop stopt**;
+    * als de gebruiker het fout heeft, de tekst ``Helaas, dat is fout.`` wordt geprint.
+
+.. dropdown:: Opdracht 03
+    :color: secondary
+    :icon: pencil
+
+    Breid het raadspelletje van opdracht 02 uit zodat wordt getoond hoeveel beurten de gebruiker nodig had om het getal te raden. Voeg daartoe een variabele :python:`aantal_beurten` aan de code toe en geef deze de waarde 1. Bij elke herhaling van de :python:`while` loop moet :python:`aantal_beurten` met 1 worden opgehoogd. Wanneer de gebruiker het getal heeft geraden, moet worden geprint hoeveel beurten daarvoor nodig waren.
+
 Elif
 ----
 
@@ -159,6 +238,42 @@ Op regel 4 checkt Python of de waarde van :python:`name` gelijk is aan :python:`
     Leuk je weer te zien.
     Hallo Tina
     Hoe gaat het met je?
+
+.. dropdown:: Opdracht 04
+    :color: secondary
+    :icon: pencil
+
+    Je gaat weer een raadspelletje maken, maar nu met een getal onder de 100. Maak daartoe in Mu editor een nieuw bestand :file:`raad_het_getal_2.py` aan en kopieer onderstaande code erin.
+
+    .. code-block:: python
+        :caption: raad_het_getal.py
+        :name: if_statements_opdracht_04
+        :linenos:
+
+        import random
+
+        # De variabele getal_in_gedachten bevat een willekeurige integer tussen 0 en 100.
+        getal_in_gedachten = random.randint(1, 99)
+        # Variabele geraden is een boolean die aangeeft of het getal is geraden
+        geraden = False
+
+        print('Ik heb een getal onder de honderd in gedachten. Kun je het raden?')
+
+        while not geraden:
+            getal = int(input('Typ een getal onder de honderd: '))
+            if ...
+
+    Vul vanaf regel 12 het :python:`if` statement aan waardoor 
+
+    * als de gebruiker het goed heeft geraden, de tekst ``Dat klopt, goed geraden!`` wordt geprint en de while loop stopt;
+    * als de gebruiker een te laag getal heeft geraden, de tekst ``Helaas, dat is te laag.`` wordt geprint.
+    * als de gebruiker een te hoog getal heeft geraden, de tekst ``Helaas, dat is te hoog.`` wordt geprint.
+
+.. dropdown:: Opdracht 05
+    :color: secondary
+    :icon: pencil
+
+    Breid je code van opdracht 04 net als bij opdracht 03 weer uit met een :python:`aantal_beurten` variabele zodat wordt getoond hoeveel beurten de gebruiker nodig had om het getal te raden. 
 
 And en or
 ---------
