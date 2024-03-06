@@ -306,3 +306,44 @@ In regel 4 staat :python:`if name == "Tony" or name == "Tina":`. Het keyword :py
         :icon: check-circle
 
         De waarde van :python:`name` kan niet tegelijkertijd zowel :python:`"Tony"` als :python:`"Tina"` zijn. Dus :python:`name == "Tony" and name == "Tina"` is altijd onwaar. Daardoor springt de code naar regel 6 en wordt elke naam begroet met :python:`"Aangenaam kennis te maken."`.
+
+.. dropdown:: Opdracht 06
+    :color: secondary
+    :icon: pencil
+
+    Je kent vast wel het spelletje *Steen, Papier, Schaar*. We gaan dit spel nu programmeren in Python. Maak een nieuw bestand :file:`rock_paper_scissors.py` aan en kopieer onderstaande code erin.
+
+    .. code-block:: python
+        :caption: rock_paper_scissors.py
+        :name: if_statements_opdracht_06
+        :linenos:
+
+        import random
+
+        print('*********************************************')
+        print('* Welkom bij het spel Rock, Paper, Scissors *')
+        print('*********************************************')
+        print('Typ r, p, of s om rock, paper of scissors te kiezen')
+        human = input('Uw keuze: ')
+
+        computer = random.choice(['r', 'p', 's'])
+
+        print('De computer koos ' + computer + ' en u koos ' + human + '.')
+
+    In regels 3 t/m 7 wordt een welkomstboodschap geprint en krijgt de gebruiker de gelegenheid om ``r``, ``p``, of ``s`` te typen. In regel 9 gebruiken we de :python:`random.choice()` functie om de computer een willekeurige keuze uit deze drie letters te laten maken.
+
+    Voeg aan de code een :python:`if` statement toe waarmee je vaststelt welke speler het spel heeft gewonnen. Gebruik de volgende structuur:
+
+    .. code-block:: python
+
+        if ... :
+            # De speler wint
+            print('U wint!')
+        elif ... :
+            # De computer wint
+            print('De computer wint...')
+        else:
+            # Gelijkspel
+            print('Gelijkspel.')
+
+    Bedenk zelf welke voorwaarden op de puntjes moeten staan. De speler wint bijvoorbeeld als zij/hij steen koos en de computer schaar, maar ook als zij/hij papier koos en de computer steen. Gebruik :python:`and` en :python:`or` om voorwaarden te combineren.  
