@@ -346,4 +346,36 @@ In regel 4 staat :python:`if name == "Tony" or name == "Tina":`. Het keyword :py
             # Gelijkspel
             print('Gelijkspel.')
 
-    Bedenk zelf welke voorwaarden op de puntjes moeten staan. De speler wint bijvoorbeeld als zij/hij steen koos en de computer schaar, maar ook als zij/hij papier koos en de computer steen. Gebruik :python:`and` en :python:`or` om voorwaarden te combineren.  
+    Bedenk zelf welke voorwaarden op de puntjes moeten staan. De speler wint bijvoorbeeld als zij/hij steen koos en de computer schaar, maar ook als zij/hij papier koos en de computer steen. Gebruik :python:`and` en :python:`or` om voorwaarden te combineren. 
+
+.. dropdown:: Opdracht 07
+    :color: secondary
+    :icon: pencil
+
+    Deze opdracht volgt op opdracht 06. In regel 11 van :file:`rock_paper_scissors.py` staat:
+    
+    .. code-block:: python
+        :linenos:
+        :lineno-start: 11
+        
+        print('De computer koos ' + computer + ' en u koos ' + human + '.')
+
+    De variabelen :python:`computer` en :python:`human` bevatten elk een letter :python:`r`, :python:`p` of :python:`s`.       De output van regel 11 zou dus bijvoorbeeld kunnen zijn:
+
+    .. code-block::
+
+        De computer koos r en u koos p.
+
+    Dit ziet er niet zo mooi uit. Beter zou zijn:
+
+    .. code-block::
+
+        De computer koos steen en u koos papier.
+
+    Vervang regel 11 door twee :python:`if` statements. Het eerste statement zorgt ervoor dat met een zin de keuze van de computer wordt getoond en het tweede doet dat voor de keuze van de speler. De output zou er dan bijvoorbeeld zo uit kunnen zien:
+
+    .. code-block::
+
+        De computer koos steen.
+        U koos papier.
+
