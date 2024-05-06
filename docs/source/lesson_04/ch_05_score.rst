@@ -142,6 +142,8 @@ Nu zou het moeten werken, toch? Probeer maar eens.
 
 De 'game over' boodschap verschijnt niet. Er gebeurt helemaal niets. De oorzaak hiervan is een beetje ingewikkeld. Hou je wel van ingewikkelde dingen, klap dan de onderstaande uitleg over globale variabelen open.
 
+.. _globale_variabelen:
+
 .. dropdown:: Meer weten over globale variabelen?
    :color: info
    :icon: info

@@ -24,6 +24,8 @@ Als je dit goed hebt gedaan, staat nu rechtsonder in de statusbalk van Mu editor
 
 Je ziet tevens dat de knoppenbalk een beetje is veranderd. Bijvoorbeeld in plaats van :guilabel:`Run` vind je nu een :guilabel:`Play` knop.
 
+.. _mappen-structuur-maken:
+
 Mappenstructuur
 ---------------
 

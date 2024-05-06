@@ -5,6 +5,8 @@
 
    <br/>
 
+.. _alien-events:
+
 Events
 ===========
 
@@ -116,6 +118,8 @@ Ook is het mogelijk te detecteren met welke muisknop is geklikt. Probeer het vol
       print("Muisklik met", button, "op positie", pos)
 
 Met de positie van de muisklik is het mogelijk om te checken of de gebruiker óp of náást onze roze alien heeft geklikt. Daarvoor hebben we *collision detection* nodig.
+
+.. _collision-detection:
 
 Collision detection
 -------------------

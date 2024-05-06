@@ -35,6 +35,8 @@ Tijd voor actie! Die statische alien mag wel eens in beweging komen. Om dat voor
 | In regel 7 positioneren we onze alien aan de linkerkant van het venster, verticaal in het midden. 
 | In de :python:`update()` functie zie je op regel 15 :python:`alien.left += 2`. Dit is een kortere schrijfwijze voor :python:`alien.left = alien.left + 2`. Het effect van deze regel is dat de linkerkant van de alien 2 pixels naar rechts opschuift, elke keer wanneer de :python:`update()` functie wordt aangeroepen.
 
+.. _no-screen-clear:
+
 Bij het runnen van de code zie je dat er iets raars gebeurt:
 
 .. image:: images/movement_01.png
