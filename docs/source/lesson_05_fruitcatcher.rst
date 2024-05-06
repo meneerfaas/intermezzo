@@ -17,3 +17,6 @@ Fruit Catcher (Fruitvanger) is een spel waarin de speler een mandje onderin het 
    :caption: Onderdelen
 
    lesson_05/ch_01_introduction
+   lesson_05/ch_02_basket
+   lesson_05/ch_03_fruit
+   lesson_05/ch_04_score

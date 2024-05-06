@@ -171,5 +171,6 @@ Dat tekenen gebeurt echter pas wanneer we de :python:`draw_lives()` functie aanr
         draw_lives()
 
 .. figure:: images/score_lives_draw.png
+    :width: 500
 
 Voilà het spel toont de score en de levens en het ziet er al behoorlijk goed uit. Maar we zijn nog niet helemaal klaar. Er wordt nog geen *game over* getoond; de speler kan gewoon blijven doorspelen. En ook begint het spel meteen nadat je in Mu editor op de :guilabel:`Run` knop hebt geklikt. Het is beter om de speler te laten bepalen wanneer het spel begint, bijvoorbeeld door drukken op de spatiebalk. Dat ga je in het volgende deel programmeren.

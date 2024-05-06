@@ -11,3 +11,4 @@ Programmeren in Python voor Intermezzo
    lesson_02_variables_and_loops
    lesson_03_coordinates_and_functions
    lesson_04_pygame
+   lesson_05_fruitcatcher
