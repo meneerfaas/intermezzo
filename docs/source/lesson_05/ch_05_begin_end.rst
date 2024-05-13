@@ -194,18 +194,21 @@ Als je nu de code runt, wordt ``Druk op de spatiebalk getoond`` maar er gebeurt 
     :color: secondary
     :icon: pencil
 
-    Voeg aan de :python:`update()` functie een :python:`if` statement toe waarin :python:`game_started` op :python:`True` wordt gezet wanneer de speler op de spatiebalk drukt én de game nog niet is gestart. Doe dit in het blokje :python:`#Keyboard events`. Denk eraan de :python:`game_started` variabele globaal te maken, anders kun je de waarde niet wijzigen in de functie.   
+    Voeg aan de :python:`update()` functie een :python:`if` statement toe waarin :python:`game_started` op :python:`True` wordt gezet wanneer de speler op de spatiebalk drukt én de game nog niet is gestart. Doe dit boven het blokje :python:`# Keyboard events`. Denk eraan de :python:`game_started` variabele globaal te maken, anders kun je de waarde niet wijzigen in de functie.   
 
     .. code-block:: python
         :caption: fruitcatcher.py
         :linenos:
         :lineno-start: 61
-        :emphasize-lines: 3, 15   
+        :emphasize-lines: 3, 5-6   
 
         # Update() functie
         def update():
             global score, lives, game_over, game_started
             
+            # Start game
+            # VOEG HIER HET IF STATEMENT TOE
+
             # Keyboard events
             if keyboard.left:
                 basket.x -= basket.speed
@@ -216,7 +219,6 @@ Als je nu de code runt, wordt ``Druk op de spatiebalk getoond`` maar er gebeurt 
             if basket.left < 0:
                 basket.left = 0
                 
-            # VOEG HIER HET IF STATEMENT TOE
 
     Voor de linker- en rechterpijltjestoets gebruikten we in regels 66 en 68 :python:`keyboard.left` en :python:`keyboard.right`. Wat zou je voor de spatiebalk moeten gebruiken?
 
@@ -233,10 +235,108 @@ Als je nu de code runt, wordt ``Druk op de spatiebalk getoond`` maar er gebeurt 
         .. code-block:: python
             :class: no-copybutton
             :linenos:
-            :lineno-start: 75
+            :lineno-start: 65
             :caption: fruitcatcher.py
 
-            if keyboard.space and not game_started:
-                game_started = True
+                # Start game
+                if keyboard.space and not game_started:
+                    game_started = True
 
-Run je code om te testen of alles werkt zoals het hoort.
+Run je code om te testen of je nu de game kunt starten met de spatiebalk.
+
+De game is bijna klaar, maar één ding werkt nog niet zoals het hoort. Run de code maar eens en druk níet op de spatiebalk. Kijk vervolgens wat er in de console gebeurt. Zonder dat je op de spatiebalk hebt gedrukt lijkt de game toch actief te zijn!
+
+.. dropdown:: Vraag 01
+    :color: secondary
+    :icon: question
+
+    Waardoor komt dit? Hoe kan het dat de score en/of het aantal levens verandert, zonder dat er op de spatiebalk is gedrukt? Probeer zelf het antwoord te vinden door goed naar je code te kijken alvorens je de oplossing opent.
+
+    .. dropdown:: Antwoord
+        :color: secondary
+        :icon: check-circle
+
+        Ook al is :python:`game_started` :python:`False`, alle code in de :python:`update()` functie wordt nog gewoon uitgevoerd. Dus de appel valt nog steeds naar beneden (ook al zie je dat niet omdat hij niet wordt getekend) en de collision detectie werkt ook nog. Je zou zelfs met de pijltjestoetsen het (onzichtbare) mandje kunnen verplaatsen.
+
+        .. code-block:: python
+            :caption: fruitcatcher.py
+            :linenos:
+            :lineno-start: 61
+
+            # Update() functie
+            def update():
+                global score, lives, game_over, game_started
+                
+                # Start game
+                if keyboard.space and not game_started:
+                    game_started = True
+                    
+                # Keyboard events
+                if keyboard.left:
+                    basket.x -= basket.speed
+                elif keyboard.right:
+                    basket.x += basket.speed
+                if basket.right > WIDTH:
+                    basket.right = WIDTH
+                if basket.left < 0:
+                    basket.left = 0
+                    
+                # Beweeg fruit
+                fruit.y += fruit.speed
+                
+                # Collision detection
+                if fruit.top > basket.top:
+                    if basket.collidepoint(fruit.center):
+                        score += 1
+                    else:
+                        lives -= 1
+                        if lives <= 0:
+                            game_over = True
+                    print(f'Score: {score}. Levens: {lives}. Game over: {game_over}.')
+                    init_fruit()
+
+We willen dat de code in de :python:`update()` functie alleen wordt uitgevoerd als het spel is gestart. Dit kunnen we eenvoudig bewerkstelligen met een :python:`if` statement en het :python:`return` keyword:
+
+.. code-block:: python
+    :caption: fruitcatcher.py
+    :linenos:
+    :lineno-start: 61
+    :emphasize-lines: 9-11
+
+    # Update() functie
+    def update():
+        global score, lives, game_over, game_started
+        
+        # Start game
+        if keyboard.space and not game_started:
+            game_started = True
+            
+        # Exit de update() functie als de game nog niet is gestart of als het game over is    
+        if not game_started or game_over:
+            return        
+
+        # Keyboard events
+        if keyboard.left:
+            basket.x -= basket.speed
+        elif keyboard.right:
+            basket.x += basket.speed
+        if basket.right > WIDTH:
+            basket.right = WIDTH
+        if basket.left < 0:
+            basket.left = 0
+            
+        # Beweeg fruit
+        fruit.y += fruit.speed
+        
+        # Collision detection
+        if fruit.top > basket.top:
+            if basket.collidepoint(fruit.center):
+                score += 1
+            else:
+                lives -= 1
+                if lives <= 0:
+                    game_over = True
+            print(f'Score: {score}. Levens: {lives}. Game over: {game_over}.')
+            init_fruit()
+
+Test de code nogmaals en stel vast dat alles nu naar behoren werkt. Je kunt dan regel 94 (waarmee score, levens en game over in de console worden geprint) verwijderen of in commentaar veranderen, want deze regel diende slechts als hulp bij het debuggen.
