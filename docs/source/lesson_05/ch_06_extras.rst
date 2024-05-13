@@ -38,7 +38,7 @@ Sleep alle afbeeldingen vanuit het zip-bestand naar de :file:`fruitcatcher\\imag
 
 .. figure:: images/extra_different_fruits_03.png
 
-We gaan voor de verschillende fruitsoorten niet verschillende :python:`Actor` variabelen aanmaken. We gebruiken de variabele :python:`fruit` die we al hadden en veranderen alleen maar de afbeelding ervan, telkens wanneer een nieuw stuk fruit valt. Daartoe maken we eerst een *lijst* variabele :python:`FRUITS` aan met de namen van alle fruit afbeeldingen:
+We gaan voor de verschillende fruitsoorten niet verschillende :python:`Actor` variabelen aanmaken. We gebruiken de variabele :python:`fruit` die we al hadden en veranderen alleen maar de afbeelding ervan, telkens wanneer een nieuw stuk fruit valt. Daartoe maken we eerst een *lijst* variabele :python:`FRUIT_IMAGES` aan met de namen van alle fruit afbeeldingen:
 
 .. code-block:: python
     :caption: fruitcatcher.py
@@ -52,7 +52,7 @@ We gaan voor de verschillende fruitsoorten niet verschillende :python:`Actor` va
     TITLE = 'Fruit Catcher'
     MARGIN = 20
 
-    FRUITS = ['apple_green', 'apple_red', 'apple_yellow', 'banana', 'berry', 'cherry', 'lemon', 'lime', 'orange', 'pear', 'plum', 'watermelon']
+    FRUIT_IMAGES = ['apple_green', 'apple_red', 'apple_yellow', 'banana', 'berry', 'cherry', 'lemon', 'lime', 'orange', 'pear', 'plum', 'watermelon']
 
     # Variabelen voor score en levens
     score = 0
@@ -68,9 +68,9 @@ Om willekeurig een fruitafbeelding te kiezen, gebruiken we de :python:`random.ch
 
     # Initialisatie fruit
     def init_fruit():
-        fruit.image = random.choice(FRUITS)
+        fruit.image = random.choice(FRUIT_IMAGES)
         fruit.x = random.randint(0 + MARGIN, WIDTH - MARGIN)
         fruit.bottom = -1
 
-Elke :python:`Actor` in Pygame Zero heeft een :python:`image` variabele. De waarde van die variabele is de naam van de afbeelding die moet worden getekend. In regel 34 vullen we de :python:`fruit.image` variabele met een willekeurige naam uit de lijst :python:`FRUITS`.        
+Elke :python:`Actor` in Pygame Zero heeft een :python:`image` variabele. De waarde van die variabele is de naam van de afbeelding die moet worden getekend. In regel 34 vullen we de :python:`fruit.image` variabele met een willekeurige naam uit de lijst :python:`FRUIT_IMAGES`.        
 
