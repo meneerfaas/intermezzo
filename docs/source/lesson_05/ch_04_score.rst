@@ -56,7 +56,7 @@ Bij het :ref:`Alien spel <collision-detection>` heb je gezien wat *collision det
     :color: secondary
     :icon: pencil
 
-    Hieronder zie je de vorm van het *geneste* :python:`if` statement waarmee we gaan checken of de appel in de mand valt, in gewone-mensentaal. Vertaal dit statement naar Python code. Om te checken of het middelpunt van de appel sprite zich binnen de mand bevindt, gebruik je :python:`basket.collidepoint(apple.center)`.
+    Hieronder zie je de vorm van het *geneste* :python:`if` statement waarmee we gaan checken of de appel in de mand valt, in gewone-mensentaal. Vertaal dit statement naar Python code. Om te checken of het middelpunt van de appel sprite zich binnen de mand bevindt, gebruik je :python:`basket.collidepoint(fruit.center)`.
 
     .. code-block::
         :class: no-copybutton

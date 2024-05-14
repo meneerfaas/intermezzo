@@ -147,7 +147,7 @@ Op regel 11 zie je wederom het keyword :python:`pass` omdat de functie nu nog le
     :color: secondary
     :icon: pencil
 
-    Vervang het :python:`pass` keyword in :python:`init_basket()` door code die ervoor zorgt dat de mand midden onderin het venster wordt gepositioneerd. De onderkant van het mandje moet precies de onderkant van het venster raken. |br|
+    Vervang het :python:`pass` keyword in de :python:`init_basket()` functie door code die ervoor zorgt dat de mand midden onderin het venster wordt gepositioneerd. De onderkant van het mandje moet precies de onderkant van het venster raken. |br|
     Let op: je mag in deze code slechts één getal gebruiken!
 
     .. dropdown:: Hint 1
