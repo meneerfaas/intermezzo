@@ -188,5 +188,112 @@ Het spel wordt uitdagender als er meerdere stukken fruit tegelijk naar beneden v
 
 Wat echter ook uitdagender wordt is het programmeerwerk, want om dit voor elkaar te krijgen gaan we een *lijstvariabele* gebruiken. Dat deden we in de uitbreiding hiervoor ook al, maar dat was nog relatief eenvoudig.
 
+Lijsten in Python
+^^^^^^^^^^^^^^^^^^
+
 In Python maak je een lijstvariabele door rechte haken te gebruiken:
 
+.. code-block:: python
+    :class: no-copybutton
+    
+    >>> mijn_lijst = ['boter', 'kaas', 'eieren']
+
+In dit voorbeeld is :python:`mijn_lijst` een lijst met stringwaarden, maar je mag allerlei datatypes door elkaar gebruiken in een lijst:
+
+.. code-block:: python
+    :class: no-copybutton
+    
+    >>> mijn_lijst = ['A', 100, True, 3.1415, 'Fabiola']
+
+Je haalt een item uit een lijst op door zijn positie in de lijst in te voeren tussen vierkante haken. Deze positie noemen we de *index* positie. Het eerste item in een lijst heeft altijd index 0.
+
+.. code-block:: python
+    :class: no-copybutton
+    
+    >>> mijn_lijst = ['A', 100, True, 3.1415, 'Fabiola']
+    >>> mijn_lijst[0]
+    'A'
+    >>> mijn_lijst[2]
+    True
+
+In dit voorbeeld heeft het item :python:`'Fabiola'` index 4, maar je kunt in een lijst ook van achter naar voor tellen met negatieve indices. Zo heeft het item :python:`'Fabiola'` óók index -1:
+
+.. code-block:: python
+    :class: no-copybutton
+
+    >>> mijn_lijst = ['A', 100, True, 3.1415, 'Fabiola']
+    >>> mijn_lijst[4]
+    'Fabiola'
+    >>> mijn_lijst[-1]
+    'Fabiola'
+
+Je kunt het aantal items in een lijst opvragen met de :python:`len()` functie:
+
+.. code-block:: python
+    :class: no-copybutton
+    
+    >>> mijn_lijst = ['A', 100, True, 3.1415, 'Fabiola']
+    >>> len(mijn_lijst)
+    5
+
+Een item in een lijst wijzigen is heel eenvoudig:
+
+.. code-block:: python
+    :class: no-copybutton
+    :emphasize-lines: 4
+    
+    >>> mijn_lijst = ['A', 100, True, 3.1415, 'Fabiola']
+    >>> mijn_lijst
+    ['A', 100, True, 3.1415, 'Fabiola']
+    >>> mijn_lijst[2] = False
+    >>> mijn_lijst
+    ['A', 100, False, 3.1415, 'Fabiola']
+
+Met de :python:`.append()` functie, kun je een item toevoegen aan een lijst:
+
+.. code-block:: python
+    :class: no-copybutton
+
+    >>> letters = ['A', 'B', 'C']
+    >>> letters.append('D')
+    >>> letters
+    ['A', 'B', 'C', 'D']
+
+En met de :python:`.remove()` functie, verwijder je een item uit een lijst:
+
+.. code-block:: python
+    :class: no-copybutton
+
+    >>> letters = ['A', 'B', 'C']
+    >>> letters.remove('B')
+    >>> letters
+    ['A', 'C']
+
+Met een :python:`for` loop kun je alle items in een lijst langslopen:
+
+.. grid:: 2
+    :padding: 0
+
+    .. grid-item::
+        :columns: 6
+
+        .. code-block:: python
+            :class: no-copybutton
+            :caption: Code
+            :linenos:
+
+            letters = ['A', 'B', 'C']
+            for letter in letters:
+                print(letter)
+
+    .. grid-item:: 
+        :columns: 6
+
+        .. code-block:: text
+            :caption: Output
+
+            'A'
+            'B'
+            'C'
+
+Lijst van 
