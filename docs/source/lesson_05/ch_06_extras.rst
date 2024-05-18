@@ -365,6 +365,7 @@ Vervolgens vervangen we de :python:`init_fruit()` functie door een :python:`add_
 
             # Initialisatie fruit
             def init_fruit():
+                fruit.image = random.choice(FRUIT_IMAGES)
                 fruit.x = random.randint(0 + MARGIN, WIDTH - MARGIN)
                 fruit.bottom = -1
 
