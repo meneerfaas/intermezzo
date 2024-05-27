@@ -50,7 +50,7 @@ Het downloaden van Paint.NET kan een beetje lastig zijn, omdat de website helaas
 
    .. tab-item:: Stap 1
 
-      Ga naar `Paint.NET <https://www.getpaint.net/>`_ en klik aan de rechterkant op de link zoals aangegeven in onderstaande afbeelding.
+      Ga naar `www.getpaint.net <https://www.getpaint.net/>`_ en klik aan de rechterkant op de link zoals aangegeven in onderstaande afbeelding.
 
       .. figure:: images/download_paint_net_01.png
 
