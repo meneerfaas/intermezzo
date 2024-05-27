@@ -12,3 +12,4 @@ Programmeren in Python voor Intermezzo
    lesson_03_coordinates_and_functions
    lesson_04_pygame
    lesson_05_fruitcatcher
+   xtra_graphics/ch_01_paint_net
