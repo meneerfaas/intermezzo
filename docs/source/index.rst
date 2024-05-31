@@ -13,3 +13,4 @@ Programmeren in Python voor Intermezzo
    lesson_04_pygame
    lesson_05_fruitcatcher
    xtra_graphics/ch_01_paint_net
+   xtra_walking_character/ch_01_walking_character

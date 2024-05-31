@@ -223,7 +223,7 @@ Zodra de speler op een pijltjestoets drukt, moet het poppetje gaan lopen en even
 Voor elk van de vier pijltjestoetsen is de code min of meer hetzelfde. Als bijvoorbeeld de linker pijltjestoets wordt ingedrukt, gebeurt het volgende:
 
 * In regel 38 wordt gecheckt of de linkerkant van het poppetje zich nog binnen het venster bevindt met :python:`player.left > 0`. Als dat het geval is, kan het poppetje naar links bewegen en anders niet.
-* In regel 39 wordt gecheckt of de richting van het poppetje misschien al 'naar links' was. Immers, als het poppetje al naar links ging voordat deze pijltjestoets werd ingedrukt, is het niet nodig :python:`player.images` en :python:`player.direction` te updaten. Alleen als het poppetje níet al naar links ging, is het nodig om :python:`player.images` van een nieuwe afbeeldingenlijst te voorzien en de waarde van :python:`player.direction` aan te passen.
+* In regel 39 wordt gecheckt of de richting van het poppetje misschien al 'naar links' was. Immers, als het poppetje al naar links ging voordat deze pijltjestoets werd ingedrukt, is het niet nodig :python:`player.images` en :python:`player.direction` te updaten. Alleen als het poppetje níet al naar links ging (:python:`player.direction != LEFT`), is het nodig om :python:`player.images` van een nieuwe afbeeldingenlijst te voorzien en de waarde van :python:`player.direction` aan te passen.
 * In regel 42 roepen we :python:`player.animate()` aan. Daardoor beweegt het poppetje alleen als de pijltjestoets wordt ingedrukt. Wanneer de speler geen toets indrukt, staat de animatie stil.
 * In regel 43 bewegen we de :python:`player` Actor naar links met de snelheid :python:`SPEED`.
 
