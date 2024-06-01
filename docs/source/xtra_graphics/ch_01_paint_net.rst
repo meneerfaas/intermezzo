@@ -183,3 +183,4 @@ In de onderstaande afbeelding zie je dat voor :guilabel:`Fixed Ratio` is gekozen
    .. figure:: images/selection_rectangle_03.png
       :class: image-border
 
+:bdg-info:`Deze tekst wordt nog uitgebreid.`

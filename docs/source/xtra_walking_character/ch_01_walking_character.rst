@@ -112,6 +112,7 @@ De animate() functie
 Om de sprite te animeren, gebruiken we de :python:`animate()` functie uit de :python:`pgzhelper` module. Daarvoor is het nodig dat we de afbeeldingen voor de animatie in een lijst zetten en meegeven aan de :python:`.images` variabele van de :python:`Actor`. De onderstaande code toont hoe dit werkt.
 
 .. code-block:: python
+   :caption: walking.py
    :linenos:
 
    from pgzhelper import *
@@ -152,6 +153,7 @@ Vier richtingen
 Om het poppetje in vier richtingen te laten lopen, geven we elke looprichting een nummer. Links is 0, rechts is 1, naar voor is 2 en naar achter is 3. In de code definiëren we hiervoor de constanten :python:`LEFT`, :python:`RIGHT`, :python:`FRONT` en :python:`BACK`. Tevens gebruiken we in plaats van één lijst :python:`walk_images` vier lijsten: één voor elke looprichting. In de code hieronder zijn de wijzigingen gemarkeerd.
 
 .. code-block:: python
+   :caption: walking.py
    :linenos:
    :emphasize-lines: 8-11, 14, 17-20, 26, 27
 
@@ -189,6 +191,7 @@ Je ziet dat in regel 26 de richting van het poppetje wordt ingesteld op 'naar vo
 Zodra de speler op een pijltjestoets drukt, moet het poppetje gaan lopen en eventueel van richting veranderen. Dat programmeren we in de :python:`update()` functie:
 
 .. code-block:: python
+   :caption: walking.py
    :linenos:
    :lineno-start: 35
 
