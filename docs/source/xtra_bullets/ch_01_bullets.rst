@@ -96,7 +96,7 @@ Als je het spel Fruitcatcher hebt gemaakt, is het programmeren van het blikje ni
 .. code-block:: python
    :caption: tomato_shooter.py
    :linenos:
-   :emphasize-lines: 7, 17-20, 25, 31-34
+   :emphasize-lines: 7, 17-20, 25, 31-35
 
    # Vensterinstellingen
    WIDTH = 600
@@ -228,12 +228,12 @@ Run de code. Wanneer je op de spatiebalk drukt, verschijnt een tomaat. Deze bewe
                tomatoes.remove(tomato)
 
 Dit is best een ingewikkeld stukje code. Omdat alle tomaten in de :python:`tomatoes` list moeten bewegen en worden gecheckt op collisions, gebruiken we een :python:`for` loop. |br|
-In regel 54 bewegen we de tomaat naar boven met :python:`tomato.y -= TOMATO_SPEED`. |br|
-In regels 55 t/m 57 checken we of de tomaat aan de bovenkant uit het venster is verdwenen en als dat het geval is, verwijderen we hem uit de lijst met :python:`tomatoes.remove(tomato)`. Vervolgens verlaten we met :python:`return` direct de functie. |br|
-In regel 58 roepen we de functie :python:`collidelist()` aan. Dat is een Pygame functie die checkt of er een collision is tussen een sprite en een lijst van andere sprites. Als dat het geval is, dan retourneert de functie de index (het nummer) van de sprite uit de lijst. Als er geen collision is, retourneert de functie :python:`-1`. Je kunt `hier <https://www.pygame.org/docs/ref/rect.html#pygame.Rect.collidelist>`_ de officiële beschrijving van deze functie vinden. Het getal dat :python:`collidelist()` teruggeeft, slaan we op in de variabele :python:`hit_clown`. |br|
-In regels 59-61 checken we of er een clown is geraakt (als er geen collision is gedetecteerd, heeft :python:`hit_clown` de waarde :python:`-1` gekregen). Als dat het geval is, verwijderen we de clown uit de :python:`clowns`  lijst en de tomaat uit de :python:`tomatoes` lijst.
+In regel 55 bewegen we de tomaat naar boven met :python:`tomato.y -= TOMATO_SPEED`. |br|
+In regels 56 t/m 58 checken we of de tomaat aan de bovenkant uit het venster is verdwenen en als dat het geval is, verwijderen we hem uit de lijst met :python:`tomatoes.remove(tomato)`. Vervolgens verlaten we met :python:`return` direct de functie. |br|
+In regel 59 roepen we de functie :python:`collidelist()` aan. Dat is een Pygame functie die checkt of er een collision is tussen een sprite en een lijst van andere sprites. Als dat het geval is, dan retourneert de functie de index (het nummer) van de sprite uit de lijst. Als er geen collision is, retourneert de functie :python:`-1`. Je kunt `hier <https://www.pygame.org/docs/ref/rect.html#pygame.Rect.collidelist>`_ de officiële beschrijving van deze functie vinden. Het getal dat :python:`collidelist()` teruggeeft, slaan we op in de variabele :python:`hit_clown`. |br|
+In regels 61-62 checken we of er een clown is geraakt (als er geen collision is gedetecteerd, heeft :python:`hit_clown` de waarde :python:`-1` gekregen). Als dat het geval is, verwijderen we de clown uit de :python:`clowns`  lijst en de tomaat uit de :python:`tomatoes` lijst.
 
-Is je opgevallen dat we in regels 60 en 61 op twee verschillende manieren hetzelfde doen? Beide regels verwijderen een element uit een lijst. Met de :python:`del` instructie kun je een element verwijderen waarvan je de index weet. Met de :python:`remove()` functie verwijder je een element waarvan je de index niet weet. Hieronder een voorbeeld:
+Is je opgevallen dat we in regels 61 en 62 op twee verschillende manieren hetzelfde doen? Beide regels verwijderen een element uit een lijst. Met de :python:`del` instructie kun je een element verwijderen waarvan je de index weet. Met de :python:`remove()` functie verwijder je een element waarvan je de index niet weet. Hieronder een voorbeeld:
 
 .. code-block:: python
    :emphasize-lines: 2, 5, 8
