@@ -2,6 +2,9 @@
 
    <br/>
 
+.. |space| unicode:: U+0020 .. space
+.. |nbspc| unicode:: U+00A0 .. non-breaking space
+
 Bestanden opslaan in de cloud
 ======================================
 
@@ -9,7 +12,9 @@ Bestanden opslaan in de cloud
    :align: right
    :width: 50%
 
-Elke computer bestaat uit een aantal vaste onderdelen zoals een moederbord, een processor, werkgeheugen en een harde schijf. Die laatste is nodig om bestanden te kunnen bewaren. Vroeger was een `harde schijf <https://nl.wikipedia.org/wiki/harde_schijf>`_ nog echt een onderdeel met ronddraaiende schijven waarop de informatie met magneetkoppen werd geschreven, maar tegenwoordig is dat niet meer zo. De harde schijf van nu is een geheugenchip zonder bewegende onderdelen.
+Elke computer bestaat uit een aantal vaste onderdelen zoals een moederbord, een processor, werkgeheugen en een harde schijf. Die laatste is nodig om bestanden te kunnen bewaren.
+
+Vroeger was een `harde schijf <https://nl.wikipedia.org/wiki/harde_schijf>`_ nog echt een onderdeel met ronddraaiende schijven waarop de informatie met magneetkoppen werd geschreven, maar tegenwoordig is dat niet meer zo. De harde schijf van nu is een geheugenchip zonder bewegende onderdelen.
 
 .. grid:: 2
 
