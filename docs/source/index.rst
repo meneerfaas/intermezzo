@@ -6,6 +6,11 @@ Programmeren in Python voor Intermezzo
    :maxdepth: 1
    :caption: Inhoudsopgave
 
+   ch00_introduction/ch00_01_preparations
+   ch00_introduction/ch00_02_editor_cli
+   ch01_arithmetic/ch01_01_arithmetic
+   ch02_datatypes/ch02_01_datatypes
+..
    lesson_00_preparations
    lesson_01_algorithms
    lesson_02_variables_and_loops

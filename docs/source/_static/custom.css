@@ -27,3 +27,27 @@ div.admonition.admonition-solution>.admonition-title:after {
 .image-border{
     border: 1px solid #999999;
 }
+
+.bgcolor-khaki{
+    background-color: khaki;
+}
+
+.bgcolor-aquamarine{
+    background-color: aquamarine;
+}
+
+.bgcolor-bisque {
+    background-color: bisque;
+}
+
+.bgcolor-azure {
+    background-color: azure
+}
+
+.bgcolor-peachpuff {
+    background-color: peachpuff
+}
+
+.bgcolor-lavenderblush {
+    background-color: lavenderblush
+}

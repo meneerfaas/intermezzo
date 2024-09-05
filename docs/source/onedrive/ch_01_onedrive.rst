@@ -158,14 +158,14 @@ Is je opgevallen dat we tot nu toe nog geen bestand hebben gezien, maar wel veel
 
 Bestanden in mappen plaatsen
 -----------------------------
-Nu de mappenstructuur is gemaakt, kunnen we er bestanden in opslaan. Maar dan hebben we wel eerst bestanden nodig. In de volgende oefening ga je eerst een aantal bestanden downloaden en vervolgens in de juiste mappen plaatsen.
+Nu de mappenstructuur is gemaakt, kunnen we er bestanden in opslaan. Maar dan hebben we wel eerst bestanden nodig. In de volgende oefeningen ga je een aantal bestanden downloaden en vervolgens in de juiste mappen plaatsen.
 
-.. dropdown:: Opdracht 02 - Bestanden plaatsen
+.. dropdown:: Opdracht 02 - Bestanden downloaden
    :open:
    :color: secondary
    :icon: pencil
 
-   Voor deze oefening heb je de onderstaande bestanden nodig. Klik één maal op elke link om het betreffende bestand te downloaden.
+   Klik één maal op elk van de onderstaande links om het betreffende bestand te downloaden.
 
    .. grid:: 2
 
@@ -186,6 +186,28 @@ Nu de mappenstructuur is gemaakt, kunnen we er bestanden in opslaan. Maar dan he
          :download:`Bestand 08 <files/sprookjesfiguren.zip>` |br|
          :download:`Bestand 09 <files/The_Parthenon_in_Athens.bmp>` |br|
          :download:`Bestand 10 <files/Wolf.jpg>`
+
+   Het downloaden van de bestanden doet je web browser op de achtergrond; je merkt vrijwel niet dat er iets gebeurt. Wellicht toont je browser een melding nadat een bestand is gedownload:
+
+   .. figure:: images/files_01.png
+      :width: 640
+
+   Nadat je alle bestanden hebt gedownload, vind je ze terug in je :file:`Downloads` map. Deze kun je via de Verkenner opzoeken, of rechtstreeks vanuit je browser openen door op het mapknopje te klikken naast een download:
+
+   .. figure:: images/files_02.png
+      :width: 640
+
+   Als het goed is, toont de Verkenner dat je 10 bestanden hebt gedownload:
+
+   .. figure:: images/files_03.png
+      :width: 640
+      :class: image-border
+
+.. dropdown:: Opdracht 03 - Bestanden kopiëren of verplaatsen
+   :open:
+   :color: secondary
+   :icon: pencil
+
 ...
 
 .. dropdown:: Handige sneltoetsen
