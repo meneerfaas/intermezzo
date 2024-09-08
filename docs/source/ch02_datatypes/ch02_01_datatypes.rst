@@ -38,6 +38,7 @@ Getallen en tekst
 Probeer het volgende eens uit in de CLI:
 
 .. code-block:: python
+  :class: no-copybutton
 
   >>> 2 + 3
   ...
@@ -72,6 +73,7 @@ Integer, float en string
 Met getallen kun je andere dingen doen dan met tekst. Getallen en tekst zijn twee verschillende soorten data. Zelfs getallen onderling kunnen van een verschillend type zijn. Met de functie :python:`type()` kun je in Python het *datatype* van een waarde opvragen. Typ de volgende regels maar eens in de CLI en bekijk het resultaat.
 
 .. code-block:: python
+  :class: no-copybutton
 
   >>> type(42)
   ...
@@ -87,7 +89,7 @@ Met getallen kun je andere dingen doen dan met tekst. Getallen en tekst zijn twe
     
     .. image:: images/type_function.png
 
-Python kan werken met een grote verscheidenheid aan datatypes, maar vooralsnog beschouwen we slechts de volgende drie:
+Python kan werken met een grote verscheidenheid aan datatypes, maar vooralsnog beschouwen we de volgende drie:
 
 .. card::
 

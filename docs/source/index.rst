@@ -11,6 +11,7 @@ Programmeren in Python voor Intermezzo
    ch00_introduction/ch00_02_editor_cli
    ch01_arithmetic/ch01_01_arithmetic
    ch02_datatypes/ch02_01_datatypes
+   ch03_variables/ch03_01_variables
 ..
    lesson_00_preparations
    lesson_01_algorithms
