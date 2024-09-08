@@ -33,6 +33,16 @@ In de zakgeldberekening zijn de waarden €1,00 en €0,50 constanten; ze verand
 
 Nu hoeven opa en oma slechts voor elk kleinkind de waarde van :python:`leeftijd` in te vullen en het computerprogramma voert de berekening uit.
 
+.. dropdown:: Wat leer je in dit hoofdstuk
+    :open:
+    :color: primary
+    :icon: book
+
+    * Wat bedoelen we met een *variabele*.
+    * Hoe maak je in Python een variabele.
+    * Hoe geef je in Python een variabele een waarde.
+    * Wat is een *assignment statement*.
+    * Waar moet je op letten bij het bedenken van een naam voor een variabele.
 
 Waarden opslaan
 ---------------
