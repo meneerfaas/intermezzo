@@ -24,7 +24,7 @@ In het vorige deel maakte je het eenvoudige programma Hello, World! Dat programm
 
 .. figure:: images/mu_hello_world.png
 
-Onder de output ``Hello, World!`` heb je wellicht de drie ``>>>`` symbolen opgemerkt. Dit is de zogenoemde *prompt*, die aangeeft dat je directe commando's aan Python kunt geven. Je hebt de CLI gevonden!
+Onder de output ``Hello, World!`` heb je wellicht de drie ``>>>`` symbolen opgemerkt. Dit is de zogenoemde *prompt*, die aangeeft dat je directe commando's aan Python kunt geven. Dat is de CLI.
 
 .. figure:: images/mu_editor_cli.png
 
@@ -79,7 +79,7 @@ Om de uitkomst van de berekening te tonen, moet je :python:`print(2 + 3)` gebrui
 
 .. figure:: images/mu_editor_cli_print_2.png
 
-Zoals je waarschijnlijk al hebt gemerkt is :python:`print()` een commando dat iets op het scherm afdrukt, zoals ``Hello, World!`` of ``5``. In de CLI hoef je :python:`print()` niet te gebruiken, omdat de CLI dat zelf al doet. Maar in de editor is het wél nodig.
+Waarschijnlijk heb je al hebt gemerkt dat :python:`print()` een commando is om iets op het scherm af te drukken, zoals ``Hello, World!`` of ``5``. In de CLI hoef je :python:`print()` echter niet te gebruiken, omdat de CLI dat zelf al doet. Maar in de editor is het wél nodig.
 
 .. dropdown:: Niet vergeten
     :open:

@@ -4,6 +4,7 @@ Programmeren in Python voor Intermezzo
 
 .. toctree::
    :maxdepth: 1
+   :numbered: 1
    :caption: Inhoudsopgave
 
    ch00_introduction/ch00_01_preparations
