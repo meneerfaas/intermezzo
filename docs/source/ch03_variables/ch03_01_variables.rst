@@ -192,3 +192,84 @@ Dus gebruik liever :python:`aantal_appels` dan :python:`aantalAppels` als variab
     In boeken over Python en zelfs in de officiële documentatie kom je regelmatig de variabelenamen :python:`spam`, :python:`eggs` en :python:`bacon` tegen. Die namen zijn afkomstig uit een sketch van de beroemde Engelse komediegroep `Monty Python <https://nl.wikipedia.org/wiki/Monty_Python>`_ waaraan de programmeertaal haar naam dankt. Monty Python's Flying Circus was een favoriet televisieprogramma van Guido van Rossum, de Nederlandse bedenker van Python (`bron <https://docs.python.org/3/faq/general.html#why-is-it-called-python>`_).
 
     Voor code waarin de variabelen geen speciale betekenis hebben, kun je dit soort namen prima gebruiken, maar voor een variabele die wél een betekenis heeft, is een beschrijvende naam beter.
+
+Opdrachten
+-----------
+
+.. dropdown:: Opdracht 01
+    :open:
+    :color: secondary
+    :icon: pencil
+
+    Maak in Mu editor een nieuw codebestand aan met de :guilabel:`New` knop. Sla het bestand met de :guilabel:`Save` knop op in je huiswerkmap als :file:`rekenen_met_variabelen.py`. |br| Kopieer onderstaande code naar het bestand.
+
+    .. code-block:: python
+        :caption: rekenen_met_variabelen.py 
+        :linenos:
+
+        # Variabelen - opdracht 01
+        
+        
+        som = getal1 + getal2
+        print(som)
+
+    Wanneer je deze code runt, krijg je een foutmelding:
+
+    .. figure:: images/name_error.png
+
+    Deze code werkt nog niet doordat de variabelen :python:`getal1` en :python:`getal2` die in regel ``4`` worden gebruikt nog niet zijn gemaakt; ze bestaan nog niet. Python geeft dat aan met ``NameError: name 'getal1' is not defined``. Los dit als volgt op:
+
+    * Schrijf op regel ``2`` een assignment statement waarmee je de variabele :python:`getal1` maakt en de waarde :python:`15` geeft.
+    * Schrijf op regel ``3`` een assignment statement waarmee je de variabele :python:`getal2` maakt en de waarde :python:`10` geeft.
+
+    Run de code. Als je het goed hebt gedaan, wordt de uitkomst ``25`` getoond:
+
+    .. figure:: images/rekenen_met_variabelen.png
+
+.. dropdown:: Opdracht 02
+    :open:
+    :color: secondary
+    :icon: pencil
+
+    Maak deze opdracht pas nadat je opdracht 01 hebt volbracht. Breid je code :file:`rekenen_met_variabelen.py` uit met de variabelen :python:`verschil`, :python:`product` en :python:`quotient` waarin je respectievelijk het verschil (aftrekking), het product (vermenigvuldiging) en het quotiënt (deling) van :python:`getal1` en :python:`getal2` opslaat. Toon de waarden van deze nieuwe variabelen als volgt met :python:`print()` aanroepen:
+    
+
+    .. code-block:: python
+        :caption: rekenen_met_variabelen.py 
+        :linenos:
+
+        # Variabelen - opdracht 01
+        
+        
+        som = getal1 + getal2
+
+
+
+        print(som)
+        print(verschil)
+        print(product)
+        print(quotient)
+
+    Op de regels ``5``, ``6`` en ``7`` schrijf je dus assignment statements voor de variabelen :python:`verschil`, :python:`product` en :python:`quotient`.
+
+.. dropdown:: Opdracht 03
+    :open:
+    :color: secondary
+    :icon: pencil
+
+    De oppervlakte van een rechthoek kun je berekenen met de formule
+
+    .. centered:: :math:`oppervlakte = lengte \times breedte`
+
+    .. image:: images/rectangle_transparent.png
+        :align: center
+
+    Maak in Mu editor een nieuw codebestand aan en sla het op onder de naam :file:`oppervlakte.py`. Schrijf hierin de volgende code:
+
+    * Twee assignment statements om de variabelen :python:`lengte` en :python:`breedte` te maken. Je mag zelf waarden kiezen voor deze variabelen.
+    * Een assignment statement om de variabele :python:`oppervlakte` te maken. Gebruik bovenstaande formule om deze variabele de juiste waarde te geven.
+    * Een :python:`print()` aanroep om de waarde van :python:`oppervlakte` te tonen.
+
+    Run je code om te testen of hij naar behoren werkt.
+
+
