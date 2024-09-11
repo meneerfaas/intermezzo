@@ -112,6 +112,45 @@ Python kan werken met een grote verscheidenheid aan datatypes, maar vooralsnog b
 
 Je ziet dat Python twee soorten getallen onderscheidt: gehele getallen en kommagetallen. De eerste heten in Python *integers* en de laatste *floats*. En je hebt vast al opgemerkt dat je kommagetallen in Python niet met een komma schrijft, maar met een punt: :python:`42.0`.
 
+Resultaten van Berekeningen
+----------------------------
+In het hoofdstuk :doc:`../ch01_arithmetic/ch01_01_arithmetic` zag je dat de berekening :python:`345 / 23` het resultaat :python:`15.0` opleverde.
+
+.. code-block:: python
+    :class: no-copybutton
+    
+    >>> 345 / 23
+    15.0
+
+Blijkbaar levert een deling van twee integers in Python altijd een float op, zelfs als de uitkomst eigenlijk een mooi rond getal is. Je kunt de geheeltallige deling :python:`//` gebruiken om een (naar beneden afgeronde) integer te krijgen:
+
+.. code-block:: python
+    :class: no-copybutton
+    
+    >>> 345 / 23
+    15.0
+    >>> 345 // 23
+    15
+
+Hoe zit het met de datatypes bij andere berekeningen zoals optellen, aftrekken en vermenigvuldigen? Wanneer je twee integers optelt, is het resultaat ook een integer. Maar wanneer je een integer en een float optelt, is het resultaat een float.
+
+.. card::
+
+    .. list-table::
+        :header-rows: 1
+        :align: center
+
+        * - Berekening
+          - Resultaat
+        * - :python:`int + int` 
+          - :python:`int` 
+        * - :python:`int + float` 
+          - :python:`float` 
+        * - :python:`float + float` 
+          - :python:`float` 
+
+Probeer zelf eens te bedenken waarom dat zo is, en hoe het werkt bij aftrekken en vermenigvuldigen.
+
 Type casting
 -------------
 
