@@ -43,6 +43,10 @@ Nu hoeven opa en oma slechts voor elk kleinkind de waarde van :python:`leeftijd`
     * Hoe geef je in Python een variabele een waarde.
     * Wat is een *assignment statement*.
     * Waar moet je op letten bij het bedenken van een naam voor een variabele.
+    * Wat is het verschil tussen een *constante* en een variabele.
+    * Hoe kun je met de assignment operatoren +=, -=, \*= en /= snel de waarde van een variabele veranderen.
+
+Enkele teksten en voorbeelden in dit hoofdstuk zijn afkomstig uit of geïnspireerd op het boek *De programmeursleerling*, geschreven door Pieter Spronck. Dit is een gratis boek dat je `hier kunt downloaden <https://www.spronck.net/pythonbook/dutchindex.xhtml>`_
 
 Waarden opslaan
 ---------------
@@ -175,7 +179,7 @@ Hieronder zie je enkele voorbeelden van geldige en ongeldige variabelenamen.
 
 
 
-Variabelenamen zijn hoofdlettergevoelig (*case-sensitive*), wat betekent dat :python:`spam`, :python:`SPAM`, :python:`Spam` en :python:`sPaM` vier verschillende variabelen zijn. Hoewel :python:`Spam` een geldige variabelenaam is, is het gebruikelijk in Python om variabelenamen te beginnen met een kleine letter. De `stijlgids voor Python code <https://peps.python.org/pep-0008/#function-and-variable-names>`_ schrijft voor:
+Variabelenamen zijn hoofdlettergevoelig (*case-sensitive*), wat betekent dat :python:`spam`, :python:`SPAM`, :python:`Spam` en :python:`sPaM` vier verschillende variabelen zijn. Hoewel :python:`Spam` een geldige variabelenaam is, is het gebruikelijk in Python voor variabelenamen uitsluitend kleine letters te gebruiken. De `stijlgids voor Python code <https://peps.python.org/pep-0008/#function-and-variable-names>`_ schrijft voor:
 
 .. card:: PEP 8 - Style Guide for Python Code
     :class-card: bgcolor-lightgray
@@ -183,6 +187,55 @@ Variabelenamen zijn hoofdlettergevoelig (*case-sensitive*), wat betekent dat :py
     Variable names should be lowercase, with words separated by underscores as necessary to improve readability.
 
 Dus gebruik liever :python:`aantal_appels` dan :python:`aantalAppels` als variabelenaam.
+
+Richtlijnen
+^^^^^^^^^^^^^^
+Uiteraard dien je je aan de regels voor variabelenamen te houden, anders werkt je programma niet. Maar daarnaast is het goed om de volgende richtlijnen in acht te nemen wanneer je een naam bedenkt voor een variabele:
+
+* Gebruik nooit een naam die ook de naam is van een functie. Je hebt al kennisgemaakt met de functie :python:`print()`. Wanneer je een variabele de naam :python:`print` geeft, is dat vragen om problemen.
+* Probeer een variabelenaam te kiezen die aangeeft wat je in de variabele gaat opslaan. Bijvoorbeeld een variabele die het aantal levens van de speler van een game bijhoudt, zou de naam :python:`aantal_levens` kunnen hebben, en beter niet :python:`de_zon_schijnt`. |br| Een uitzondering hierop zijn de namen voor *wegwerp variabelen*: variabelen die slechts even gebruikt worden voor een klein stukje code en van zichzelf eigenlijk geen betekenis hebben. Daarvoor gebruiken we vaak namen van 1 letter zoals :python:`i` of :python:`j`.
+
+Door je te houden aan deze richtlijnen wordt je code beter leesbaar. Kijk maar eens naar de volgende code:
+
+.. code-block:: python
+
+    a = 3.14159265
+    b = 4
+    c = 9
+    d = a * b**2 * c / 3
+    print(d)
+
+Snap je wat deze code doet? Waarschijnlijk zie je wel dat in de variabele :python:`a` een benadering van het getal :math:`\pi` (pi) is opgeslagen, maar wat stelt :python:`d` voor?
+
+De code berekent de inhoud (het volume) van een kegel. De wiskundige formule die daarbij hoort is:
+
+.. grid:: 2
+
+    .. grid-item::
+        :columns: 8
+        :child-align: center
+
+        .. math::
+            Inhoud = \frac{\pi \times straal^{2} \times hoogte}{3}
+
+    .. grid-item::
+        :columns: 4
+        :child-align: center
+
+        .. figure:: images/cone.png
+            :scale: 40%
+
+Bekijk nu eens de volgende code:
+
+.. code-block:: python
+    
+    PI = 3.14159265
+    straal = 4
+    hoogte = 9
+    inhoud_van_kegel = pi * straal**2 * hoogte / 3
+    print(inhoud_van_kegel)
+
+Dit is een stuk leesbaarder, nietwaar? Probeer in je code dus altijd betekenisvolle namen te gebruiken.
 
 .. dropdown:: spam, eggs en bacon
     :open:
@@ -192,6 +245,51 @@ Dus gebruik liever :python:`aantal_appels` dan :python:`aantalAppels` als variab
     In boeken over Python en zelfs in de officiële documentatie kom je regelmatig de variabelenamen :python:`spam`, :python:`eggs` en :python:`bacon` tegen. Die namen zijn afkomstig uit een sketch van de beroemde Engelse komediegroep `Monty Python <https://nl.wikipedia.org/wiki/Monty_Python>`_ waaraan de programmeertaal haar naam dankt. Monty Python's Flying Circus was een favoriet televisieprogramma van Guido van Rossum, de Nederlandse bedenker van Python (`bron <https://docs.python.org/3/faq/general.html#why-is-it-called-python>`_).
 
     Voor code waarin de variabelen geen speciale betekenis hebben, kun je dit soort namen prima gebruiken, maar voor een variabele die wél een betekenis heeft, is een beschrijvende naam beter.
+
+Constanten
+^^^^^^^^^^^^
+Meestal veranderen de waarden van variabelen gedurende de uitvoering van je programma. Bijvoorbeeld een variabele :python:`aantal_levens` kan bij aanvang van een game de waarde :python:`5` krijgen en tijdens het spelen teruglopen naar :python:`0` (game over). 
+Een *constante* is een variabele die slechts één keer een waarde krijgt en daarna niet meer verandert. Het is gebruikelijk om de namen van constanten met hoofdletters te schrijven.
+
+.. code-block:: python
+    :linenos:
+
+    ZWAARTEKRACHT = 0.1
+    valsnelheid = 2
+    print(valsnelheid)
+    valsnelheid = valsnelheid + ZWAARTEKRACHT
+    print(valsnelheid)
+
+In de code hierboven zie je dat op regel 1 de constante :python:`ZWAARTEKRACHT` wordt gemaakt en op regel 2 de variabele :python:`valsnelheid`. Zwaartekracht is typisch een waarde die niet verandert (tenzij je naar een andere planeet gaat), terwijl valsnelheid juist heel veranderlijk is. Op regel 4 zie je dat :python:`valsnelheid` de waarde krijgt van de oude valsnelheid vermeerderd met de zwaartekracht.
+
+Verkorte operatoren
+--------------------
+Bij programmeren komt het vaak voor dat je de waarde van een variabele met 1 wilt verhogen of verlagen. Je zou dat als volgt kunnen doen:
+
+.. code-block:: python
+
+    spam = 6
+    spam = spam + 1
+    print(spam)
+
+Omdat deze situatie zo vaak voorkomt, kent Python een aantal *verkorte notaties* om de inhoud van een variabele aan te passen. De volgende code doet hetzelfde als de code hierboven:
+
+.. code-block:: python
+
+    spam = 6
+    spam += 1
+    print(spam)
+
+Zie je het verschil in de tweede regel? Wanneer je iets wilt optellen bij een variabele kun je :python:`+=` gebruiken als *assignment operator*, met de variabele aan de linkerkant en wat je erbij op wilt tellen aan de rechterkant. Net zo kun je voor aftrekken, vermenigvuldigen en delen de operators :python:`-=`, :python:`*=` en :python:`/=` gebruiken.
+
+.. code-block:: python
+
+    aantal_bananen = 100
+    aantal_bananen += 12
+    aantal_bananen -= 13
+    aantal_bananen *= 19
+    aantal_bananen /= aantal_bananen
+    print(aantal_bananen)
 
 Opdrachten
 -----------
@@ -238,7 +336,7 @@ Opdrachten
         :caption: rekenen_met_variabelen.py 
         :linenos:
 
-        # Variabelen - opdracht 01
+        # Variabelen - opdracht 01 en 02
         
         
         som = getal1 + getal2
@@ -266,10 +364,66 @@ Opdrachten
 
     Maak in Mu editor een nieuw codebestand aan en sla het op onder de naam :file:`oppervlakte.py`. Schrijf hierin de volgende code:
 
+    * Een commentaarregel met de tekst ``Variabelen - opdracht 03``
     * Twee assignment statements om de variabelen :python:`lengte` en :python:`breedte` te maken. Je mag zelf waarden kiezen voor deze variabelen.
     * Een assignment statement om de variabele :python:`oppervlakte` te maken. Gebruik bovenstaande formule om deze variabele de juiste waarde te geven.
     * Een :python:`print()` aanroep om de waarde van :python:`oppervlakte` te tonen.
 
     Run je code om te testen of hij naar behoren werkt.
 
+.. dropdown:: Opdracht 04
+    :open:
+    :color: secondary
+    :icon: pencil
 
+    Maak in Mu editor een nieuw codebestand aan en sla het op onder de naam :file:`gemiddelde.py`. Schrijf hierin de volgende code:
+
+    * Een commentaarregel met de tekst ``Variabelen - opdracht 04``
+    * Definieer drie variabelen :python:`getal1`, :python:`getal2` en :python:`getal3` en geef ze willekeurige integer waarden.
+    * Bereken het gemiddelde van de drie getallen en stop het in de variabele :python:`gemiddelde`.
+    * Toon het gemiddelde.
+    * Voeg bij elk van de drie voorgaande punten een commentaarregel toe waarin je uitlegt wat de bijbehorende code doet.
+
+.. dropdown:: Opdracht 05
+    :open:
+    :color: secondary
+    :icon: pencil
+
+    Arthur wil de waarden van twee variabelen verwisselen: variabele :python:`a` moet de waarde krijgen van variabele :python:`b` en :python:`b` de waarde van :python:`a`. Hij probeert het volgende:
+
+    .. code-block:: python
+        :caption: wisseltruc.py
+        :linenos:
+
+        # Variabelen - opdracht 05
+
+        a = 42
+        b = 63
+        print("De beginwaarden van de variabelen zijn:")
+        print("a = " + str(a) + " en b = " + str(b))
+        a = b
+        b = a
+        print("Nu zijn de waarden verwisseld:")
+        print("a = " + str(a) + " en b = " + str(b))
+  
+    Wanneer hij deze code uitvoert, blijkt het resultaat niet te kloppen! Kun jij de code verbeteren?
+
+    Maak in Mu editor een nieuw codebestand aan en sla het op onder de naam :file:`wisseltruc.py`. Kopieer Arthurs code naar je bestand en klik op :guilabel:`Run` om te controleren dat Arthurs code inderdaad niet goed werkt. Probeer het probleem op te lossen.
+
+    .. dropdown:: Hint
+        :color: secondary
+        :icon: light-bulb
+
+        Het probleem zit in regel 6. Wanneer je variabele :python:`a` de waarde van variabele :python:`b` geeft, verdwijnt de oude waarde van :python:`a`! Je kunt dit oplossen door een extra *dummy variabele* te maken, waarin je de oude waarde van :python:`a` even bewaart.
+
+    .. dropdown:: toelichting bij regels 6 en 10
+        :color: info
+        :icon: info
+
+        In de regels 6 en 10 worden de waarden van :python:`a` en :python:`b` getoond met de regel
+
+        .. code-block:: python
+
+            print("a = " + str(a) + " en b = " + str(b))
+
+        In het hoofdstuk :doc:`/ch02_datatypes/ch02_01_datatypes` heb je gezien dat :python:`str(a)` van de integer :python:`42` de string :python:`'42'` maakt. Dat noemden we *type casting*. Het is hier nodig om de waarden van de variabelen te kunnen vastplakken aan de twee stringwaarden :python:`"a = "` en :python:`"b = "`  
