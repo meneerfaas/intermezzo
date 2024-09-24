@@ -12,6 +12,9 @@ Programmeren in Python voor Intermezzo
    ch01_arithmetic/ch01_01_arithmetic
    ch02_datatypes/ch02_01_datatypes
    ch03_variables/ch03_01_variables
+   ch04_strings/ch04_01_strings
+   ch04_strings/ch04_02_fstrings
+   ch05_basic_functions/ch05_01_input
 ..
    lesson_00_preparations
    lesson_01_algorithms
