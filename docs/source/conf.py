@@ -47,3 +47,6 @@ html_theme_options = {
 
 # -- Options for sphinx-copybutton
 copybutton_selector = "div:not(.no-copybutton) > div.highlight > pre"
+
+# -- Options for plantuml
+plantuml = 'java -jar ../../../../../plantuml.jar'
