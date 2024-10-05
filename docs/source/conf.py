@@ -1,3 +1,5 @@
+import os
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -49,4 +51,7 @@ html_theme_options = {
 copybutton_selector = "div:not(.no-copybutton) > div.highlight > pre"
 
 # -- Options for plantuml
-plantuml = 'java -jar ../../../../../plantuml.jar'
+if os.environ.get("READTHEDOCS") != None:
+    plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
+else:
+    plantuml = 'java -jar ../../../../../plantuml.jar'
