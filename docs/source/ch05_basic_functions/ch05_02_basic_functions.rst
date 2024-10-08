@@ -123,5 +123,5 @@ Niet alle functie retourneren een waarde. Bijvoorbeeld :python:`print()` drukt t
   >>> print(a)
   None
 
-In dit voorbeeld wordt de returnwaarde van :python:`print('Hello, World!')` opgeslagen in :python:`a`. Wanneer we vervolgens de waarde van :python:`print(a)` aanroepen, wordt :python:`None` afgedrukt. Dit is een van de Python keywords die je eerder tegenkwam in het hoofdstuk :ref:`Variabelen <python-keywords>`. Het geeft aan dat :python:`a` geen waarde heeft. 
+In dit voorbeeld wordt de returnwaarde van :python:`print('Hello, World!')` opgeslagen in :python:`a`. Wanneer we vervolgens :python:`print(a)` aanroepen om de waarde van :python:`a` te tonen, wordt :python:`None` afgedrukt. Dit is een van de Python keywords die je eerder tegenkwam in het hoofdstuk :ref:`Variabelen <python-keywords>`. Het geeft aan dat :python:`a` geen waarde heeft. 
 
