@@ -138,6 +138,8 @@ Een goede variabelenaam beschrijft de data die de variabele bevat. Stel je voor 
 
 Gereserveerde woorden (*keywords*) hebben al een betekenis in Python en daarom kun je ze niet als variabelenaam gebruiken. Met het commando :python:`help('keywords')` kun je in de CLI de lijst van keywords opvragen:
 
+.. _python-keywords:
+
 .. code-block:: python
     :class: no-copybutton
 
