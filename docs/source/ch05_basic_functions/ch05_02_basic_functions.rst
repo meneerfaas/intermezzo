@@ -114,7 +114,7 @@ De output van een functie wordt vaak de *returnwaarde* of *retourwaarde* genoemd
   >>> print(b * int(4.75))
   12
 
-Niet alle functie retourneren een waarde. Bijvoorbeeld :python:`print()` drukt tekst af op het scherm, maar geeft geen waarde terug. Dat kun je als volgt checken:
+Niet alle functies retourneren een waarde. Bijvoorbeeld :python:`print()` drukt tekst af op het scherm, maar geeft geen waarde terug. Dat kun je als volgt checken:
 
 .. code-block:: python
   
