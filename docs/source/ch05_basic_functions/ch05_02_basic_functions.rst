@@ -5,7 +5,7 @@
 
    <br/>
 
-Functies basics
+Functiebeginselen
 =======================
 
 Je hebt inmiddels kennisgemaakt met de functies :python:`print()`, :python:`input()`, :python:`type()`, :python:`int()`, :python:`float()` en :python:`str()`. Dit zestal vormt slechts het topje van de spreekwoordelijke ijsberg. Python telt bijna zeventig standaard ingebouwde functies, en daarnaast nog duizenden (misschien zelfs miljoenen) andere functies die je kunt gebruiken. Functies zijn, net als variabelen, belangrijke bouwstenen voor een computerprogramma. Hoog tijd dus om er wat dieper op in te gaan.      
@@ -125,3 +125,12 @@ Niet alle functies retourneren een waarde. Bijvoorbeeld :python:`print()` drukt 
 
 In dit voorbeeld wordt de returnwaarde van :python:`print('Hello, World!')` opgeslagen in :python:`a`. Wanneer we vervolgens :python:`print(a)` aanroepen om de waarde van :python:`a` te tonen, wordt :python:`None` afgedrukt. Dit is een van de Python keywords die je eerder tegenkwam in het hoofdstuk :ref:`Variabelen <python-keywords>`. Het geeft aan dat :python:`a` geen waarde heeft. 
 
+Ingebouwde functies
+---------------------
+
+Zoals gezegd kent Python een kleine zeventig ingebouwde functies. De werking van :python:`print()`, :python:`input()`, :python:`type()`, :python:`int()`, :python:`float()` en :python:`str()` ken je inmiddels, maar hieronder volgen er nog enkele die je vaak van pas kunnen komen.
+
+:python:`min()` en :python:`max()`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+...
