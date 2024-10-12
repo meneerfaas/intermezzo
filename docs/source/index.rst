@@ -15,6 +15,7 @@ Programmeren in Python voor Intermezzo
    ch04_strings/ch04_01_strings
    ch04_strings/ch04_02_fstrings
    ch05_basic_functions/ch05_01_input
+   ch05_basic_functions/ch05_02_basic_functions
 ..
    lesson_00_preparations
    lesson_01_algorithms
