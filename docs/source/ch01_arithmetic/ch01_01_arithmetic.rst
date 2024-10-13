@@ -11,15 +11,15 @@ Het woord 'computer' komt van het Latijnse *computare*, dat 'berekenen' betekent
     :color: primary
     :icon: book
 
-    * Wat zijn de rekenkundige operators in Python.
+    * Wat zijn de rekenkundige operatoren in Python.
     * Hoe voer je berekeningen uit in de CLI.
 
 Optellen, aftrekken, vermenigvuldigen en delen
 ----------------------------------------------
 
-In het dagelijks leven gebruiken we meestal de symbolen :math:`+`, :math:`-`, :math:`\times` en :math:`:` voor optellen, aftrekken, vermenigvuldigen en delen. In Python noemen we de symbolen voor berekeningen *operators* en ze wijken voor vermenigvuldigen en delen af van de symbolen die je gewend bent.
+In het dagelijks leven gebruiken we meestal de symbolen :math:`+`, :math:`-`, :math:`\times` en :math:`:` voor optellen, aftrekken, vermenigvuldigen en delen. In Python noemen we de symbolen voor berekeningen *operatoren* en ze wijken voor vermenigvuldigen en delen af van de symbolen die je gewend bent.
 
-.. card:: Rekenkundige operators
+.. card:: Rekenkundige operatoren
 
     .. list-table::
         :header-rows: 1
@@ -41,7 +41,7 @@ In het dagelijks leven gebruiken we meestal de symbolen :math:`+`, :math:`-`, :m
           - :math:`:`
           - :math:`/`
 
-Probeer de rekenkundige operators eens uit in de CLI. Voer bijvoorbeeld de volgende berekeningen in en druk telkens op :kbd:`Enter` om Python het antwoord te laten geven:
+Probeer de rekenkundige operatoren eens uit in de CLI. Voer bijvoorbeeld de volgende berekeningen in en druk telkens op :kbd:`Enter` om Python het antwoord te laten geven:
 
 .. code-block:: python
     :class: no-copybutton
@@ -125,7 +125,7 @@ Op de basisschool heb je waarschijnlijk 'delen met rest' geleerd, bijvoorbeeld d
    :alt: staartdeling
    :align: center
 
-De uitkomst van :math:`345:12` is volgens deze berekening :math:`28\text{ rest }9`. In Python heb je voor dit resultaat twee aparte operators nodig: :python:`//` en :python:`%`. Met de operator :python:`//` verkrijg je de *naar beneden afgeronde uitkomst* van de deling en met :python:`%` de rest van de deling.
+De uitkomst van :math:`345:12` is volgens deze berekening :math:`28\text{ rest }9`. In Python heb je voor dit resultaat twee aparte operatoren nodig: :python:`//` en :python:`%`. Met de operator :python:`//` verkrijg je de *naar beneden afgeronde uitkomst* van de deling en met :python:`%` de rest van de deling.
 
 .. code-block:: python
     :class: no-copybutton
@@ -135,11 +135,11 @@ De uitkomst van :math:`345:12` is volgens deze berekening :math:`28\text{ rest }
     >>> 345 % 12
     9
 
-Overzicht rekenkundige operators
+Overzicht rekenkundige operatoren
 ---------------------------------
-In dit hoofdstuk heb je de onderstaande rekenkundige operators leren kennen.
+In dit hoofdstuk heb je de onderstaande rekenkundige operatoren leren kennen.
 
-.. card:: Rekenkundige operators
+.. card:: Rekenkundige operatoren
     
     .. list-table::
         :header-rows: 1

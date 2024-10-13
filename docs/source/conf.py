@@ -51,10 +51,7 @@ html_theme_options = {
 copybutton_selector = "div:not(.no-copybutton) > div.highlight > pre"
 
 # -- Options for plantuml
-#if os.environ.get("READTHEDOCS") != None:
-#    plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
-#else:
-#    plantuml = 'java -jar ../../../../../plantuml.jar'
 local_plantuml_path = os.path.join(os.path.dirname(
     __file__), "utils", "plantuml.jar")
 plantuml = f"java -Djava.awt.headless=true -jar {local_plantuml_path}"
+plantuml_output_format = 'svg'
