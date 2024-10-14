@@ -5,8 +5,8 @@
 
    <br/>
 
-Python Turtle - Extra oefeningen
-================================
+Tekenen met Turtle - Extra oefeningen
+=======================================
 
 Opdrachten
 ----------

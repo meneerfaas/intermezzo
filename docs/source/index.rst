@@ -16,6 +16,10 @@ Programmeren in Python voor Intermezzo
    ch04_strings/ch04_02_fstrings
    ch05_basic_functions/ch05_01_input
    ch05_basic_functions/ch05_02_basic_functions
+   ch06_turtle/ch06_01_turtle
+   ch06_turtle/ch06_02_turtle_exercises
+   ch07_loops/ch07_01_while_loops
+   ch07_loops/ch07_02_for_loops
 ..
    lesson_00_preparations
    lesson_01_algorithms
