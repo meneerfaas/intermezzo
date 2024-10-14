@@ -29,7 +29,8 @@ Je kunt dit gemakkelijker doen met een *for loop*. Dat wil niet zeggen dat je ee
     :color: primary
     :icon: book
 
-    * ...
+    * Wat doet de functie :python:`range()`.
+    * Hoe maak je een for loop met de functie :python:`range()`.  
 
 De functie :python:`range()`
 -----------------------------
