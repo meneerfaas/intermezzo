@@ -8,7 +8,7 @@
 For loops
 =======================
 
-Een while loop heeft als nadeel dat je er drie regels code voor nodig hebt:
+Wanneer je van tevoren al weet hoe vaak je een blok code wilt herhalen, is een while loop enigszins omslachtig. Je hebt er namelijk drie regels code voor nodig:
 
 * één om de teller variabele te maken met een assignment statement;
 * één waarin het keyword :python:`while` staat, gevolgd door de voorwaarde(n);
@@ -21,7 +21,8 @@ Een while loop heeft als nadeel dat je er drie regels code voor nodig hebt:
         ...
         ...
         n = n + 1
-        
+
+Je kunt dit gemakkelijker doen met een *for loop*. Dat wil niet zeggen dat je een while loop nooit nodig hebt. Er zijn situaties waarin een for loop niet werkt en een while loop wel.
 
 .. dropdown:: Wat leer je in dit hoofdstuk
     :open:
@@ -30,141 +31,119 @@ Een while loop heeft als nadeel dat je er drie regels code voor nodig hebt:
 
     * ...
 
-For en range()
---------------
+De functie :python:`range()`
+-----------------------------
 
-Maak in Mu editor een nieuw bestand, kopieer en plak de onderstaande code erin en sla het op als :file:`turtle_while.py`.
+Met de functie :python:`range()` kun je een serie opeenvolgende getallen genereren. Om die serie zichtbaar te maken in de CLI, hebben we ook de functie :python:`list()` nodig:
+
+.. code-block:: python
+
+    >>> list(range(5))
+    [0, 1, 2, 3, 4]
+    >>> list(range(9))
+    [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+Je ziet dat :python:`range(n)` de getallen :python:`0` tot en met :python:`n-1` genereert. Meestal is dit voor ons doel (een for loop) voldoende, maar het is mogelijk om aan :python:`range()` drie parameterwaarden mee te geven:
+
+.. py:function:: range(start, stop, step)
+
+    Retourneert een reeks getallen, die standaard bij 0 begint, telkens met 1 ophoogt en stopt juist voor het meegegeven getal.
+
+    :Parameters:
+        * Het startgetal van de serie. Niet verplicht; standaardwaarde is 0.
+        * Getal dat aangeeft waar de serie moet stoppen. Verplicht.
+        * De stapgrootte. Niet verplicht; standaardwaarde is 1.
+    :Returnwaarde:
+        Een serie getallen. Om de serie te tonen in de CLI heb je de :python:`list()` functie nodig. 
+    :Voorbeelden:
+        .. code-block:: python
+            :class: no-copybutton
+
+            >>> list(range(3))          # alleen stop meegegeven.
+            [0, 1, 2]
+
+            >>> list(range(2, 6))       # start en stop meegegeven.
+            [2, 3, 4, 5]
+
+            >>> list(range(4, 11, 2))   # start, stop en step meegegeven.
+            [4, 6, 8, 10]
+
+For en range
+-------------
+
+De functie :python:`range` wordt vaak gebruikt in for loops. Dat ziet er zo uit:
 
 .. code-block:: python
     :linenos:
-    :caption: turtle_while.py
-    :name: turtle_while_v01
+    :caption: for_loop.py
 
-    import turtle
+    for i in range(5):
+        print(i)
 
-    tony = turtle.Turtle()
+Je kunt regel 1 lezen als: *voor elke waarde van* :python:`i` *in de reeks 0 t/m 4, doe het volgende*. De variabele :python:`i` krijgt dus achtereenvolgens de waarden :python:`0`, :python:`1`, :python:`2`, :python:`3` en :python:`4`. In de output van het programma zie je dit terug:
 
-    zijde = 0
-    while zijde < 4:
-        tony.fd(100)
-        tony.lt(90)
-        zijde = zijde + 1
+.. code-block::
 
-Run de code om het resultaat te bekijken. Snap je hoe deze code werkt? Het Python keyword :python:`while` in regel 6, kun je vertalen als *terwijl* of *zolang*. En het :python:`<`  symbool betekent *kleiner dan*. Schematisch weergegeven doet de code het volgende:
+    0
+    1
+    2
+    3
+    4
 
-.. uml::
-    :align: center 
-
-    @startuml
-    <style>
-        activityDiagram {
-            FontName Monospaced
-            FontSize 15
-        }
-        document {
-            BackgroundColor transparent
-        }
-        </style>
-    start
-    :zijde = 0;
-    while (zijde < 4) is (True)
-        :tony.fd(100);
-        :tony.lt(90);
-        :zijde = zijde + 1;
-    endwhile (False)
-    stop
-    @enduml
-
-Eerst krijgt de variabele :python:`zijde` de waarde :python:`0`. Vervolgens checkt Python of :python:`zijde` kleiner is dan :python:`4`. Als dat zo is, wordt :python:`tony` vooruit gestuurd en gedraaid. Daarna wordt de waarde van :python:`zijde` met :python:`1` opgehoogd. We springen terug naar regel 6 en Python checkt weer of :python:`zijde` kleiner is dan :python:`4`.
-
-Doordat we de waarde van :python:`zijde` telkens iets groter maken, zal de check in regel 6 op een zeker moment :python:`False` zijn. De uitvoering van de loop stopt, en in dit geval is het programma dan ook afgelopen.  
-
-
-Debugging mode
-----------------
-
-Mu editor biedt de mogelijkheid om de uitvoering van een programma stap voor stap te volgen. Je kunt op die manier goed zien hoe de while loop werkt.
-
-Klik op regel 6 in :file:`turtle_while.py` met de muiscursor in het grijze stukje rechts naast het regelnummer 6 om een zogenoemd **breakpoint** te plaatsen.
-
-.. figure:: images/debug_breakpoint.png
-    :align: left
-    :figwidth: 100%
-
-Klik daarna op :guilabel:`Debug` bovenin de knoppenbalk.
-
-.. figure:: images/debug_debug_button.png
-    :align: left
-    :figwidth: 100%
-
-Nu start Mu editor de uitvoering van de code, maar pauzeert op regel 6, waar je zojuist het breakpoint plaatste. Gebruik de knop :guilabel:`Step over` om de code vanaf het breakpoint telkens een stapje verder uit te voeren. Houd daarbij in de gaten wat er in de turtle tekening gebeurt, maar ook wat de waarde van de variabele :python:`zijde` is. Die waarde wordt in Mu editor aan de rechterkant getoond. 
-
-.. figure:: images/debug_step_over.png
-    :align: left
-    :figwidth: 100%
-
-Begrijp je nu hoe de while loop werkt? Klik op :guilabel:`Stop` om het debuggen te stoppen. 
-
-In de volgende opdrachten ga je je eigen while loops schrijven. Je zult merken dat je met loops mooie patronen kunt tekenen.
-
-Indentation
-------------
-
-Kijk nog eens goed naar de regels 7, 8 en 9 van :file:`turtle_while.py`. Deze regels zijn ingesprongen. Dat is belangrijk! Daardoor weet Python dat die drie regels binnen de 'while lus' vallen. In Python bepaalt de inspringing (Engels: indentation) van een coderegel tot welk blok die regel behoort. Kopieer de onderstaande code naar Mu editor (in een bestand :file:`hello_while.py`) om te zien hoe dat werkt:
+Uiteraard is niet verplicht om de waarde van :python:`i` binnen de for loop te gebruiken:
 
 .. code-block:: python
     :linenos:
-    :caption: hello_while.py
-    :name: hello_while
+    :caption: for_loop.py
 
-    i = 0
-    while i < 3:
-        print('Deze zin wordt drie keer geprint.')
-        print('En deze zin valt ook binnen de while lus.')
-        i = i + 1
-    print('Maar deze zin wordt slechts één keer geprint.')
+    for i in range(5):
+        print('Hello, World!')
 
-De regels 3, 4 en 5 van :file:`hello_while.py` zijn ingesprongen: ze worden voorafgegaan door 4 spaties. Daardoor weet Python dat die regels één blokje vormen binnen de while lus.
-Regel 6 is niet ingesprongen en hoort daardoor niet bij het blokje dat wordt herhaald.
+Het resultaat:
 
-Bestudeer nu de volgende code eens, nadat je hem in Mu editor hebt uitgevoerd. Je ziet hier een while lus bínnen een andere while lus.
+.. code-block::
 
-.. code-block:: python
-    :linenos:
-    :caption: turtle_while.py
-    :name: turtle_while_v02
+    Hello, World!
+    Hello, World!
+    Hello, World!
+    Hello, World!
+    Hello, World!
 
-    import turtle
+Wanneer je een for loop gebruikt voor het tekenen van een vierkant met Python turtle, heb je minder coderegels nodig dan wanneer je dat met een while loop doet:
 
-    tony = turtle.Turtle()
+.. grid:: 2
 
-    vierkant = 0
-    while vierkant < 3:
-        zijde = 0
-        while zijde < 4:
-            tony.fd(100)        # Deze regels
-            tony.lt(90)         # vallen binnen
-            zijde = zijde + 1   # de 2e while lus
-        tony.pu()
-        tony.lt(120)
-        tony.fd(100)
-        tony.pd()
-        vierkant = vierkant + 1
+    .. grid-item:: 
+        :columns: 6
 
-De regels 7 t/m 16 in deze code vallen binnen de while lus die begint op regel 6. Maar in dat blok begint op regel 8 een tweede while lus, die de regels 9 t/m 11 herhaalt. Let op de inspringing van regel 12: die valt niet meer onder de tweede while lus.
+        .. code-block:: python
+            :linenos:
+            :caption: turtle_while.py
 
-Wanneer je in Mu editor op :kbd:`Enter` drukt nadat je regel 6 hebt getypt, springt de volgende regel automatisch in. Wil je handmatig een regel laten inspringen, dan kun je daarvoor de :kbd:`Tab` toets gebruiken (links naast de :kbd:`Q`).
+            import turtle
 
-.. dropdown:: Spaties of tabs?
-    :open:
-    :color: warning
-    :icon: alert
+            tony = turtle.Turtle()
 
-    Gebruik voor het inspringen van coderegels nooit de spatiebalk! Ten eerste is het heel onhandig om telkens spaties te moeten tellen, en ten tweede krijg je sneller indentation errors.
+            zijde = 0
+            while zijde < 4:
+                tony.fd(100)
+                tony.lt(90)
+                zijde = zijde + 1
 
-    .. figure:: images/keyboard_tab_vs_space.png
+    .. grid-item:: 
+        :columns: 6
 
-    Met de :kbd:`Tab` toets kun je in één keer een grotere inspringing maken. Ook is het mogelijk in Mu editor een aantal regels code te selecteren en vervolgens op :kbd:`Tab` te drukken om die regels tegelijkertijd te laten inspringen; probeer het maar eens. Om ze weer te laten terugspringen gebruik je :kbd:`Shift` + :kbd:`Tab`.
+        .. code-block:: python
+            :linenos:
+            :caption: turtle_for.py
+
+            import turtle
+
+            tony = turtle.Turtle()
+
+            for zijde in range(4):
+                tony.fd(100)
+                tony.lt(90)
 
 Opdrachten
 -----------
@@ -174,221 +153,91 @@ Opdrachten
     :color: secondary
     :icon: pencil
 
-    Maak een nieuw bestand in Mu editor en sla het op als :file:`driehoeken.py`. Kopieer de code van :file:`turtle_while.py` naar je nieuwe bestand. Pas de code zodanig aan dat in plaats van een vierkant een driehoek met zijden van 100 pixels wordt getekend, uiteraard met gebruikmaking van een while loop. Na het tekenen van een zijde moet de turtle telkens 120 graden draaien.
+    Hieronder zie je code waarmee de turtle een driehoek tekent. Als je de opdrachten over :doc:`while loops </ch07_loops/ch_07_01_while_loops>` hebt gemaakt, beschik je al over deze code in het bestand :file:`driehoeken.py`. Zo niet, kopieer dan onderstaande code naar een nieuw bestand :file:`driehoeken.py`. 
 
-    .. dropdown:: Oplossing
-        :color: secondary
-        :icon: check-circle
+    .. code-block:: python
+        :linenos:
+        :caption: driehoeken.py
+        :name: turtle_while_opdr01
 
-        .. code-block:: python
-            :linenos:
-            :caption: driehoeken.py
-            :name: turtle_while_opdr01
+        # For loops - opdracht 01
+        
+        import turtle
 
-            # While loops - opdracht 01
-            
-            import turtle
+        tony = turtle.Turtle()
 
-            tony = turtle.Turtle()
+        zijde = 0
+        while zijde < 3:
+            tony.fd(100)
+            tony.lt(120)
+            zijde = zijde + 1
 
-            zijde = 0
-            while zijde < 3:
-                tony.fd(100)
-                tony.lt(120)
-                zijde = zijde + 1
+    Vervang de while loop in deze code door een for loop.
+
 
 .. dropdown:: Opdracht 02
     :open:
     :color: secondary
     :icon: pencil
 
-    Breid de code in :file:`driehoeken.py` van opdracht 01 uit, opdat met behulp van een **while loop binnen een andere while loop** vier driehoeken op een rij worden getekend zoals hieronder afgebeeld.
+    Maak een nieuw bestand in Mu editor, kopieer onderstaande de code erin en sla het op onder de naam :file:`turtle_dots_for.py`.
 
-    .. image:: images/triangles_in_a_row.png
-        
-    .. dropdown:: Hint
-        :color: secondary
-        :icon: light-bulb
+    .. code-block:: python
+        :linenos:
 
-        Gebruik voor je programma de volgende structuur:
+        # For loops - opdracht 02
 
-        .. code-block:: python
-            :name: turtle_while_opdr02_hint
+        import turtle
 
-            # While loops - opdracht 02
+        tony = turtle.Turtle()
+        tony.speed(0)
+        tony.up()
 
-            import turtle
+        for rij in range(5):
+            for kolom in range(5):
+                tony.dot(20, 'red')
+                tony.fd(30)
+            # Stuur tony naar het begin van de volgende rij:
+            tony.bk(5*30)
+            tony.lt(90)
+            tony.fd(30)
+            tony.rt(90)
+            
+        tony.home()
+    
+    Dit programma tekent een rooster van 5 bij 5 rode dots. De opdracht :python:`tony.home()` in regel 17 zorgt ervoor dat de turtle weer teruggaat naar het beginpunt. De output van het programma ziet er zo uit:
 
-            tony = turtle.Turtle()
+    .. figure:: images/red_dots_02.png
 
-            driehoek = 0
-            while driehoek < 4:
-                zijde = 0
-                while zijde < 3:
-                    ...
-                    ...
-                    ...
-                ...
-                ...
+    Voeg aan het programma na regel 19 code toe waarmee een rooster van 4 bij 4 blauwe dots met een grootte van 30 pixels wordt getekend, die precies tussen de rode dots in komen:
 
-    .. dropdown:: Oplossing
-        :color: secondary
-        :icon: check-circle
+    .. figure:: images/red_dots_03.png
 
-        .. code-block:: python
-            :linenos:
-            :caption: driehoeken.py
-            :name: turtle_while_opdr02
-
-            # While loops - opdracht 02
-
-            import turtle
-
-            tony = turtle.Turtle()
-
-            driehoek = 0
-            while driehoek < 4:
-                zijde = 0
-                while zijde < 3:
-                    tony.fd(100)
-                    tony.lt(120)
-                    zijde = zijde + 1
-                tony.fd(100)
-                driehoek = driehoek + 1
+    Pak dit handig aan. Je zou bijvoorbeeld de regels 9 t/m 17 kunnen kopiëren en aanpassen.
 
 .. dropdown:: Opdracht 03
     :open:
     :color: secondary
     :icon: pencil
 
-    Kopieer de code van :file:`turtle_while.py` naar een nieuw bestand dat je opslaat als :file:`bloem.py`. Breid de code zodanig uit dat met behulp van een **while loop binnen een andere while loop** 20 vierkanten worden getekend, waarbij elk vierkant 18 graden gedraaid is ten opzicht van het vorige. Dit moet de volgende figuur opleveren:
-    
-    .. image:: images/star_of_squares.png
-
-    .. dropdown:: Hint
-        :color: secondary
-        :icon: light-bulb
-
-        Je programma bestaat uit twee while loops, waarvan de binnenste het tekenen van één vierkant verzorgt. Na het tekenen van een vierkant moet de turtle 18 graden linksom draaien.
-
-        .. code-block:: python
-            :name: turtle_while_opdr03_hint
-
-            ...
-            while ...:
-                # Deze while loop zorgt voor 20 herhalingen.
-                ...
-                while ...:
-                    # Deze while loop zorgt voor één vierkant.
-                    ...
-                    ...
-                tony.lt(18)  # Draai tony 18 graden linksom
-                ...
-
-.. dropdown:: Opdracht 04
-    :open:
-    :color: secondary
-    :icon: pencil
-
-    Maak een nieuw bestand in Mu editor, kopieer onderstaande de code erin en sla het op onder de naam :file:`turtle_dots.py`. 
+    Maak een nieuw bestand, kopieer onderstaande code erin en sla het op als :file:`turtle_spiral.py`. 
 
     .. code-block:: python
         :linenos:
-        :emphasize-lines: 8, 10, 12-18
-        :caption: turtle_dots.py
-        :name: turtle_dots
+        :caption: turtle_spiral.py
+        :name: turtle_spiral_v01
+
+        # For loops - opdracht 03
 
         import turtle
 
         tony = turtle.Turtle()
-        tony.hideturtle()
         tony.speed(0)
 
-        rij = 0
-        while ...:
-            kolom = 0
-            while ...:
-                tony.dot(20, 'red')
-                ...
-                ...
-                ...
-                ...
-            ...
-            ...
-            ...
-    
-    Vervang de puntjes in de gemarkeerde regels door code die ervoor zorgt dat een rooster van 10 bij 10 rode puntjes wordt getekend.
+        for i in range(300):
+            tony.fd(i * 2)
+            tony.lt(30)
 
-    .. image:: images/red_dots.png
+    Deze code tekent eerst een lijnstukje van 0 pixels, vervolgens een lijnstukje van 2 pixels, dan 4 pixels, dan 6 pixels, enzovoort tot het laatste lijnstukje van 598 pixels (299 * 2). En tussendoor draait de turtle telkens 30 graden. Kijk maar eens wat dat oplevert, door het programma te runnen.
 
-.. dropdown:: Opdracht 05
-    :open:
-    :color: secondary
-    :icon: pencil
-
-    Schrijf een programma dat de onderstaande figuur tekent. Je mag zelf de kleur en de pendikte bepalen, maar voor het daadwerkelijke tekenen mag je **maximaal 5 regels code** gebruiken.
-
-    .. image:: images/five_pointed_star.png
-        :align: center
-
-    .. dropdown:: Hint
-        :color: secondary
-        :icon: light-bulb
-
-        Vind je het lastig om de draaiingshoek te bepalen? Bedenk dan dat de turtle in totaal 2 keer volledig ronddraait (dus de totale draaiingshoek is 2 * 360° = 720°) en dat die volledige draai over 5 stappen wordt verdeeld.
-
-Het wordt nóg interessanter wanneer je de while loop variabele niet alleen als *teller* gebruikt, maar bijvoorbeeld ook aan :python:`turtle.fd()` meegeeft zoals in onderstaand voorbeeld :file:`turtle_spiral.py`.
-
-.. code-block:: python
-    :linenos:
-    :caption: turtle_spiral.py
-    :name: turtle_spiral_v01
-
-    import turtle
-
-    tony = turtle.Turtle()
-
-    lengte = 2
-    while lengte < 300:
-        tony.fd(lengte)
-        tony.lt(30)
-        lengte = lengte + 2
-
-Deze code tekent eerst een lijnstukje van 2 pixels, vervolgens een lijnstukje van 4 pixels, dan 6 pixels, dan 8 pixels, enzovoort. En tussendoor draait de turtle telkens 30 graden. Kijk maar eens wat dat oplevert, door de code in Mu editor uit te proberen.
-
-.. dropdown:: Opdracht 06
-    :open:
-    :color: secondary
-    :icon: pencil
-
-    Experimenteer met de code in :file:`turtle_spiral.py` door telkens één getal een te veranderen en te bekijken hoe de figuur verandert. Je zou :python:`tony` bijvoorbeeld telkens 91° kunnen laten draaien in plaats van 30°. En wat gebeurt er als je op regel 8 :python:`tony.lt(30)` vervangt door :python:`tony.lt(lengte)` of :python:`tony.lt(3 * lengte)`? Probeer maar uit!
-
-.. dropdown:: Opdracht 07
-    :open:
-    :color: secondary
-    :icon: pencil
-
-    Kopieer onderstaande code in een nieuw bestand, dat je opslaat als :file:`turtle_veelhoeken.py`.
-
-    .. code-block:: python
-        :linenos:
-        :caption: turtle_veelhoeken.py
-
-        import turtle
-
-        tony = turtle.Turtle()
-
-        aantal_hoeken = 5
-        draaiingshoek = ...
-
-        hoek = ...
-        while ...:
-            tony.fd(100)
-            tony.lt(draaiingshoek)
-            hoek = hoek + 1  
-
-    Op regels 6, 8 en 9 ontbreekt code. Vul zelf in wat op de puntjes moet staan, opdat het programma een regelmatige vijfhoek tekent.
-
-    Wanneer je vervolgens in regel 5 de waarde van :python:`aantal_hoeken` wijzigt naar bijvoorbeeld 7, zou een regelmatige zevenhoek moeten worden getekend.
-
-    Gelukt? Breid dan je programma uit met een :python:`input()` aanroep waarmee aan de gebruiker wordt gevraagd hoeveel hoeken de veelhoek moet hebben en sla het antwoord van de gebruiker op in :python:`aantal_hoeken`.  
+    Experimenteer met de code in :file:`turtle_spiral.py` door telkens één getal te veranderen en te bekijken hoe de figuur verandert. Je zou :python:`tony` bijvoorbeeld telkens 91° kunnen laten draaien in plaats van 30°. En wat gebeurt er als je op regel 10 :python:`tony.lt(30)` vervangt door :python:`tony.lt(i)` of :python:`tony.lt(i * 3)`? Probeer maar uit!

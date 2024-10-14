@@ -42,7 +42,7 @@ De regels 5 t/m 11 bevatten veel herhaling. Het zou beter zijn als we tegen Pyth
 
 Vergelijkingsoperatoren
 ------------------------
-Voordat we de while loop introduceren, moet je weten wat een *vergelijkingsoperator* is. Het begrip *operator* ben je eerder tegengekomen in het hoofdstuk :doc:`/ch01_arithmetic/ch01_01_arithmetic` bij de behandeling van de *rekenkundige operatoren*, de symbolen die je gebruikt voor berekeningen zoals :python:`+`, :python:`*` en :python:`//`. Vergelijkingsoperatoren zijn symbolen die je gebruikt om twee waarden met elkaar te vergelijken. We hebben er zes:
+Voordat we de while loop introduceren, moet je weten wat een *vergelijkingsoperator* is. Het begrip *operator* ben je eerder tegengekomen in het hoofdstuk :doc:`/ch01_arithmetic/ch01_01_arithmetic` bij de behandeling van de *rekenkundige operatoren*: de symbolen die je gebruikt voor berekeningen zoals :python:`+`, :python:`*` en :python:`//`. Vergelijkingsoperatoren zijn symbolen die je gebruikt om twee waarden met elkaar te vergelijken. We hebben er zes:
 
 .. card:: Vergelijkingsoperatoren
     
@@ -222,6 +222,58 @@ Wanneer je in Mu editor op :kbd:`Enter` drukt nadat je regel 6 hebt getypt, spri
 
     Met de :kbd:`Tab` toets kun je in één keer een grotere inspringing maken. Ook is het mogelijk in Mu editor een aantal regels code te selecteren en vervolgens op :kbd:`Tab` te drukken om die regels tegelijkertijd te laten inspringen; probeer het maar eens. Om ze weer te laten terugspringen gebruik je :kbd:`Shift` + :kbd:`Tab`.
 
+Verschillende voorwaarden
+--------------------------
+
+In de voorgaande voorbeelden gebruikten we in de voorwaarde van de while loop telkens een teller variabele, oftewel een integer. Maar je kunt in de voorwaarde van een while loop ook andere datatypes gebruiken, zoals een string:
+
+.. code-block:: python
+    :linenos:
+    :caption: annoying_while.py
+
+    name = ''
+    while name != 'je naam':
+        name = input('Typ je naam: ')
+
+    print('Dankjewel!')
+
+Probeer dit programma maar eens uit. Het is afkomstig uit het boek `Automate the Boring Stuff <https://automatetheboringstuff.com/2e/chapter2/>`_ van Al Sweigart. Daarin heet dit programma *An Annoying while Loop*. Kun je bedenken waarom?
+
+Hieronder zi je het stroomdiagram dat hoort bij de code. Er wordt nu geen integer variabele gebruikt voor de while loop, maar een string :python:`naam`. Zolang de waarde van :python:`naam` ongelijk is aan :python:`'je naam'` blijft de loop zich herhalen.   
+
+.. uml::
+    :align: center 
+
+    @startuml
+    <style>
+        activityDiagram {
+            FontName Monospaced
+            FontSize 15
+        }
+        document {
+            BackgroundColor transparent
+        }
+        </style>
+    start
+    :naam = '';
+    while (naam != 'je naam') is (True)
+        :name = input('Typ je naam: ');
+    endwhile (False)
+    :print('Dankjewel!');
+    stop
+    @enduml
+
+Je kunt in de voorwaarde van de while loop variabelen ook helemaal achterwege laten, zoals in het volgende voorbeeld:
+
+.. code-block:: python
+    :linenos:
+    :caption: endless_while.py
+
+    while True:
+        print('Dit stopt niet meer!')
+
+Met :python:`while True:` creëer je een oneindige loop. Er zijn wel mogelijkheden om daar weer uit te ontsnappen, maar die bewaren we voor een ander moment. Uiteraard wil je liever niet dat je programma in een loop blijft hangen waar de gebruiker nooit meer uitkomt. Let dus altijd goed op wanneer je een while loop programmeert.
+
 Opdrachten
 -----------
 
@@ -354,6 +406,8 @@ Opdrachten
         :caption: turtle_dots.py
         :name: turtle_dots
 
+        # While loops - opdracht 04
+
         import turtle
 
         tony = turtle.Turtle()
@@ -392,3 +446,45 @@ Opdrachten
         :icon: light-bulb
 
         Vind je het lastig om de draaiingshoek te bepalen? Bedenk dan dat de turtle in totaal 2 keer volledig ronddraait (dus de totale draaiingshoek is 2 * 360° = 720°) en dat die volledige draai over 5 stappen wordt verdeeld.
+
+.. dropdown:: Opdracht 06
+    :open:
+    :color: secondary
+    :icon: pencil
+
+    We willen de turtle een regelmatige veelhoek laten tekenen. Dat is een veelhoek waarvan alle zijden even lang zijn en de hoeken even groot.
+    
+    .. figure:: images/regular_polygons.png
+
+    Om het programma flexibel te maken, gaan we een variabele :python:`aantal_hoeken` gebruiken, die het aantal hoeken van de veelhoek aangeeft. Als bijvoorbeeld :python:`aantal_hoeken = 3` dan moet een driehoek worden getekend en als :python:`aantal_hoeken = 8` een achthoek.
+    
+    Kopieer onderstaande code in een nieuw bestand, dat je opslaat als :file:`turtle_veelhoeken.py`.
+
+    .. code-block:: python
+        :linenos:
+        :caption: turtle_veelhoeken.py
+
+        # While loops - opdracht 06
+
+        import turtle
+
+        tony = turtle.Turtle()
+
+        aantal_hoeken = 5
+        draaiingshoek = ...
+
+        hoek = ...
+        while ...:
+            tony.fd(100)
+            tony.lt(draaiingshoek)
+            hoek = hoek + 1  
+
+    Op regels 8, 10 en 11 ontbreekt code. Vul zelf in wat op de puntjes moet staan, opdat het programma een regelmatige vijfhoek tekent. De waarde van :python:`draaiingshoek` is afhankelijk van :python:`aantal_hoeken`, dus op de puntjes in regel 8 moet een berekening met :python:`aantal_hoeken` komen.   
+
+    Test je programma door in regel 7 voor :python:`aantal_hoeken` verschillende waarden te kiezen. Als je bijvoorbeeld :python:`aantal_hoeken = 7` kiest, zou een regelmatige zevenhoek moeten worden getekend.
+
+    Gelukt? Breid dan je programma uit met een :python:`input()` aanroep waarmee aan de gebruiker wordt gevraagd hoeveel hoeken de veelhoek moet hebben en sla het antwoord van de gebruiker op in :python:`aantal_hoeken`.
+
+    .. figure:: images/polygon_01.png
+
+    .. figure:: images/polygon_02.png
