@@ -282,7 +282,25 @@ Opdrachten
     :color: secondary
     :icon: pencil
 
-    Maak een nieuw bestand in Mu editor en sla het op als :file:`driehoeken.py`. Kopieer de code van :file:`turtle_while.py` naar je nieuwe bestand. Pas de code zodanig aan dat in plaats van een vierkant een driehoek met zijden van 100 pixels wordt getekend, uiteraard met gebruikmaking van een while loop. Na het tekenen van een zijde moet de turtle telkens 120 graden draaien.
+    Maak een nieuw bestand in Mu editor en sla het op als :file:`driehoeken.py`. Kopieer de onderstaande code van :file:`turtle_while.py` naar je nieuwe bestand. 
+    
+    .. code-block:: python
+        :linenos:
+        :caption: turtle_while.py
+
+        # While loops - opdracht 01
+
+        import turtle
+
+        tony = turtle.Turtle()
+
+        zijde = 0
+        while zijde < 4:
+            tony.fd(100)
+            tony.lt(90)
+            zijde = zijde + 1
+    
+    Pas de code zodanig aan dat in plaats van een vierkant een driehoek met zijden van 100 pixels wordt getekend, uiteraard met gebruikmaking van een while loop. Na het tekenen van een zijde moet de turtle telkens 120 graden draaien.
 
     .. dropdown:: Oplossing
         :color: secondary
