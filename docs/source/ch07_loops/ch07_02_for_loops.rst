@@ -52,7 +52,7 @@ Je ziet dat :python:`range(n)` de getallen :python:`0` tot en met :python:`n-1` 
 
     :Parameters:
         * Het startgetal van de serie. Niet verplicht; standaardwaarde is 0.
-        * Getal dat aangeeft waar de serie moet stoppen. Verplicht.
+        * Het stopggetal van de serie. Verplicht.
         * De stapgrootte. Niet verplicht; standaardwaarde is 1.
     :Returnwaarde:
         Een serie getallen. Om de serie te tonen in de CLI heb je de :python:`list()` functie nodig. 
