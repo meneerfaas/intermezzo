@@ -19,6 +19,9 @@ Programmeren in Python voor Intermezzo
    ch06_turtle/ch06_01_turtle
    ch07_loops/ch07_01_while_loops
    ch07_loops/ch07_02_for_loops
+   ch08_coordinates/ch08_01_coordinates
+   ch09_functions/ch09_01_functions
+   ch10_if_statements/ch10_01_if_statements
 ..
    lesson_00_preparations
    lesson_01_algorithms
