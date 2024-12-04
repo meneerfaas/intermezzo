@@ -22,6 +22,7 @@ Programmeren in Python voor Intermezzo
    ch08_coordinates/ch08_01_coordinates
    ch09_functions/ch09_01_functions
    ch10_if_statements/ch10_01_if_statements
+   ch07_loops/ch07_03_exercises
 ..
    lesson_00_preparations
    lesson_01_algorithms
