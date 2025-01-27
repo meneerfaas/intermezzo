@@ -1,15 +1,28 @@
 .. role:: python(code)
    :language: python
 
+.. |br| raw:: html
+
+   <br/>
+
 Functies
 ========
 
 In Python kun je een functie herkennen aan haakjes achter de naam. Bijvoorbeeld :python:`print()` en :python:`turtle.penup()` zijn functies. Aan sommige functies kun je informatie meegeven waarmee de functie iets moet doen. Die informatie zet je dan tussen de haakjes. Bijvoorbeeld :python:`print('Hello, World!')` geeft aan dat de functie :python:`print()` de tekst :python:`'Hello, World!'` moet afdrukken. Er zijn ook functies die geen informatie nodig hebben, zoals :python:`turtle.penup()`, maar toch moet je de haakjes typen, omdat Python anders niet snapt dat je een functie aanroept.
 
+.. dropdown:: Wat leer je in dit hoofdstuk
+    :open:
+    :color: primary
+    :icon: book
+
+    * Hoe maak je je eigen functies in Python.
+    * Wat is het verschil tussen een functiedefinitie en een functieaanroep.
+    * Hoe maak je een functie die input kan ontvangen.
+
 Het :python:`def` keyword
 -------------------------
 
-Om een functie te maken heb je het :python:`def` keyword nodig. Keywords zijn woorden met een speciale betekenis in Python. Je kent bijvoorbeeld al de keywords :python:`while` en :python:`for` om loops te maken. Met het :python:`def` keyword **def**\inieer je een functie.
+Om een functie te maken heb je het :python:`def` keyword nodig. Keywords zijn woorden met een speciale betekenis in Python. Je kent bijvoorbeeld al de keywords :python:`while` en :python:`for` om loops te maken en je hebt in het :ref:`hoofdstuk Variabelen <python-keywords>` een overzicht van de Python keywords gezien. Met het :python:`def` keyword **def**\inieer je een functie.
 
 Kopieer onderstaande code naar een nieuw bestand in Mu editor en sla het op als function_square.py. 
 
@@ -55,7 +68,65 @@ Wanneer je :file:`function_square.py` runt, zul je zien dat er niets gebeurt! Da
 
 Het commentaar op regels 5 en 13 is voor Python niet interessant (Python negeert commentaar bij het uitvoeren van het programma), maar maakt de code wel beter leesbaar. Met :python:`# Hoofdprogramma` in regel 13 geven we aan dat vanaf daar het eigenlijke programma begint. In regel 14 roepen we de functie :python:`square()` aan, waardoor het vierkant daadwerkelijk wordt getekend. Probeer maar.
 
+Het is belangrijk twee zaken goed te onderscheiden:
+
+.. grid:: 2
+
+    .. grid-item-card:: Functiedefinitie
+        :class-card: bgcolor-khaki
+
+        Een functiedefinitie is de code die de functie beschrijft. In de functiedefinitie staat wat de functie doet. De functie wordt nog niet uitgevoerd; dat gebeurt pas wanneer hij wordt aangeroepen.
+
+        In :file:`function_square.py` bevatten de regels 6 t/m 11 de functiedefinitie.
+
+    .. grid-item-card:: Functieaanroep
+        :class-card: bgcolor-khaki
+
+        De functieaanroep staat in het hoofdprogramma (of in de definitie van een andere functie). De functieaanroep zorgt ervoor dat de functie daadwerkelijk wordt uitgevoerd.
+
+        In :file:`function_square.py` staat op regel 14 de functieaanroep. Merk op dat op regels 9 en 10 ook functieaanroepen staan: :python:`tony.fd(50)` en :python:`tony.lt(90)`.
+
+
 Elke keer dat we nu een vierkantje met zijden van 50 pixels willen tekenen, hoeven we slechts de functie :python:`square()` aan te roepen. Dat scheelt een hoop typwerk. Wijzig de code in :file:`function_square.py` als volgt:
+
+.. code-block:: python
+    :linenos:
+    :emphasize-lines: 17, 21, 25
+    :caption: function_square.py
+    :name: function_square_v03
+
+    import turtle
+
+    tony = turtle.Turtle()
+
+    # Functie square() tekent een vierkant
+    def square():
+        z = 0
+        while z < 4:
+            tony.fd(50)
+            tony.lt(90)
+            z = z + 1
+
+    # Hoofdprogramma
+    tony.pu()
+    tony.goto(-200, 0)
+    tony.pd()
+    square()
+    tony.pu()
+    tony.goto(-100, 0)
+    tony.pd()
+    square()
+    tony.pu()
+    tony.goto(0, 0)
+    tony.pd()
+    square()
+
+Dit programma tekent drie vierkantjes:
+
+.. figure:: images/function_square.png
+    :width: 300
+
+Uiteraard kunnen we dit efficiënter doen met een loop. Probeer de code hieronder maar eens, die tien vierkantjes tekent.
 
 .. code-block:: python
     :linenos:
@@ -122,12 +193,25 @@ Elke keer dat we nu een vierkantje met zijden van 50 pixels willen tekenen, hoev
 
     .. image:: images/function_triangle.png
 
-Argumenten
-----------
+Argumenten en parameters
+------------------------
 
-Aan de functie :python:`square()` kun je geen informatie tussen de haakjes meegeven. Maar zou het niet handig zijn als we :python:`square(100)` konden gebruiken om een vierkant met zijden van 100 pixels te tekenen en :python:`square(200)` voor zijden van 200 pixels? Ja dat zou heel handig zijn! We willen dus graag informatie kunnen meegeven aan onze functies. In Python noem je die informatie *argumenten*. We gaan de functie :python:`square()` aanpassen zodat het mogelijk wordt om één argument mee te geven: de zijdelengte.
+Aan de functie :python:`square()` kun je geen informatie tussen de haakjes meegeven. Maar zou het niet handig zijn als we :python:`square(100)` konden gebruiken om een vierkant met zijden van 100 pixels te tekenen en :python:`square(200)` voor zijden van 200 pixels? Ja dat zou heel handig zijn! We willen dus graag informatie kunnen meegeven aan onze functies. In Python noem je die informatie *argumenten*. Om argumenten mee te kunnen geven aan een functie, voeg je aan de functiedefinitie *parameters* toe. Het volgende voorbeeld maakt het verschil tussen argumenten en parameters duidelijk.
 
-Maak weer een nieuw bestand in Mu editor en noem het :file:`turtle_functions.py`. In dit bestand zullen we namelijk meerdere verschillende functies gaan definiëren. Kopieer onderstaande code naar het bestand.
+.. code-block:: python
+    :caption: arguments_and_parameters.py
+    :linenos:
+
+    # Functie begroet()
+    def begroet(naam):          # naam is een parameter
+        print(f'Hallo {naam}!')
+
+    # Hoofdprogramma
+    begroet('Alan')             # 'Alan' is een argument
+
+Bij het aanroepen van de functie :python:`begroet()` in regel 6 geven we het argument :python:`'Alan'` mee. Dit argument wordt door de functie ontvangen in de parameter :python:`naam`. De functie :python:`begroet()` zal dan de tekst :python:`'Hallo Alan!'` afdrukken. 
+
+Terug naar onze turtle functies. We gaan de functie :python:`square()` aanpassen zodat het mogelijk wordt om één argument mee te geven: de zijdelengte. Maak weer een nieuw bestand in Mu editor en noem het :file:`turtle_functions.py`. In dit bestand zullen we namelijk meerdere verschillende functies gaan definiëren. Kopieer onderstaande code naar het bestand.
 
 .. code-block:: python
     :linenos:
@@ -147,7 +231,7 @@ Maak weer een nieuw bestand in Mu editor en noem het :file:`turtle_functions.py`
     # Hoofdprogramma
     square(200)
 
-Deze code lijkt sterk op :ref:`function_square_v02`. Op regel zes is tussen de haakjes echter een variabele :python:`side_length` toegevoegd. Deze variabele wordt in regel 8 gebruikt in de aanroep :python:`tony.fd(side_length)`. Door deze eenvoudige toevoegingen kunnen we nu in regel 12 een argument meegeven aan de functie: :python:`square(200)`.
+Deze code lijkt sterk op :ref:`function_square_v02`. Op regel zes is tussen de haakjes echter de parameter :python:`side_length` toegevoegd. Deze parameter wordt in regel 8 gebruikt in de aanroep :python:`tony.fd(side_length)`. Door deze eenvoudige toevoegingen kunnen we nu in regel 12 een argument meegeven aan de functie: :python:`square(200)`. |br| Overigens is er nog een verschil met  :ref:`function_square_v02`: in plaats van een :python:`while` loop gebruiken we een :python:`for` loop. Dit is efficiënter en levert minder typwerk op.
 
 Nu we een argument aan :python:`square()` kunnen meegeven, hebben we nog meer mogelijkheden om te spelen met loops. Gebruik bijvoorbeeld de loopvariabele als volgt:
 
