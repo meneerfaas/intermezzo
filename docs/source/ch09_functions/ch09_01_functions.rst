@@ -211,6 +211,30 @@ Aan de functie :python:`square()` kun je geen informatie tussen de haakjes meege
 
 Bij het aanroepen van de functie :python:`begroet()` in regel 6 geven we het argument :python:`'Alan'` mee. Dit argument wordt door de functie ontvangen in de parameter :python:`naam`. De functie :python:`begroet()` zal dan de tekst :python:`'Hallo Alan!'` afdrukken. 
 
+.. grid:: 2
+
+    .. grid-item-card:: Parameter
+        :class-card: bgcolor-khaki
+
+        Een parameter is een variabele die tussen de haakjes in een functiedefinitie staat. In het voorbeeld hieronder zijn :python:`a` en :python:`b` parameters.
+
+        .. code-block:: python
+
+            def print_som(a, b):
+                uitkomst = a + b
+                print(f'{a} + {b} = {uitkomst}')  
+
+    .. grid-item-card:: Argument
+        :class-card: bgcolor-khaki
+
+        Een argument is een waarde die je tussen haakjes meegeeft in een functieaanroep. In het voorbeeld hieronder zijn :python:`3` en :python:`4` argumenten.
+
+        .. code-block:: python
+
+            print_som(3, 4)          
+
+
+
 Terug naar onze turtle functies. We gaan de functie :python:`square()` aanpassen zodat het mogelijk wordt om één argument mee te geven: de zijdelengte. Maak weer een nieuw bestand in Mu editor en noem het :file:`turtle_functions.py`. In dit bestand zullen we namelijk meerdere verschillende functies gaan definiëren. Kopieer onderstaande code naar het bestand.
 
 .. code-block:: python
