@@ -345,16 +345,14 @@ Dat is waarschijnlijk niet helemaal wat je voor ogen hebt wanneer je de alien in
 .. grid:: 2
 
    .. grid-item:: 
-      :columns: auto
+      :columns: 6
 
       .. image:: images/sides.png
-         :scale: 50%
 
    .. grid-item:: 
-      :columns: auto
+      :columns: 6
 
       .. image:: images/anchorpoints.png
-         :scale: 50%
 
 
 De alien sprite heeft een breedte en een hoogte. Wanneer je :python:`alien.x` en :python:`alien.y` een waarde geeft, zorgt Pygame ervoor dat het middelpunt (:python:`center`) van de sprite op die positie terecht komt. Het middelpunt is namelijk het standaard *ankerpunt*  van een sprite. Wij willen echter graag dat het punt rechtsonder (:python:`bottomright`) op de coördinaten :python:`(600, 400)` terecht komt. Dit kun je doen door regels 7 en 8 van je programma als volgt aan te passen:

@@ -112,30 +112,6 @@ De pixel die vanuit de linker bovenhoek 200 naar rechts en 100 naar beneden ligt
 
 .. figure:: images/coordinates_03.png
 
-.. dropdown:: Verschillende coördinatenstelsels
-   :open:
-   :color: warning
-   :icon: alert
-
-   Let op het verschil tussen het coördinatenstelsel in Pygame Zero en dat in de turtle module. In de turtle module is :python:`(0, 0)` het midden van het venster. In Pygame Zero is :python:`(0, 0)`  de linker bovenhoek. Bovendien is de positieve richting van de y-as in de turtle module naar boven en in Pygame Zero naar beneden!
-
-   .. grid:: 2
-
-      .. grid-item:: 
-         :columns: 6
-
-         .. image:: images/turtle_axes.png
-         
-         Coördinatenstelsel turtle
-
-      .. grid-item:: 
-         :columns: 6
-
-         .. image:: images/pygame_axes.png
-
-         Coördinatenstelsel Pygame
-     
-
 Laten we de alien eens op dit punt :python:`(200, 100)` positioneren: 
 
 .. code-block:: python
@@ -163,116 +139,35 @@ Run de code om te controleren of de alien inderdaad op de juiste positie staat.
 .. image:: images/alien_200_100.png
 
 |br|
+Om de alien in het midden van het venster te plaatsen zou je het volgende kunnen doen:
 
-.. dropdown:: Opdracht 01
-  :color: secondary
-  :icon: pencil
-  :open:
+.. code-block:: python
+   :class: no-copybutton
+   :linenos:
+   :lineno-start: 7
+   :caption: alien.py
+   :name: alien_v04
 
-  Wijzig de code in :file:`alien.py` zodat de alien op 500 pixels van de linkerzijde en 300 pixels van de bovenzijde van het venster staat.   
+   alien.x = 300
+   alien.y = 200
 
-  .. dropdown:: Oplossing
-      :color: secondary
-      :icon: check-circle
+Dat is echter niet handig! De volgende manier is beter:
 
-      .. code-block:: python
-         :class: no-copybutton
-         :linenos:
-         :emphasize-lines: 7-8
-         :caption: alien.py
+.. code-block:: python
+   :class: no-copybutton
+   :linenos:
+   :lineno-start: 7
+   :caption: alien.py
+   :name: alien_v05
 
-         # Vensterafmetingen
-         WIDTH = 600
-         HEIGHT = 400
+   alien.x = WIDTH / 2
+   alien.y = HEIGHT / 2
 
-         # Roze alien Actor
-         alien = Actor('alien_pink')
-         alien.x = 500
-         alien.y = 300
-
-         # De draw() functie van de game
-         def draw():
-            alien.draw()
-
-.. dropdown:: Opdracht 02
-  :color: secondary
-  :icon: pencil
-  :open:
-
-  Wijzig de code in :file:`alien.py` zodat de alien op 150 pixels van de **rechter**\zijde en 50 pixels van de **onder**\zijde van het venster staat.   
-
-.. dropdown:: Opdracht 03
-  :color: secondary
-  :icon: pencil
-  :open:
-
-  Wijzig de code in :file:`alien.py` zodat de alien exact in het midden van het venster staat.   
-
-Vensterafmetingen gebruiken
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Wellicht heb je de opdrachten 02 en 03 als volgt opgelost:
-
-.. grid:: 2
-
-   .. grid-item:: 
-      :columns: 6
-
-      .. code-block:: python
-         :class: no-copybutton
-         :linenos:
-         :lineno-start: 7
-         :caption: Opdracht 02
-
-         alien.x = 450
-         alien.y = 350
-
-   .. grid-item:: 
-      :columns: 6
-
-      .. code-block:: python
-         :class: no-copybutton
-         :linenos:
-         :lineno-start: 7
-         :caption: Opdracht 03
-
-         alien.x = 300
-         alien.y = 200
-
-Met deze code komt de alien inderdaad op de juiste plek terecht. Het is echter beter om bij deze opdrachten de vensterafmetingen :python:`WIDTH` en :python:`HEIGHT` te gebruiken voor het positioneren van de alien:
-
-.. grid:: 2
-
-   .. grid-item:: 
-      :columns: 6
-
-      .. code-block:: python
-         :class: no-copybutton
-         :linenos:
-         :lineno-start: 7
-         :caption: Opdracht 02
-
-         alien.x = WIDTH - 150
-         alien.y = HEIGHT - 50
-
-   .. grid-item:: 
-      :columns: 6
-
-      .. code-block:: python
-         :class: no-copybutton
-         :linenos:
-         :lineno-start: 7
-         :caption: Opdracht 03
-
-         alien.x = WIDTH / 2
-         alien.y = HEIGHT / 2
-
-
+In plaats van de waarden van :python:`alien.x` en :python:`alien.y` te *hardcoden* met de getallen :python:`300` en :python:`200` is het beter ze afhankelijk te maken van :python:`WIDTH` en :python:`HEIGHT`.
 
 .. dropdown:: Vraag 01
     :color: secondary
     :icon: question
-    :open:
 
     Waarom is het beter :python:`alien.x = WIDTH / 2` te gebruiken dan :python:`alien.x = 300` om de sprite horizontaal in het midden van het venster te positioneren?  
 
@@ -282,33 +177,9 @@ Met deze code komt de alien inderdaad op de juiste plek terecht. Het is echter b
 
         Met :python:`alien.x = WIDTH / 2` is je code flexibeler. Stel dat je later besluit om de breedte van je venster te vergroten naar 800 pixels, dan komt de sprite nog steeds in het midden terecht. Had je :python:`alien.x = 300` gebruikt, dan zou de sprite niet meer in het midden staan.
 
-.. dropdown:: Opdracht 04
-   :color: secondary
-   :icon: pencil
-   :open:
-
-   Wijzig de code in :file:`alien.py` zodat de alien op een kwart van de vensterbreedte en de helft van de vensterhoogte staat.
-
-   .. dropdown:: Oplossing
-      :color: secondary
-      :icon: check-circle
-
-      .. code-block:: python
-         :class: no-copybutton
-         :linenos:
-         :lineno-start: 7
-         :caption: Opdracht 04
-
-         alien.x = WIDTH / 4     # Of alien.x = 0.25 * WIDTH
-         alien.y = HEIGHT / 2    # Of alien.y = 0.5 * HEIGHT
-
-Ankerpunten
-^^^^^^^^^^^^^^^^
-
-.. dropdown:: Opdracht 05
+.. dropdown:: Opdracht 01
   :color: secondary
   :icon: pencil
-  :open:
 
   Plaats de alien in de rechter onderhoek van het venster. Gebruik niet de getallen :python:`600` en :python:`400`, maar de constanten :python:`WIDTH` en :python:`HEIGHT`.   
 
@@ -386,10 +257,9 @@ Nu staat de alien precies op de plek die we wilden:
 
 |br|
 
-.. dropdown:: Opdracht 06
+.. dropdown:: Opdracht 02
    :color: secondary
    :icon: pencil
-   :open:
 
    Plaats de alien in de rechter bovenhoek van het venster.
 
@@ -423,10 +293,9 @@ Nu staat de alien precies op de plek die we wilden:
 
          alien.topright = (WIDTH, 0)
 
-.. dropdown:: Opdracht 07
+.. dropdown:: Opdracht 03
    :color: secondary
    :icon: pencil
-   :open:
 
    Plaats de alien in de linker onderhoek van het venster.
 

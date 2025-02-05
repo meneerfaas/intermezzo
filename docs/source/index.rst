@@ -5,7 +5,7 @@ Programmeren in Python voor Intermezzo
 .. toctree::
    :maxdepth: 1
    :numbered: 1
-   :caption: Inhoudsopgave
+   :caption: Basisbeginselen
 
    ch00_introduction/ch00_01_preparations
    ch00_introduction/ch00_02_editor_cli
@@ -23,6 +23,15 @@ Programmeren in Python voor Intermezzo
    ch09_functions/ch09_01_functions
    ch10_if_statements/ch10_01_if_statements
    ch07_loops/ch07_03_exercises
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 1
+   :caption: Games programmeren
+
+   ch11_pygame_zero/ch_01_pygame
+   ch11_pygame_zero/ch_02_sprites
+   ch11_pygame_zero/ch_03_movement
 ..
    lesson_00_preparations
    lesson_01_algorithms
