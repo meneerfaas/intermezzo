@@ -30,10 +30,10 @@ Tijd voor actie! Die statische alien mag wel eens in beweging komen. Om dat voor
 
    # De update() functie van de game
    def update():
-      alien.left += 2
+      alien.x += 2
 
 | In regel 7 positioneren we onze alien aan de linkerkant van het venster, verticaal in het midden. 
-| In de :python:`update()` functie zie je op regel 15 :python:`alien.left += 2`. Dit is een kortere schrijfwijze voor :python:`alien.left = alien.left + 2`. Het effect van deze regel is dat de linkerkant van de alien 2 pixels naar rechts opschuift, elke keer wanneer de :python:`update()` functie wordt aangeroepen.
+| In de :python:`update()` functie zie je op regel 15 :python:`alien.x += 2`. Dit is een kortere schrijfwijze voor :python:`alien.x = alien.x + 2`. Het effect van deze regel is dat de alien 2 pixels naar rechts opschuift, elke keer wanneer de :python:`update()` functie wordt aangeroepen.
 
 .. _no-screen-clear:
 
@@ -65,7 +65,7 @@ De alien schuift inderdaad naar rechts, maar hij laat een flinke schaduw achter.
 
    # De update() functie van de game
    def update():
-      alien.left += 2
+      alien.x += 2
 
 Dit ziet er al een stuk beter uit. Maar er is nog wel een probleem: de alien verdwijnt buiten beeld aan de rechterkant van het venster.
 
@@ -95,11 +95,13 @@ Dit gaan we oplossen met een :python:`if` statement. Als de linkerzijde van de a
 
    # De update() functie van de game
    def update():
-      alien.left += 2
+      alien.x += 2
       if alien.left > WIDTH:
          alien.right = 0
 
 Door in regel 18 de rechterzijde van de alien op 0 te zetten, plaatsen we hem net buiten beeld aan de linkerkant van het venster.
+
+.. figure:: images/movement_out_of_bounds.png
 
 .. dropdown:: Opdracht 01
    :color: secondary
@@ -143,7 +145,7 @@ Door in regel 18 de rechterzijde van de alien op 0 te zetten, plaatsen we hem ne
 
          # De update() functie van de game
          def update():
-            alien.left -= 2
+            alien.x -= 2
             if alien.right < 0:
                alien.left = WIDTH
 
@@ -225,7 +227,7 @@ In regel 16 van :file:`alien.py` verandert de positie van de alien 2 pixels door
 
    # De update() functie van de game
    def update():
-      alien.left += alien.speed
+      alien.x += alien.speed
       if alien.left > WIDTH:
          alien.right = 0
 
@@ -249,7 +251,7 @@ Nu we voor de snelheid een variabele gebruiken, kun je tijdens de uitvoering van
 
    # De update() functie van de game
    def update():
-      alien.left += alien.speed
+      alien.x += alien.speed
       alien.speed += 0.1
       if alien.left > WIDTH:
          alien.right = 0
@@ -266,7 +268,7 @@ Je kunt je alien ook steeds langzamer laten bewegen:
 
    # De update() functie van de game
    def update():
-      alien.left += alien.speed
+      alien.x += alien.speed
       alien.speed -= 0.1
       if alien.left > WIDTH:
          alien.right = 0
@@ -283,7 +285,7 @@ Maar dan zie je dat hij al snel de andere kant op gaat omdat de snelheid een neg
 
    # De update() functie van de game
    def update():
-      alien.left += alien.speed
+      alien.x += alien.speed
       alien.speed *= 0.99
       if alien.left > WIDTH:
          alien.right = 0
@@ -312,7 +314,7 @@ De uitdrukking :python:`alien.speed *= 0.99` betekent :python:`alien.speed = ali
 
          # De update() functie van de game
          def update():
-            alien.left += alien.speed
+            alien.x += alien.speed
             if alien.right >= WIDTH:
                alien.speed = ...
 
@@ -332,7 +334,7 @@ De uitdrukking :python:`alien.speed *= 0.99` betekent :python:`alien.speed = ali
 
          # De update() functie van de game
          def update():
-            alien.left += alien.speed
+            alien.x += alien.speed
             if alien.right >= WIDTH:
                alien.speed = -alien.speed
 
@@ -362,7 +364,7 @@ De uitdrukking :python:`alien.speed *= 0.99` betekent :python:`alien.speed = ali
 
          # De update() functie van de game
          def update():
-            alien.left += alien.speed
+            alien.x += alien.speed
             if alien.right >= WIDTH or alien.left <= 0:
                alien.speed = -alien.speed
 

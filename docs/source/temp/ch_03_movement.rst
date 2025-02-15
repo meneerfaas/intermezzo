@@ -30,10 +30,10 @@ Tijd voor actie! Die statische alien mag wel eens in beweging komen. Om dat voor
 
    # De update() functie van de game
    def update():
-      alien.left += 2
+      alien.x += 2
 
 | In regel 7 positioneren we onze alien aan de linkerkant van het venster, verticaal in het midden. 
-| In de :python:`update()` functie zie je op regel 15 :python:`alien.left += 2`. Dit is een kortere schrijfwijze voor :python:`alien.left = alien.left + 2`. Het effect van deze regel is dat de linkerkant van de alien 2 pixels naar rechts opschuift, elke keer wanneer de :python:`update()` functie wordt aangeroepen.
+| In de :python:`update()` functie zie je op regel 15 :python:`alien.x += 2`. Dit is een kortere schrijfwijze voor :python:`alien.x = alien.x + 2`. Het effect van deze regel is dat de alien 2 pixels naar rechts opschuift, elke keer wanneer de :python:`update()` functie wordt aangeroepen.
 
 .. _no-screen-clear:
 
@@ -65,7 +65,7 @@ De alien schuift inderdaad naar rechts, maar hij laat een flinke schaduw achter.
 
    # De update() functie van de game
    def update():
-      alien.left += 2
+      alien.x += 2
 
 Dit ziet er al een stuk beter uit. Maar er is nog wel een probleem: de alien verdwijnt buiten beeld aan de rechterkant van het venster.
 
@@ -95,11 +95,13 @@ Dit gaan we oplossen met een :python:`if` statement. Als de linkerzijde van de a
 
    # De update() functie van de game
    def update():
-      alien.left += 2
+      alien.x += 2
       if alien.left > WIDTH:
          alien.right = 0
 
 Door in regel 18 de rechterzijde van de alien op 0 te zetten, plaatsen we hem net buiten beeld aan de linkerkant van het venster.
+
+.. figure:: images/movement_out_of_bounds_png
 
 .. dropdown:: Opdracht 01
    :color: secondary
