@@ -1,0 +1,11 @@
+{
+    "esbonio.sphinx.buildDir": "${workspaceFolder}/docs/build/html",
+    "esbonio.sphinx.confDir": "${workspaceFolder}\\docs\\source",
+    "esbonio.sphinx.srcDir": "${workspaceFolder}/docs/source",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none",
+    "restructuredtext.preview.scrollEditorWithPreview": false,
+    "restructuredtext.preview.scrollPreviewWithEditor": true
+}
