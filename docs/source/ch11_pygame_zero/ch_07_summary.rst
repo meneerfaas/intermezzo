@@ -239,3 +239,45 @@ Met de collision detection functie :python:`.collidepoint()` van de Actor kun je
       elif player_02.collidepoint(pos):
          print('De groene alien is aangeklikt!')
 
+Reageren op toetsenbord
+------------------------
+
+Voor het reageren op toetsaanslagen kun je twee wegen bewandelen:
+
+.. grid:: 2
+
+   .. grid-item-card:: 
+      :columns: 6
+
+      Definieer een :python:`on_key_down()` en/of een :python:`on_key_up()` event handler. Deze functies worden automatisch aangeroepen zodra een toets wordt ingedrukt of losgelaten.
+
+      Deze manier is minder geschikt voor situaties waarin de speler een toets *ingedrukt houdt*, bijvoorbeeld om een Actor te besturen. De functies worden namelijk niet herhaaldelijk aangeroepen.
+
+   .. grid-item-card::
+      :columns: 6
+
+      Gebruik een :python:`if` statement in de :python:`update()` functie om te controleren of een toets is ingedrukt. Deze functie wordt automatisch 60 keer per seconde aangeroepen.
+
+      Deze manier is minder geschikt voor situaties waarin je slechts één keer wilt reageren per toetsaanslag.
+
+Met de volgende code kun je het verschil tussen de twee manieren goed zien.
+
+.. code-block:: python
+
+   # on_key_down() event handler
+   def on_key_down(key):
+      if key == keys.A:
+         player_01.x -=5
+      elif key == keys.D:
+         player_01.x +=5
+
+   # update() functie van de game
+   def update():
+      if keyboard[keys.LEFT]:
+         player_02.x -= 5
+      elif keyboard[keys.RIGHT]:
+         player_02.x += 5
+
+De roze alien wordt bestuurd met de A en de D toetsen. De groene alien wordt bestuurd met de linker- en rechterpijltjestoetsen. Om de roze alien te bewegen moet je heel vaak de A of D toets indrukken. De groene alien beweegt echter soepel met de pijltjestoetsen, die je gewoon ingedrukt kunt houden.
+
+Let op het verschil tussen de :python:`if` statements in de :python:`on_key_down()` functie en de :python:`update()` functie. In de :python:`on_key_down()` functie gebruik je :python:`if key == keys.KEYCODE` en in de :python:`update()` functie gebruik je :python:`if keyboard[keys.KEYCODE]`. De KEYCODE is een constante die je kunt vinden in de `Pygame Zero documentatie <https://pygame-zero.readthedocs.io/en/stable/hooks.html?highlight=time#keys>`_.

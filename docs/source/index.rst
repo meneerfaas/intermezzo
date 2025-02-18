@@ -38,6 +38,8 @@ Games programmeren
    ch11_pygame_zero/ch_02_sprites
    ch11_pygame_zero/ch_03_movement
    ch11_pygame_zero/ch_04_events
+   ch11_pygame_zero/ch_07_summary
+
    ch11_pygame_zero/ch_05_score
    ch11_pygame_zero/ch_06_improvements
 ..
