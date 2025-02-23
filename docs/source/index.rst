@@ -42,6 +42,18 @@ Games programmeren
 
    ch11_pygame_zero/ch_05_score
    ch11_pygame_zero/ch_06_improvements
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 1
+   :caption: Fruit catcher
+
+   ch12_pygame_zero/ch_01_introduction
+   ch12_pygame_zero/ch_02_basket
+   ch12_pygame_zero/ch_03_fruit
+   ch12_pygame_zero/ch_04_score
+   ch12_pygame_zero/ch_05_begin_end
+   ch12_pygame_zero/ch_06_extras
 ..
    lesson_00_preparations
    lesson_01_algorithms
