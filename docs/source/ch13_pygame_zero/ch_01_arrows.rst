@@ -8,6 +8,8 @@
 Extra oefening: Arrows
 ========================
 
+Deze opdracht gaat over het positioneren van sprites in het venster.
+
 Sprites
 -----------
 
@@ -21,10 +23,10 @@ Download de volgende sprites:
 Mappenstructuur
 ----------------
 
-Maak voor deze oefening in je :file:`games` map een nieuwe map met de naam :file:`arrows`. Maak in Mu editor een nieuw bestand en sla het op in je :file:`arrows` map onder de naam :file:`arrows.py`. Plaats de gedownloade sprites naar de :file:`images` map in de :file:`arrows` map.
+Maak voor deze oefening in je :file:`games` map een nieuwe map met de naam :file:`arrows`. Maak in Mu editor een nieuw bestand en sla het op in je :file:`arrows` map onder de naam :file:`arrows.py`. Plaats de gedownloade sprites in de :file:`images` map in de :file:`arrows` map.
 
-.. card:: 
-   
+.. card::
+
    .. uml::
       :align: left
       :html_format: svg
@@ -52,6 +54,6 @@ Begin met de volgende code in :file:`arrows.py`:
    HEIGHT = 300
    TITLE = 'Arrows'
 
-Maak vervolgens een programma dat vier pijlen op de onderstaande manier op het scherm toont. De pijlen moeten precies zijn uitgelijnd in de hoeken van het venster.
+Maak vervolgens een programma dat vier pijlen op de onderstaande manier op het scherm toont. De pijlpunten moeten precies zijn uitgelijnd in de hoeken van het venster.
 
 .. figure:: images/arrows.png
