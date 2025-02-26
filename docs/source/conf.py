@@ -9,7 +9,7 @@ import os
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Programmeren in Python voor Intermezzo'
-copyright = '2024, S. Faas'
+copyright = '2025, S. Faas'
 author = 'S. Faas'
 release = '0.0'
 
