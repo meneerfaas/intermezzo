@@ -54,6 +54,14 @@ Games programmeren
    ch12_pygame_zero/ch_04_score
    ch12_pygame_zero/ch_05_begin_end
    ch12_pygame_zero/ch_06_extras
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 1
+   :caption: Extra oefeningen
+
+   ch13_pygame_zero/ch_01_arrows
+
 ..
    lesson_00_preparations
    lesson_01_algorithms
