@@ -61,6 +61,8 @@ Games programmeren
    :caption: Extra oefeningen
 
    ch13_pygame_zero/ch_01_arrows
+   ch13_pygame_zero/ch_02_balls
+   ch13_pygame_zero/ch_03_flying_ball
 
 ..
    lesson_00_preparations
