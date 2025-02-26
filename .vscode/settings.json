@@ -5,11 +5,9 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
-    "python.formatting.provider": "none",
     "restructuredtext.preview.scrollEditorWithPreview": false,
     "restructuredtext.preview.scrollPreviewWithEditor": true,
     "restructuredtext.linter.doc8.extraArgs": [
-        "--ignore D004",
-        "--ignore D008"
-    ]
+            "--ignore D001 D004 D005"
+        ]
 }
