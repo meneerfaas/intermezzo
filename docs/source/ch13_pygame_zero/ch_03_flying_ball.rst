@@ -77,7 +77,7 @@ Bekijk de code goed. Probeer van elke regel de betekenis te begrijpen.
 Opdracht
 ---------
 
-Breidt de code uit met de volgende functionaliteit:
+Breid de code uit met de volgende functionaliteit:
 
 * Als je met de linkermuisknop op de bal klikt, moet die in tegengestelde richting gaan bewegen. Dus als de bal naar rechts beweegt, moet hij na een muisklik naar links bewegen en vice versa.
 * Als de bal aan de linkerkant uit het venster verdwijnt, moet hij aan de rechterkant weer verschijnen.

@@ -89,7 +89,7 @@ Run de code en klik met de linkermuisknop op de blauwe bal. Wat gebeurt er?
 Opdracht
 ---------
 
-Breidt de code uit met de volgende functionaliteit:
+Breid de code uit met de volgende functionaliteit:
 
 * Als je met de *rechter*\muisknop op de oranje bal klikt, moet die één stapgrootte omlaag bewegen.
 * Als je met een willekeurige muisknop op de groene bal klikt, moet de blauwe bal één stapgrootte omlaag en de oranje bal één stapgrootte omhoog bewegen.
