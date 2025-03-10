@@ -63,7 +63,8 @@ Games programmeren
    ch13_pygame_zero/ch_01_arrows
    ch13_pygame_zero/ch_02_balls
    ch13_pygame_zero/ch_03_flying_ball
-
+   ch13_pygame_zero/ch_04_brick
+   ch13_pygame_zero/ch_05_speedbrick
 ..
    lesson_00_preparations
    lesson_01_algorithms
