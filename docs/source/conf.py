@@ -1,4 +1,6 @@
 import os
+import sys
+from pathlib import Path
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -55,3 +57,4 @@ local_plantuml_path = os.path.join(os.path.dirname(
     __file__), "utils", "plantuml.jar")
 plantuml = f"java -Djava.awt.headless=true -jar {local_plantuml_path}"
 plantuml_output_format = 'svg'
+
