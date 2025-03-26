@@ -5,6 +5,10 @@
 
    <br/>
 
+.. |rectangleselect| image:: images/painttools/RectangleSelectToolIcon.192.png
+   :height: 2ex
+   :class: no-scaled-link
+
 .. |magicwand| image:: images/painttools/MagicWandToolIcon.192.png
    :height: 2ex
    :class: no-scaled-link
@@ -28,6 +32,8 @@
 .. |deletelayer| image:: images/painttools/MenuLayersDeleteLayerIcon.192.png
    :height: 2ex
    :class: no-scaled-link
+
+
 
 Sprites bewerken in Paint.NET
 ==============================
@@ -192,7 +198,7 @@ Let op: je moet behalve de :kbd:`Ctrl` toets dus ook de :kbd:`Alt` toets ingedru
 Selectiegereedschappen
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-In de toolbox vind je een aantal gereedschappen waarmee je onderdelen van een afbeelding kunt selecteren. Klik op het :guilabel:`Rectangle Select` gereedschap in de linkerbovenhoek van de toolbox en je zult zien dat de knoppenbalk bovenin zich daarop aanpast.
+In de toolbox vind je een aantal gereedschappen waarmee je onderdelen van een afbeelding kunt selecteren. Klik op het *Rectangle Select* |rectangleselect| gereedschap in de linkerbovenhoek van de toolbox en je zult zien dat de knoppenbalk bovenin zich daarop aanpast.
 
 .. grid:: 2
 
@@ -222,7 +228,7 @@ In de onderstaande afbeelding zie je dat voor :guilabel:`Fixed Ratio` is gekozen
    :color: secondary
    :icon: pencil
 
-   Kies het :guilabel:`Rectangle Select` gereedschap. Stel de afmeting in op :guilabel:`Fixed Ratio` met breedte-hoogteverhouding 1:1.
+   Kies het *Rectangle Select* |rectangleselect| gereedschap. Stel de afmeting in op :guilabel:`Fixed Ratio` met breedte-hoogteverhouding 1:1.
    Selecteer met deze instelling Kenny (het derde mannetje van links).
 
    .. figure:: images/selection_rectangle_03.png
@@ -245,7 +251,7 @@ Om Kenny te kunnen gebruiken in een game, moeten we de achtergrond verwijderen. 
    :color: secondary
    :icon: pencil
 
-   Kies het :guilabel:`Rectangle Select` gereedschap. Stel de afmeting in op :guilabel:`Any Size` en selecteer een rechthoek rondom Kenny. Kies vervolgens in de menubalk :guilabel:`Image` en :guilabel:`Crop to Selection`, of gebruik de toetscombinatie :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`X`.
+   Kies het *Rectangle Select* |rectangleselect| gereedschap. Stel de afmeting in op :guilabel:`Any Size` en selecteer een rechthoek rondom Kenny. Kies vervolgens in de menubalk :guilabel:`Image` en :guilabel:`Crop to Selection`, of gebruik de toetscombinatie :kbd:`Ctrl` + :kbd:`Shift` + :kbd:`X`.
 
    .. figure:: images/kenny_03.png
       :class: image-border
