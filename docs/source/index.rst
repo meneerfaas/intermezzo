@@ -65,6 +65,14 @@ Games programmeren
    ch13_pygame_zero/ch_03_flying_ball
    ch13_pygame_zero/ch_04_brick
    ch13_pygame_zero/ch_05_speedbrick
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 1
+   :caption: Sprites maken
+
+   ch14_paint_net/ch_01_paint_net
+
 ..
    lesson_00_preparations
    lesson_01_algorithms
