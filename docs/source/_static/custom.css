@@ -5,7 +5,6 @@ div.admonition.admonition-exercise>.admonition-title:after {
     /* the fa-pen icon */
 }
 
-
 /* admonition-solution */
 div.admonition.admonition-solution {
     border-color: hsl(52, 100%, 50%);
@@ -58,4 +57,9 @@ div.admonition.admonition-solution>.admonition-title:after {
 
 .bgcolor-lightgray {
     background-color: lightgray
+}
+
+.mono {
+    font-family: monospace;
+    font-size: small;
 }

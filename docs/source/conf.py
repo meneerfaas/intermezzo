@@ -34,6 +34,11 @@ html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
 
+rst_prolog = """
+   .. role:: tt
+        :class: mono"
+"""
+
 html_logo = "images/logo_beekvliet.png"
 
 # -- Options for pydata_sphinx_theme
