@@ -15,7 +15,7 @@ Zwaartekracht
 
 Door zwaartekracht vallen objecten op aarde naar beneden. Dat vallen gebeurt niet met een constante snelheid, de snelheid neemt toe tijdens de val. De toename van snelheid noem je *versnelling*. De versnelling door zwaartekracht op aarde is ongeveer 9,81 m/s². Dit betekent dat een object dat vrij valt, elke seconde ongeveer 9,81 meter per seconde sneller gaat.
 
-Wanneer we onze dinosaurus willen laten springen, gaan we hem een verticale snelheid omhoog geven. Tijdens de sprong snoept de zwaartekracht telkens iets af, totdat de snelheid nul is. Op dat moment bevindt de dinosaurus zich op het hoogste punt van de sprong. Maar de zwaartekracht blijf zijn werk doen en de dinosaurus valt terug naar de grond met een steeds groter wordende snelheid. In de figuur hieronder zie je dat weergegeven, waarbij de zwaartekrachtversnelling is afgerond op 10 m/s². In dat geval zou een sprong van 45 centimeter hoog 0,6 seconden duren.
+Wanneer we onze dinosaurus willen laten springen, gaan we hem een verticale snelheid omhoog geven. Tijdens de sprong snoept de zwaartekracht telkens iets van de snelheid af, totdat de snelheid nul is. Op dat moment bevindt de dinosaurus zich op het hoogste punt van de sprong. Maar de zwaartekracht blijft zijn werk doen en de dinosaurus valt terug naar de grond met een steeds groter wordende snelheid. In de figuur hieronder zie je dat weergegeven, waarbij de zwaartekrachtversnelling is afgerond op 10 m/s². In dat geval zou een sprong van 45 centimeter hoog 0,6 seconden duren.
 
 .. figure:: images/jump_parabola.png
    :class: image-border
@@ -37,7 +37,7 @@ Tijd om deze theorie in de praktijk te brengen! We gaan de dinosaurus laten spri
 .. code-block:: python
    :caption: endlessrunner.py
    :linenos:
-   :emphasize-lines: 10, 19-20, 38, 40-44, 46-49
+   :emphasize-lines: 10-11, 19-20, 38, 40-44, 46-49
 
    from pgzhelper import *
 
