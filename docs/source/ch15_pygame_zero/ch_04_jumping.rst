@@ -93,7 +93,7 @@ Op regel 10 hebben we een nieuwe constante :python:`BASELINE` toegevoegd en in r
 De constante :python:`GRAVITY` in regel 11 is de versnelling door zwaartekracht. |br| 
 We hebben de dinosaurus in regel 20 van een extra attribuut :python:`vy` voorzien, dat de verticale snelheid van de dinosaurus aangeeft (vy staat voor *velocity* in *y*-richting). De snelheid is 0 als de dinosaurus op de grond staat.
 
-In de :python:`update()` functie verplaatsen we op regel 38 de dinosaurus met de snelheid :python:`vy` in de *y*-richting. Vervolgens controleren we of de dinosaurus onder de BASELINE is geraakt: :python:`if player.bottom > BASELINE`. Als dat het geval is, zetten we de dinosaurus terug op de BASELINE en zetten we de snelheid op 0. Als de dinosaurus nog in de lucht is (:python:`elif player.bottom <>> BASELINE`), verhogen we de snelheid met de zwaartekracht.
+In de :python:`update()` functie verplaatsen we op regel 38 de dinosaurus met de snelheid :python:`vy` in de *y*-richting. Vervolgens controleren we of de dinosaurus onder de BASELINE is geraakt: :python:`if player.bottom > BASELINE`. Als dat het geval is, zetten we de dinosaurus terug op de BASELINE en zetten we de snelheid op 0. Als de dinosaurus nog in de lucht is (:python:`elif player.bottom < BASELINE`), verhogen we de snelheid met de zwaartekracht.
 
 Tenslotte zie je in regels 46-49 de :python:`on_key_down()` functie. Als de spatiebalk wordt ingedrukt, zetten we de verticale snelheid van de dinosaurus op -15. Dit zorgt ervoor dat de dinosaurus omhoog gaat bewegen.
 
