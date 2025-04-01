@@ -58,6 +58,19 @@ Games programmeren
 .. toctree::
    :maxdepth: 1
    :numbered: 1
+   :caption: Endless Runner
+
+   ch15_pygame_zero/ch_01_introduction
+   ch15_pygame_zero/ch_02_background
+   ch15_pygame_zero/ch_03_animation
+   ch15_pygame_zero/ch_04_jumping
+   ch15_pygame_zero/ch_05_obstacles
+   ch15_pygame_zero/ch_06_scoring_dying
+   ch15_pygame_zero/ch_07_lives
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 1
    :caption: Extra oefeningen
 
    ch13_pygame_zero/ch_01_arrows
