@@ -254,3 +254,70 @@ De game loop is door het gebruik van dictionaries iets ingewikkelder geworden, o
 In regels 90-91 maken we de variabelen :python:`ing_val_0` en :python:`ing_val_1` die de values bevatten die in :python:`elements` zouden moeten voorkomen. Deze values zijn de keys in :python:`elements_inverse`. In regels 95-96 vullen we :python:`ing_key_0` en :python:`ing_key_1` met de keys die bij de values horen. De code is weinig elegant, maar als we straks de grafische versie gaan maken, is deze omslachtigheid niet meer nodig; voor nu accepteren we het.
 
 Run de code om te zien of het spel naar behoren werkt. Probeer ook gerust zelf wat dingen uit. Wellicht kun je ervoor zorgen dat de foutmelding in regel 42 of 44 wordt geactiveerd?
+
+.. dropdown:: Opdracht 01
+   :open:
+   :color: secondary
+   :icon: pencil
+
+   In dit deel hebben we ervoor gezorgd dat de recepten uit de string :python:`recipes_txt` worden gelezen en in de dictionary :python:`recipes` worden opgeslagen. Dat gebeurt in de helper functie :python:`build_recipes()`. In deze opdracht ga je :python:`build_recipes()` nog iets geavanceerder maken. 
+
+   Wijzig de string :python:`recipes_txt` als volgt:
+
+   .. code-block:: python
+      :linenos:
+      :lineno-start: 27
+
+      recipes_txt = '''water
+      fire
+      wind
+      earth
+      -
+      water+fire=steam
+      water+wind=wave
+      water+earth=plant
+      fire+wind=smoke
+      fire+earth=lava
+      wind+earth=dust'''
+
+   De string bestaat nu uit twee delen: de eerste vier regels bevatten de elementen die bij aanvang van het spel beschikbaar zijn voor de speler, daarna volgt een scheidingsteken :python:`-`, en het tweede deel bevat de recepten.
+
+   Breid :python:`build_recipes()` uit met de volgende functionaliteit:
+
+   * De string :python:`recipes_txt` wordt opgesplitst in de twee delen :python:`first_part` en :python:`second_part`. Maak hiervoor gebruik van het scheidingsteken :python:`-`, maar je zult merken dat je hier nog iets aan moet toevoegen om de splitsing goed te krijgen.
+   * De string :python:`first_part`, die de vier basiselementen bevat, wordt opgesplitst in regels, en het resultaat opgeslagen in de variabele :python:`primes`.
+   * De string :python:`second_part`, die de recepten bevat, wordt opgesplitst in regels, en het resultaat opgeslagen in de variabele :python:`combinations`.
+   * Met een for loop wordt voor elke :python:`prime` in :python:`primes` eerst gecheckt of die als key voorkomt in :python:`elements`. Als dat niet zo is, wordt een foutmelding gegenereerd. In het andere geval wordt de :python:`prime` toegevoegd aan :python:`discoveries` met behulp van de functie :python:`add_discovery()`.
+   * De rest van de code in :python:`build_recipes()` blijft hetzelfde, behalve dat de string :python:`lines` wordt vervangen door :python:`combinations`.
+
+   Als je dit hebt gedaan, kun je de vier aanroepen van :python:`add_discovery()` in het hoofdprogramma verwijderen. De vier elementen worden nu automatisch toegevoegd aan :python:`discoveries` in de helper functie :python:`build_recipes()`. Run het programma en kijk of alles nog steeds werkt.
+
+   
+   .. dropdown:: Oplossing
+      :color: secondary
+      :icon: check-circle
+
+      .. code-block:: python
+         :linenos:
+         :lineno-start: 41
+
+         def build_recipes():
+            first_part, second_part = recipes_txt.split('\n-\n')
+            primes = first_part.split('\n')
+            combinations = second_part.split('\n')
+            for prime in primes:
+               if prime not in elements:
+                     raise Exception('Recipe error: unknown prime element.')
+               add_discovery(prime)
+            for combination in combinations:
+               left, right = combination.split('=')
+               ingredients = left.split('+')
+               if (len(ingredients) != 2):
+                     raise Exception('Recipe error: number of ingredients must be exactly 2.')
+               if ingredients[0] not in elements or ingredients[1] not in elements:
+                     raise Exception('Recipe error: unknown ingredients.')
+               ingredients.sort()
+               if ingredients[0] not in recipes: 
+                     recipes[ingredients[0]] = {ingredients[1]: right}
+               else:
+                     recipes[ingredients[0]][ingredients[1]] = right
