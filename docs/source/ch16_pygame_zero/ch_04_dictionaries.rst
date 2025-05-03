@@ -253,4 +253,4 @@ De game loop is door het gebruik van dictionaries iets ingewikkelder geworden, o
 
 In regels 90-91 maken we de variabelen :python:`ing_val_0` en :python:`ing_val_1` die de values bevatten die in :python:`elements` zouden moeten voorkomen. Deze values zijn de keys in :python:`elements_inverse`. In regels 95-96 vullen we :python:`ing_key_0` en :python:`ing_key_1` met de keys die bij de values horen. De code is weinig elegant, maar als we straks de grafische versie gaan maken, is deze omslachtigheid niet meer nodig; voor nu accepteren we het.
 
-Run de code om te zien of het spel naar behoren werkt. Probeer ook gerust zelf wat dingen uit. Wellicht kun je ervoor zorgen dat de foutmelding in regel 42 of 44 verschijnt?
+Run de code om te zien of het spel naar behoren werkt. Probeer ook gerust zelf wat dingen uit. Wellicht kun je ervoor zorgen dat de foutmelding in regel 42 of 44 wordt geactiveerd?
