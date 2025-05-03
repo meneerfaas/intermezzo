@@ -35,8 +35,10 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 
 rst_prolog = """
-   .. role:: tt
-        :class: mono"
+.. role:: tt
+    :class: mono
+.. role:: ttt
+    :class: mono-small
 """
 
 html_logo = "images/logo_beekvliet.png"

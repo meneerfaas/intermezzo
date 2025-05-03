@@ -61,5 +61,9 @@ div.admonition.admonition-solution>.admonition-title:after {
 
 .mono {
     font-family: monospace;
+}
+
+.mono-small {
+    font-family: monospace;
     font-size: small;
 }

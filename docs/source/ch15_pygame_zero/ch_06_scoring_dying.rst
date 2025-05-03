@@ -92,7 +92,7 @@ Zodra de dinosaurus een cactus raakt, moet het spel afgelopen zijn. Je weet inmi
    :class-card: bgcolor-khaki
 
    *test if one rectangle in a list intersects* |br|
-   :tt:`collidelist(list) -> index`
+   :ttt:`collidelist(list) -> index`
 
    Test whether the rectangle collides with any in a sequence of rectangles. The index of the first collision found is returned. If no collisions are found an index of -1 is returned.
 
