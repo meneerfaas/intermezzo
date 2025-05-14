@@ -71,6 +71,16 @@ Games programmeren
 .. toctree::
    :maxdepth: 1
    :numbered: 1
+   :caption: Alchemy game
+
+   ch16_pygame_zero/ch_01_introduction
+   ch16_pygame_zero/ch_02_lists
+   ch16_pygame_zero/ch_03_alchemytxt
+   ch16_pygame_zero/ch_04_dictionaries
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 1
    :caption: Extra oefeningen
 
    ch13_pygame_zero/ch_01_arrows

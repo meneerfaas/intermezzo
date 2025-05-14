@@ -8,6 +8,8 @@
 Alchemy game
 ================
 
+:bdg-info:`Deze tutorial is nog 'under construction'.`
+
 Het idee om een tutorial te maken voor een *alchemy game* is afkomstig van twee leerlingen uit de Intermezzo klas 2024/2025. Zij wilden namelijk een spel maken dat lijkt op `Infinite Craft <https://neal.fun/infinite-craft/>`_. 
 
 Bij een alchemy game gaat het erom zoveel mogelijk nieuwe elementen (materialen, voorwerpen) te creëren, door twee bestaande elementen te combineren. Je begint meestal met de vier elementen uit de natuur: aarde, lucht, vuur en water. Door bijvoorbeeld vuur en water te combineren, krijg je stoom. Door stoom en lucht te combineren, krijg je een wolk. Enzovoort. Het doel van het spel is om zoveel mogelijk nieuwe elementen te ontdekken door ze met elkaar te combineren.
