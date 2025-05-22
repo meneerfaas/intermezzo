@@ -37,7 +37,7 @@ In de huidige versie van ons Alchemy spel zijn de elementen en de recepten *hard
    fire+earth=lava
    wind+earth=dust'''
 
-Dit betekent dat we de code moeten aanpassen als we een nieuw element of recept willen toevoegen. Dit is niet erg handig, vooral als we veel elementen en recepten hebben. Het is beter om deze gegevens in een apart bestand te zetten, zodat we ze gemakkelijk kunnen aanpassen zonder onze programmacode te veranderen.
+Dit betekent dat we de code moeten wijzigen telkens als we een nieuw element of recept willen toevoegen. Dit is niet erg handig, vooral als we veel elementen en recepten hebben. Het is beter om deze gegevens in een apart bestand te zetten, zodat we ze gemakkelijk kunnen aanpassen zonder de programmacode te veranderen.
 
 Recipes in een txt bestand
 ------------------------------------------------
@@ -45,7 +45,7 @@ We gaan de recepten in een tekstbestand zetten. In Windows kun je snel een tekst
 
 .. figure:: images/notepad_recipes.png
 
-Sla het bestand op in de map :file:`alchemy` onder de naam :file:`recipes.txt`. Het is belangrijk dat je het bestand in dezelfde map opslaat als het :file:`alchemy.py` bestand.
+Sla het bestand op in de map :file:`alchemy` onder de naam :file:`recipes.txt`. Het is belangrijk dat je het bestand in dezelfde map opslaat als het :file:`alchemytxt.py` bestand.
 
 .. uml::
    :align: center
@@ -57,6 +57,14 @@ Sla het bestand op in de map :file:`alchemy` onder de naam :file:`recipes.txt`. 
       /games/alchemy/recipes.txt
       @endfiles
    @enduml
+
+Zie je in de Windows Verkenner de extensie :file:`.txt` staan achter de naam van het bestand? Zo niet, dan kun je de extensie zichtbaar maken door in de Verkenner naar het tabblad :guilabel:`Beeld` te gaan en daar het vinkje bij :guilabel:`Bestandsextensies` aan te zetten.
+
+.. figure:: images/file_name_extensions.png
+   :class: image-border
+
+.. figure:: images/file_name_extensions_2.png
+   :class: image-border
 
 In Python bestaat het lezen van een bestand uit drie stappen:
 
@@ -158,7 +166,7 @@ Je ziet dat de inhoud van het JSON bestand vrijwel identiek is aan de :python:`e
 
    In JSON bestanden worden altijd *dubbele* aanhalingstekens gebruikt voor strings. Dit is anders dan in Python, waar je ook *enkele* aanhalingstekens kunt gebruiken. Als je een JSON bestand maakt met enkele aanhalingstekens, krijg je een foutmelding. Zorg er dus voor dat je altijd dubbele aanhalingstekens gebruikt in JSON bestanden!
 
-Nu is het tijd om het JSON bestand in onze code in te lezen. Om dat te kunnen doen, is het nodig dat het in dezelfde map staat als het :file:`alchemy.py` bestand. 
+Nu is het tijd om het JSON bestand in onze code in te lezen. Om dat te kunnen doen, is het nodig dat het in dezelfde map staat als het :file:`alchemytxt.py` bestand. 
 
 .. uml::
    :align: center
