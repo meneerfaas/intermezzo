@@ -38,10 +38,11 @@ Games programmeren
    ch11_pygame_zero/ch_02_sprites
    ch11_pygame_zero/ch_03_movement
    ch11_pygame_zero/ch_04_events
-   ch11_pygame_zero/ch_07_summary
-
    ch11_pygame_zero/ch_05_score
    ch11_pygame_zero/ch_06_improvements
+
+   ch11_pygame_zero/ch_07_summary
+
 
 .. toctree::
    :maxdepth: 1
@@ -77,6 +78,7 @@ Games programmeren
    ch16_pygame_zero/ch_02_lists
    ch16_pygame_zero/ch_03_alchemytxt
    ch16_pygame_zero/ch_04_dictionaries
+   ch16_pygame_zero/ch_05_files
 
 .. toctree::
    :maxdepth: 1

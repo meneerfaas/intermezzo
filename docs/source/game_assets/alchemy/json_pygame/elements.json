@@ -1,0 +1,42 @@
+{
+	"fire": {
+		"name": "vuur",
+		"img": "fire"
+	},
+	"water": {
+		"name": "water",
+		"img": "water"
+	},
+	"wind": {
+		"name": "wind",
+		"img": "wind"
+	},
+	"earth": {
+		"name": "aarde",
+		"img": "earth"
+	},
+	"steam": {
+		"name": "stoom",
+		"img": "steam"
+	},
+	"wave": {
+		"name": "golf",
+		"img": "water_wave"
+	},
+	"plant": {
+		"name": "plant",
+		"img": "plant"
+	},
+	"smoke": {
+		"name": "rook",
+		"img": "smoke"
+	},
+	"lava": {
+		"name": "lava",
+		"img": "lava"
+	},
+	"dust": {
+		"name": "stof",
+		"img": "dust"
+	}
+}
