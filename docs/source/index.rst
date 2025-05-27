@@ -79,6 +79,11 @@ Games programmeren
    ch16_pygame_zero/ch_03_alchemytxt
    ch16_pygame_zero/ch_04_dictionaries
    ch16_pygame_zero/ch_05_files
+   ch16_pygame_zero/ch_06_alchemy_pygame
+   ch16_pygame_zero/ch_07_drawing_elements
+   ch16_pygame_zero/ch_08_drag_and_drop
+   ch16_pygame_zero/ch_09_inventory_and_workbench
+   ch16_pygame_zero/ch_10_combining_cards
 
 .. toctree::
    :maxdepth: 1

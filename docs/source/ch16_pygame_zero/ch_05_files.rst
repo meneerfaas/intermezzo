@@ -173,12 +173,6 @@ Nu is het tijd om het JSON bestand in onze code in te lezen. Om dat te kunnen do
    :html_format: svg
 
    @startuml
-      <style>
-         root {
-            FontColor Red
-            BackGroundColor palegreen
-         }  
-      </style>
       @startfiles
       /games/alchemy/alchemytxt.py
       /games/alchemy/elements.json
@@ -190,16 +184,16 @@ Voeg bovenaan je code het volgende import statement toe:
 
 .. code-block:: python
    :linenos:
-   :emphasize-lines: 8
+   :emphasize-lines: 6
 
    ################
    # ALCHEMY GAME #
    # Text version #
    ################
 
-   # DICTIONARIES AND LISTS
-
    import json
+
+   # DICTIONARIES AND LISTS
 
 De :python:`json` module is een ingebouwde module in Python die het mogelijk maakt om JSON bestanden te lezen en te schrijven. Voeg de volgende drie regels toe aan het hoofdprogramma, vóór alle andere code:
 
@@ -218,13 +212,15 @@ De :python:`json` module is een ingebouwde module in Python die het mogelijk maa
 
 De regels 71 en 72 lijken sterk op de code die we eerder gebruikten om het :file:`recipes.txt` bestand te lezen. Het enige verschil is dat we nu de :python:`json.load()` functie gebruiken in plaats van de :python:`read()` methode. Deze functie leest het JSON bestand en zet de inhoud om in een Python dictionary. Nadat dit is gebeurd, maken we op regel 73 de inverse dictionary aan, zoals we eerder deden op regel 23.
 
-Verwijder de oude :python:`elements` en :python:`elements_invers`  dictionaries in de regels 10 t/m 23 uit je code. Het eerste stuk van het programma ziet er nu zo uit:
+Verwijder de oude :python:`elements` en :python:`elements_inverse`  dictionaries in de regels 10 t/m 23 uit je code. Het eerste stuk van het programma ziet er nu zo uit:
 
 .. code-block:: python
    :linenos:
-   :lineno-start: 8
+   :lineno-start: 6
 
    import json
+
+   # DICTIONARIES AND LISTS
 
    recipes = {}
 
