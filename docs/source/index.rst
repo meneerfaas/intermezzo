@@ -84,6 +84,7 @@ Games programmeren
    ch16_pygame_zero/ch_08_drag_and_drop
    ch16_pygame_zero/ch_09_inventory_and_workbench
    ch16_pygame_zero/ch_10_combining_cards
+   ch16_pygame_zero/ch_11_resizing_inventory
 
 .. toctree::
    :maxdepth: 1
