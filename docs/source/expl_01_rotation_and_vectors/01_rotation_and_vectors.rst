@@ -223,7 +223,7 @@ In regel 30 wordt de lengte van de vector aangepast naar 100 pixels. Dit is de a
    :class: image-border
 
 In regel 31 berekenen we de spawn positie van de kanonskogel door de :python:`direction` vector op te tellen bij de ankerpositie van het kanon. De spawn positie is dus het ankerpunt van het kanon plus een afstand van 100 pixels in de richting van de kanonskogel. |br|
-In regel 32 wordt de lengte van de vector aangepast naar de snelheid van de kanonskogel. Dit is de snelheid waarmee de kanonskogel zich gaat verplaatsen. |br|
+In regel 32 passen we de lengte van de vector opnieuw aan, maar nu naar de waarde van :python:`SPEED`. Daarmee wordt de lengte van de vector de snelheid waarmee de kanonskogel zich straks gaat verplaatsen. |br|
 In regel 33 roepen we de :python:`spawn_cannonball()` aan om de kanonskogel te maken en toe te voegen aan de lijst van kanonskogels.
 
 Om de kanonskogel af te vuren, moeten we de :python:`fire_cannon()` functie aanroepen. We doen dit in de :python:`on_mouse_down()` event handler:
