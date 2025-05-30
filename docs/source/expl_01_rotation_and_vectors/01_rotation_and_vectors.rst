@@ -11,7 +11,6 @@ Explainer: sprites draaien
 Voor sommige spellen is het belangrijk dat sprites kunnen draaien. In deze explainer leer je hoe je sprites kunt draaien in Pygame Zero. En we gaan nog een stapje verder: hoe kun je een kanon richten op een doelwit en de kanonskogels in de juiste richting afvuren?
 
 .. figure:: images/cannon_animation_small.gif
-   :target: images/cannon_animation.gif
 
 Voorbereidingen
 ---------------------
