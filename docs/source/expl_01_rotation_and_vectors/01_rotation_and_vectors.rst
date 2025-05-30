@@ -99,6 +99,27 @@ Met regel 13 draaien we het kanon 90 graden tegen de klok in, zodat het recht om
    :scale: 75%
    :class: no-scaled-link
 
+Plaats bij wijze van experiment eens de volgende regel in de :python:`update()` functie:
+
+.. code-block:: python
+   :linenos:
+   :lineno-start: 21
+   :emphasize-lines: 2
+
+   def update():
+      cannon.angle += 3
+
+Run de code en je ziet dat het kanon rondjes draait. Om het belang van het juiste anchor point te demonstreren, kun je in regel 10 het anchor point een andere waarde geven, bijvoorbeeld :python:`(0, 0)`:
+
+.. code-block:: python
+   :linenos:
+   :lineno-start: 10
+
+   cannon.anchor = (0, 0)
+
+Met deze instelling draait het kanon rond de linkerbovenhoek van de sprite. |br|
+Zet nadat je klaar bent met experimenteren het anchor point weer terug naar de oorspronkelijke waarde :python:`(40, 46)` en vervang de regel in de :python:`update()` functie weer door het :python:`pass` keyword.
+
 In de `Pygame Zero documentatie <https://pygame-zero.readthedocs.io/en/stable/builtins.html#rotation>`_ staat een voorbeeld van een sprite die draait naar de muispositie door gebruik te maken van de :python:`angle_to()` methode. Dat voorbeeld kunnen we één-op-één gebruiken om het kanon naar de muispositie te laten draaien:
 
 .. code-block:: python
