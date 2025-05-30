@@ -89,6 +89,13 @@ Games programmeren
 .. toctree::
    :maxdepth: 1
    :numbered: 1
+   :caption: Explainers
+
+   expl_01_rotation_and_vectors/01_rotation_and_vectors.rst
+
+.. toctree::
+   :maxdepth: 1
+   :numbered: 1
    :caption: Extra oefeningen
 
    ch13_pygame_zero/ch_01_arrows
