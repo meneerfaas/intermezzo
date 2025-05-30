@@ -8,7 +8,7 @@
 Explainer: sprites draaien
 ==============================
 
-Voor sommige spellen is het belangrijk dat sprites kunnen draaien. In deze sectie explainer we zien hoe je sprites kunt draaien in Pygame Zero. En we gaan nog een stapje verder: hoe kun je een kanon richten op een doelwit en de kanonskogels in de juiste richting afvuren?
+Voor sommige spellen is het belangrijk dat sprites kunnen draaien. In deze explainer leer je hoe je sprites kunt draaien in Pygame Zero. En we gaan nog een stapje verder: hoe kun je een kanon richten op een doelwit en de kanonskogels in de juiste richting afvuren?
 
 .. figure:: images/cannon_animation_small.gif
    :target: images/cannon_animtion.gif
@@ -99,7 +99,7 @@ Met regel 13 draaien we het kanon 90 graden tegen de klok in, zodat het recht om
    :scale: 75%
    :class: no-scaled-link
 
-In de `Pygame Zero documentatie <https://pygame-zero.readthedocs.io/en/stable/builtins.html#rotation>`_ staat een voorbeeld van een sprite die draait naar de muispositie door gebruik te maken van de :python:`angle_to()` methode. Dat voorbeeld kunnen we een-op-een gebruiken om het kanon naar de muispositie te laten draaien:
+In de `Pygame Zero documentatie <https://pygame-zero.readthedocs.io/en/stable/builtins.html#rotation>`_ staat een voorbeeld van een sprite die draait naar de muispositie door gebruik te maken van de :python:`angle_to()` methode. Dat voorbeeld kunnen we één-op-één gebruiken om het kanon naar de muispositie te laten draaien:
 
 .. code-block:: python
    :linenos:
